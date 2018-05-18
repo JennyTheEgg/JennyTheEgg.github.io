@@ -1,0 +1,9 @@
+; define('exp_datetimeformats', function() {
+
+	'use strict';
+
+window.uitkformatter = window.uitkformatter || {};
+window.uitkformatter.dateTimeSettings =  window.uitkformatter.dateTimeSettings || {};
+window.uitkformatter.dateTimeSettings.zh_HK = {"calendarPlaceholder":"yyyy/mm/dd","startDayOfWeek":"0","time":{"format":{"full":"ah:mm:ss [zzzz]","medium":"HH:mm:ss","short":"HH:mm","long":"HH:mm (z)"}},"date":{"weekday":{"abbreviated":{"tuesday":"週二","wednesday":"週三","thursday":"週四","friday":"週五","saturday":"週六","sunday":"週日","monday":"週一"},"narrow":{"tuesday":"二","wednesday":"三","thursday":"四","friday":"五","saturday":"六","sunday":"日","monday":"一"},"wide":{"tuesday":"星期二","wednesday":"星期三","thursday":"星期四","friday":"星期五","saturday":"星期六","sunday":"星期日","monday":"星期一"}},"calendarPlaceholder":"yyyy/mm/dd","dateSeparators":"/","month":{"abbreviated":{"january":"1月","february":"2月","march":"3月","april":"4月","may":"5月","june":"6月","july":"7月","august":"8月","september":"9月","october":"10月","november":"11月","december":"12月"},"narrow":{"january":"1","february":"2","march":"3","april":"4","may":"5","june":"6","july":"7","august":"8","september":"9","october":"10","november":"11","december":"12"},"wide":{"january":"1月","february":"2月","march":"3月","april":"4月","may":"5月","june":"6月","july":"7月","august":"8月","september":"9月","october":"10月","november":"11月","december":"12月"}},"format":{"full":"M月d日(EEEE)","medium":"M月d日","short":"yyyy/M/d","long":"yyyy年M月d日"}}};
+return window.uitkformatter;
+});

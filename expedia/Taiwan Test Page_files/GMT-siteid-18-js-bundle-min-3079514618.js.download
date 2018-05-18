@@ -1,0 +1,4 @@
+$("#hotelOnly-tab .tab-label").text("酒店");$("#activities-tab .tab-label").text("當地玩樂");
+/*!  generated on 2018-05-14 05:33:13.800 PDT(-0700) in 0 ms  */
+
+/*!  served in 3 ms  */
