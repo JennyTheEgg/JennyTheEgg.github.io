@@ -849,7 +849,7 @@
 </div>
 <div class="cont-block">
 <div class="txt-block">
-<h2 class="text-reset mokuteki-title"><span class="span">目的から探す</span></h2>
+<h2 class="text-reset zokuteki-title"><span class="span">目的から探す</span></h2>
 <div class="title-lead mokuteki-lead"><img src="https://welove.expedia.co.jp/wp-content/uploads/2018/02/mokuteki-txt.png" alt="Overseasc travel Top 3"></div>
 <div class="clearfix">
 <p class="cont-txt cont-txt-left">やりたいコトから旅先を探そう！<br>
@@ -1538,8 +1538,20 @@ img {
   left: 0;
   width: 100%;
 }
+.cont-block .txt-block h2.zokuteki-title:before {
+  border-top: 2px solid #f386e8;
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+}
 @media (max-width: 767px) {
   .cont-block .txt-block h2.mokuteki-title:before {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+    .cont-block .txt-block h2.zokuteki-title:before {
     width: calc(100% + 30px);
     margin-left: -15px;
   }
