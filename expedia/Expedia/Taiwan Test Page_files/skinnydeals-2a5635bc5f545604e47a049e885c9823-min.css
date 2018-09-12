@@ -1,0 +1,133 @@
+.skinnydeals .tile-details{overflow:hidden}
+.skinnydeals .tile-details p{font-weight:600;color:#757575;margin:0 auto;width:100%;display:block}
+.skinnydeals .tile-details .star-rating-outer{width:auto;display:inline-block}
+.skinnydeals .gmt-deals-wrapper .gmt-tile:hover{background-color:transparent}
+.skinnydeals .gmt-deals-wrapper .gmt-tile .tile-header{background:#616161 none repeat scroll 0 0;border-radius:.176471em .176471em 0 0;padding:.529412em .705882em;z-index:100}
+.skinnydeals .gmt-deals-wrapper .gmt-tile .tile-header .tile-heading{color:#fff;font-size:.764706em;margin:0}
+.skinnydeals .gmt-deals-wrapper .gmt-tile .new-tile-image{margin-top:0;width:100%}
+.skinnydeals .gmt-deals-wrapper .gmt-tile .mobile-tile-destination-header{display:none}
+.skinnydeals .gmt-deals-wrapper .gmt-tile .new-tile-header{background:#000;border-radius:.176471em .176471em 0 0;padding:.47058824em 0 .47058824em 0;z-index:100}
+.skinnydeals .gmt-deals-wrapper .gmt-tile .new-tile-header .tile-heading{color:#fff;font-size:.8235294117647058em;margin:0}
+.skinnydeals .gmt-deals-wrapper .gmt-tile .flex-figure .image{-webkit-border-radius:0;-moz-border-radius:0;-o-border-radius:0;border-radius:0}
+.skinnydeals .gmt-deals-wrapper .gmt-tile .flex-figure img{-webkit-border-radius:0;-moz-border-radius:0;-o-border-radius:0;border-radius:0}
+.skinnydeals .gmt-deals-wrapper .activity-gmt-tile{width:25%}
+.skinnydeals .gmt-deals-wrapper .activity-gmt-tile .flex-area-primary{padding:0}
+.skinnydeals .gmt-deals-wrapper .divider-line{margin:.88235294em 0 1.17647059em 0;border-top:1px solid #ddd;width:100%}
+.skinnydeals .gmt-deals-wrapper .lxactivity-left-section{width:50%;display:inline-block}
+.skinnydeals .gmt-deals-wrapper .lxactivity-left-section p{display:block}
+.skinnydeals .gmt-deals-wrapper .lxactivity-new-left-section{width:100%;display:inline-block}
+.skinnydeals .gmt-deals-wrapper .lxactivity-new-left-section p{margin-top:.58823529em;display:block}
+.skinnydeals .gmt-deals-wrapper .lxactivity-right-section{width:50%;float:right}
+.skinnydeals .gmt-deals-wrapper .lxactivity-right-section p{display:block;text-align:right}
+.skinnydeals .gmt-deals-wrapper .lxactivity-right-section .tile-discount{text-decoration:line-through}
+.skinnydeals .gmt-deals-wrapper .lxactivity-right-section .tile-price-activity{color:#0065b8;font-size:18px}
+.skinnydeals .gmt-deals-wrapper .lxactivity-new-right-section{width:100%}
+.skinnydeals .gmt-deals-wrapper .lxactivity-new-right-section p{display:block}
+.skinnydeals .gmt-deals-wrapper .lxactivity-new-right-section .save-message-flag{background-color:#d60000;color:#fff;font-size:.7058823529411765em;border-radius:.23076923em;padding:.52941176em .52941176em .35294118em .52941176em;font-weight:700;display:inline-block;width:auto}
+.skinnydeals .gmt-deals-wrapper .lxactivity-new-right-section .new-lx-tile-discount{text-decoration:line-through;display:inline;font-size:.8823529411764706em}
+.skinnydeals .gmt-deals-wrapper .lxactivity-new-right-section .new-lx-tile-price-activity{color:#000;display:inline;font-size:1.2352941176470589em;font-weight:500;margin:0 0 0 .17647059em}
+.skinnydeals .gmt-deals-wrapper .lxactivity-new-right-section .no-saving-flag{font-size:.5882352941176471em;display:inline-block}
+.skinnydeals .gmt-deals-wrapper .activity-tile-details .tile-name{font-size:.8em;height:40px;overflow:hidden;margin-bottom:4px}
+.skinnydeals .gmt-deals-wrapper .activity-tile-details .supplier-name{height:20px;overflow:hidden;margin-bottom:4px}
+.skinnydeals .gmt-deals-wrapper .activity-tile-details .new-tile-name{color:black;font-size:.9411764705882353em;height:2.70588235em;overflow:hidden}
+.skinnydeals .gmt-deals-wrapper .icon-success,.skinnydeals .gmt-deals-wrapper .freeCancel{color:#477a00;font-weight:bold}
+.skinnydeals .gmt-deals-wrapper .new-tile-freecancel{color:#477a00;font-weight:800;font-size:.8235294117647058em;margin-top:-0.11764706em}
+.skinnydeals .gmt-deals-wrapper .pack-deals-container,.skinnydeals .gmt-deals-wrapper .tile-heading,.skinnydeals .gmt-deals-wrapper .tile-details,.skinnydeals .gmt-deals-wrapper .tile-price,.skinnydeals .gmt-deals-wrapper .cruise-slider .price{text-align:center !important}
+.skinnydeals .gmt-deals-wrapper .pagination{position:relative;clear:both}
+.skinnydeals .gmt-deals-wrapper .tile-footer{background:#eee;border:1px solid #e0e0e0;border-top:0;border-radius:0 0 .17647059em .17647059em}
+.skinnydeals .gmt-deals-wrapper .tile-details .trip-dates{font-weight:500;float:none;font-weight:normal;margin-bottom:0}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-name{margin:0 0 -0.35em;margin:0 0 -0.17647059em 0}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-price,.skinnydeals .gmt-deals-wrapper .tile-details .ratingReview>.rating{float:none}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-price{margin-left:0}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-price .cross-out-price{display:block;margin-bottom:-0.23529412em}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-price strong,.skinnydeals .gmt-deals-wrapper .tile-details .tile-price p:first-child{font-size:2em;color:#1f1f1f}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-price .price-check{font-size:.7058823529411765em}
+.skinnydeals .gmt-deals-wrapper .tile-details .price-check{color:#1f1f1f;font-size:1.0588235294117647em;border-top:1px solid #999;padding-top:.82352941em;margin-top:1.05882353em;margin-bottom:.58823529em}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-priceless{position:relative !important;bottom:0 !important;right:0 !important;margin:1em 0 1.41176471em 0 !important;float:none}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-priceless .btn{position:relative !important;margin-bottom:.8em;margin-bottom:.82352941em;bottom:0 !important}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-guestRate{margin:0}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-guestRate span{font-weight:400}
+.skinnydeals .gmt-deals-wrapper .tile-details .hot{font-weight:500;margin-top:.23529412em;color:#f06601}
+.skinnydeals .gmt-deals-wrapper .tile-details .urgencymessage{font-weight:500;color:#1f1f1f;margin:.47058824em 0 .47058824em 0}
+.skinnydeals .gmt-deals-wrapper .tile-details .urgencymessage.secondary{margin:.47058824em 0 .47058824em 0}
+.skinnydeals .gmt-deals-wrapper .tile-details .trip-length{margin:.47058824em 0 .47058824em 0}
+.skinnydeals .gmt-deals-wrapper .tile-details .hotel-details{margin-bottom:0;clear:both}
+.skinnydeals .gmt-deals-wrapper .tile-details .hotel-details .hot{font-size:1em}
+.skinnydeals .gmt-deals-wrapper .tile-details .flight-icon,.skinnydeals .gmt-deals-wrapper .tile-details .hotel-details{padding-left:0 !important}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-flight-info{float:none !important;max-width:70%;margin:0 auto !important}
+.skinnydeals .gmt-deals-wrapper .tile-details .tile-dates{margin:0;font-size:.6470588235294118em}
+.skinnydeals .gmt-deals-wrapper .tile-details .icon-flights{color:#999;display:inline-block;position:relative;font-style:normal;margin:.23529412em 0 0 1em;font-size:1.2em;float:left}
+.skinnydeals .gmt-deals-wrapper .flight .gmt-tile .tile-details .tile-flight-info{color:#0065b8 !important;text-align:center;float:none;margin:0}
+.skinnydeals .gmt-deals-wrapper .flight .gmt-tile .tile-details .tile-dates{margin:1em 0 0 0}
+.skinnydeals .gmt-deals-wrapper .flight .gmt-tile .tile-details .price-check{color:#1f1f1f;font-size:1.0588235294117647em;border-top:1px solid #999;padding-top:.82352941em;margin-top:1.05882353em;margin-bottom:.58823529em}
+.skinnydeals .gmt-deals-wrapper .flight .gmt-tile .flight-info-wrapper{margin:0 auto;display:block}
+.skinnydeals .gmt-deals-wrapper .hotel-discount-red{left:0;right:auto}
+.skinnydeals .gmt-deals-wrapper .cruise-slider .logoheader img{float:left}
+.skinnydeals .gmt-deals-wrapper .cruise-slider .triplink{clear:left;padding-top:1em}
+.skinnydeals .gmt-deals-wrapper .fav-container{top:2.4em;right:.4em}
+.skinnydeals .gmt-deals-wrapper.page-rfd .fav-container{top:.4em;right:.4em}
+.skinnydeals .gmt-deals-wrapper .fav-icon{min-height:44px}
+.skinnydeals .gmt-deals-wrapper .fav-container{z-index:101 !important}
+.skinnydeals .gmt-deals-wrapper figure figcaption{bottom:-1em}
+.skinnydeals .gmt-deals-wrapper s{float:none;display:block;margin:.23529412em 0 -0.47058824em 0;font-weight:400}
+.skinnydeals .gmt-deals-wrapper .review{display:none}
+.skinnydeals .gmt-deals-wrapper .branded-deal{background:0;top:0 !important;position:relative;margin:.47058824em 0 0 0;text-align:center;color:#2f7000 !important;font-weight:400 !important}
+.skinnydeals .gmt-deals-wrapper .branded-deal strong{font-weight:700 !important}
+.skinnydeals .gmt-deals-wrapper .pricesfrom{text-transform:uppercase;color:#757575;font-size:.6470588235294118em;font-weight:400 !important;margin:1em 0 0 0 !important;clear:both}
+.skinnydeals .gmt-deals-wrapper .pricesfrom:before,.skinnydeals .gmt-deals-wrapper .pricesfrom:after{background-color:#999;content:"";display:inline-block;height:1px;position:relative;vertical-align:middle;width:25%}
+.skinnydeals .gmt-deals-wrapper .pricesfrom:before{right:.5em;margin-left:-50%}
+.skinnydeals .gmt-deals-wrapper .pricesfrom:after{left:.5em;margin-right:-50%}
+.skinnydeals .gmt-deals-wrapper .short-box .box.hotel-only-price{background:#eee;border:1px solid #e0e0e0;border-top:0;border-radius:0 0 .17647059em .17647059em}
+.skinnydeals .gmt-deals-wrapper .short-box .box.hotel-only-price span{width:100%}
+.skinnydeals .gmt-deals-wrapper .short-box .hotel-short-price{float:none !important;margin:-0.41176471em 0 -1em 0;padding:0}
+.skinnydeals .gmt-deals-wrapper .short-box .tile-details{text-align:center !important}
+.skinnydeals .gmt-deals-wrapper .tab-pane.multi-destination .tile-details{text-align:left !important}
+.skinnydeals .gmt-deals-wrapper .tab-pane.multi-destination .tile-price{text-align:right !important}
+.skinnydeals .gmt-deals-wrapper .tab-pane.multi-destination .short-box .hotel-short-price{margin:0}
+.skinnydeals.siteid1.page-dailydeals #offer-grp-1 .gmt-tile{width:25%}
+.skinnydeals.es_MX .promo-deals-module .gmt-tile .tile-guestRate{max-width:85%}
+.skinnydeals.da_DK .promo-deals-module .gmt-tile .tile-price strong,.skinnydeals.siteid61 .promo-deals-module .gmt-tile .tile-price strong,.skinnydeals.en_HK .promo-deals-module .gmt-tile .tile-price strong,.skinnydeals.siteid62 .promo-deals-module .gmt-tile .tile-price strong{font-size:1.6470588235294117em}
+.skinnydeals.pt_tab .gmt-tile-grid .gmt-tile .hotel-only-price,.skinnydeals .promo-deals-module .gmt-tile-grid .gmt-tile .hotel-only-price{padding:.35294118em .58823529em;min-height:3.4em !important;background:#eee;border:1px solid #e0e0e0;border-top:0;border-radius:0 0 .17647059em .17647059em}
+.skinnydeals.pt_tab .gmt-tile-grid .gmt-tile .hotel-only-price .currencySign,.skinnydeals .promo-deals-module .gmt-tile-grid .gmt-tile .hotel-only-price .currencySign{color:#0065b8}
+.skinnydeals.page-dailydeals #offer-grp-0 .gmt-tile-grid .gmt-tile .icon-flights,.skinnydeals.page-dailydealspromo #offer-grp-0 .gmt-tile-grid .gmt-tile .icon-flights,.skinnydeals.siteid1.page-dailydeals #offer-grp-0 .gmt-tile-grid .gmt-tile .icon-flights{position:absolute;margin:1em 0 0 0;float:none;left:17%}
+.skinnydeals .rotating-promos .gmt-tile,.skinnydeals #carousel-deals-wrapper .gmt-tile{width:33.33%}
+.skinnydeals .rotating-promos .gmt-tile:nth-child(4n+1),.skinnydeals #carousel-deals-wrapper .gmt-tile:nth-child(4n+1){clear:none}
+.skinnydeals .rotating-promos .gmt-tile .tile-details,.skinnydeals #carousel-deals-wrapper .gmt-tile .tile-details{text-align:left !important}
+@media(min-width:0) and (max-width:960px){.skinnydeals.skinnydeals .siteid1.page-dailydeals #offer-grp-0 .gmt-tile-grid .gmt-tile{width:33.33333333333%}
+.skinnydeals.skinnydeals .siteid1.page-dailydeals #offer-grp-0 .gmt-tile-grid .gmt-tile:nth-child(4n+1){clear:none}
+.skinnydeals.skinnydeals .siteid1.page-dailydeals #offer-grp-0 .gmt-tile-grid .gmt-tile:nth-child(3n+1){clear:left}
+.skinnydeals.skinnydeals .content-slider .gmt-tile-grid .gmt-tile:nth-child(4n+1),.skinnydeals.skinnydeals #carousel-deals-wrapper .gmt-tile-grid .gmt-tile:nth-child(4n+1),.skinnydeals.skinnydeals .content-slider .gmt-tile-grid .gmt-tile:nth-child(3n+1),.skinnydeals.skinnydeals #carousel-deals-wrapper .gmt-tile-grid .gmt-tile:nth-child(3n+1){clear:none}
+.skinnydeals.skinnydeals .cruise-slider img{max-width:105px}
+.skinnydeals.skinnydeals .activity-tile-details .tile-image{width:100%}
+}
+@media(min-width:0) and (max-width:750px){.skinnydeals.skinnydeals .rotating-promos .gmt-tile-grid .gmt-tile,.skinnydeals.skinnydeals #carousel-deals-wrapper .gmt-tile-grid .gmt-tile{width:50% !important}
+.skinnydeals.skinnydeals .gmt-tile-grid .gmt-tile:nth-child(3n+1){clear:none}
+.skinnydeals.skinnydeals .gmt-tile-grid .gmt-tile:nth-child(2n+1){clear:left}
+.skinnydeals.skinnydeals .gmt .gmt-tile .tile-details .hotel-short-price{float:none !important}
+.skinnydeals.skinnydeals .hotel-only-price .tile-name{font-size:.6470588235294118em}
+.skinnydeals.skinnydeals .content-slider .gmt-tile-grid .gmt-tile:nth-child(3n+1),.skinnydeals.skinnydeals #carousel-deals-wrapper .gmt-tile-grid .gmt-tile:nth-child(3n+1),.skinnydeals.skinnydeals .content-slider .gmt-tile-grid .gmt-tile:nth-child(2n+1),.skinnydeals.skinnydeals #carousel-deals-wrapper .gmt-tile-grid .gmt-tile:nth-child(2n+1){clear:none}
+.skinnydeals.skinnydeals .cruise-slider .logoheader img{float:none}
+}
+@media(min-width:0) and (max-width:600px){.skinnydeals.skinnydeals .cruise-slider .logoheader img{max-width:150px}
+}
+@media(min-width:0) and (max-width:520px){.skinnydeals.skinnydeals .rotating-promos .gmt-tile-grid .gmt-tile,.skinnydeals.skinnydeals #carousel-deals-wrapper .gmt-tile-grid .gmt-tile{width:100%}
+.skinnydeals.skinnydeals .gmt-tile-grid .gmt-tile,.skinnydeals.skinnydeals .siteid1.page-dailydeals #offer-grp-0 .gmt-tile-grid .gmt-tile{width:100%}
+.skinnydeals.skinnydeals.page-dailydeals #offer-grp-0 .gmt-tile-grid .gmt-tile .icon-flights,.skinnydeals.skinnydeals.page-dailydealspromo #offer-grp-0 .gmt-tile-grid .gmt-tile .icon-flights,.skinnydeals.skinnydeals.siteid1.page-dailydeals #offer-grp-0 .gmt-tile-grid .gmt-tile .icon-flights{left:9%}
+}
+@media only screen and (min-width:45.375em){.skinnydeals .lxactivities .tile-image{height:35%}
+.skinnydeals .lxactivities .new-tile-image{height:100%}
+}
+@media only screen and (max-width:490px){.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .new-tile-header{display:none}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .mobile-tile-destination-header{z-index:100;position:relative;color:white;display:block;text-align:left;font-weight:900;font-size:1.1764705882352942em;margin:-2.05882353em 0 .88235294em .88235294em;text-transform:uppercase}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .divider-line{display:none}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .new-tile-name{float:left;text-align:left;width:65%;font-weight:700;margin-bottom:0;max-height:46px}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .lxactivity-new-left-section{width:65%;display:inline-block;float:left;text-align:left;font-size:1em}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .lxactivity-new-left-section .p{margin-top:0}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .lxactivity-new-left-section .new-tile-freecancel{margin-top:0}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .lxactivity-new-right-section{width:30%;display:inline-block;text-align:right}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .lxactivity-new-right-section.p{margin-top:0}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .lxactivity-new-right-section .save-message-flag{margin-right:-2.64705882em;font-size:.7058823529411765em}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .lxactivity-new-right-section .new-lx-tile-discount{text-decoration:line-through;display:block;font-size:.9411764705882353em;margin-top:0}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .lxactivity-new-right-section .new-lx-tile-price-activity{font-size:1.1764705882352942em;font-weight:500;margin:0 0 0 .17647059em}
+.skinnydeals.skinnydeals .gmt-deals-wrapper .mobile-lx-tabbed-view .lxactivity-new-right-section .new-lx-tile-ticket-type{margin-top:0}
+}

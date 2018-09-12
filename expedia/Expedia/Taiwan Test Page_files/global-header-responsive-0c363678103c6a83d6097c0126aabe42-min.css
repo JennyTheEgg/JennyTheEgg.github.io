@@ -1,0 +1,259 @@
+.site-header-secondary ul{width:auto;white-space:nowrap}
+@media only screen and (max-width:62.5625em){.site-header-secondary .site-navigation{width:auto}
+.site-header-secondary .all-in-collapsed{display:block}
+.site-header-secondary .all-in-collapsed-desktop{display:none}
+.site-header-secondary .all-in-full{display:none}
+.site-header-secondary .menu{top:1.94117647em;right:0;font-size:1.1176470588235294em}
+.site-header-secondary .menu li:first-child a{-webkit-border-radius:.23076923em 0 0 0;-moz-border-radius:.23076923em 0 0 0;-o-border-radius:.23076923em 0 0 0;border-radius:.23076923em 0 0 0}
+}
+@media only screen and (max-width:37.4375em){.alert-banner.secondary.redirect-banner{padding-top:.70588235em;padding-bottom:.70588235em}
+.alert-banner.secondary.redirect-banner a{display:block;padding:0}
+.alert-banner.secondary.redirect-banner .btn-close{font-size:1.1764705882352942em;padding:.35294118em .29411765em .35294118em .29411765em}
+}
+@media only screen and (min-width:45.375em){#account-menu-header{display:none}
+}
+@media only screen and (min-width:30.75em) and (max-width:45.3125em){#account-menu-header .open .menu.menu-arrow-example{width:65vw}
+}
+@media only screen and (max-width:45.3125em){#ab13716status .site-header .site-navigation .language-toggle{display:block}
+#ab13716status .mobile-language-links{display:none}
+#ab13716status #rewardsHeader{display:none}
+#ab13716status #rewardsInAccountIcon #rewardsHeader{display:block}
+#ab13716status #account-menu-header .menu-bar-inner img.signedInIcon.gold{border-color:#e7b40d}
+#ab13716status #account-menu-header .menu-bar-inner img.signedInIcon.blue{border-color:#0085c9}
+#ab13716status #account-menu-header .menu-bar-inner img.signedInIcon.silver{border-color:#6b6b6b}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main ul li{position:relative}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main .userDetails{position:absolute;top:3px;left:63px;display:inherit;margin-left:0}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main .loyaltyDetails{display:block;position:absolute;top:25px;left:63px}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main .loyaltyDetails span{display:inline-block;font-size:12px}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main .loyaltyDetails a{display:inline;font-size:12px;min-width:inherit}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main .loyaltyDetails #rewardsHeader .tierBadge{top:0;font-size:11px;margin:0}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main .loyaltyDetails #rewardsHeader .pointsDisplay{top:3px;font-size:11px;display:block !important}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main .icon-menu-SignedIn img.signedInIcon.gold{border-color:#e7b40d;border-width:6px}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main .icon-menu-SignedIn img.signedInIcon.blue{border-color:#0085c9;border-width:6px}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main .icon-menu-SignedIn img.signedInIcon.silver{border-color:#6b6b6b;border-width:6px}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main ul.menu-links{padding:.70588235em 0 .70588235em 0}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main ul.menu-links li{padding:0;cursor:pointer}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main ul.menu-links li a{max-width:none;padding:.47058824em 1.05882353em .47058824em 1.35294118em}
+#ab13716status #account-menu-header .menu-bar-inner .menu.menu-arrow-example .menu-main ul.menu-links li a:hover{background-color:#edf7ff}
+#ab13716status #account-menu-header .btn-text{color:#0065b8;background:transparent}
+.site-header-primary.us-pos .off-canvas-btn.menu-toggle-btn{margin-top:0}
+.site-header-primary.us-pos #account-menu-header{right:-2.3em;margin:0 .88235294em 0 0}
+.site-header-primary.tv-header #account-menu-header .icon.icon-traveler{color:#fff}
+.site-header-primary .off-canvas-btn.menu-toggle-btn{margin-top:.47058824em}
+#account-menu-header{right:-1.06666667em;float:right;position:relative;padding:0}
+#account-menu-header .menu.menu-arrow-example{width:95vw}
+#account-menu-header .menu-bar-inner .menu.menu-arrow-example{border-radius:5px;top:45px}
+#account-menu-header .menu-bar-inner li a{margin-right:.35294118em;padding:.70588235em .70588235em 0 .76470588em}
+#account-menu-header .menu-bar-inner li button{margin-right:.35294118em;padding:.47058824em .70588235em 0 .76470588em}
+#account-menu-header .menu-bar-inner .icon-signedIn img{height:29px;width:29px;border-radius:50%;border:white;border-style:solid;border-width:3px}
+#account-menu-header .menu-bar-inner .icon.icon-traveler{padding-top:.3em}
+#account-menu-header .menu-bar-inner>li{margin:0}
+#account-menu-header .menu-main{padding:0}
+#account-menu-header .menu-main hr{margin-top:0;margin-bottom:0}
+#account-menu-header .menu-main button{margin:0;padding:0;display:initial}
+#account-menu-header .menu-main ul{padding:1.05882353em 1.05882353em .70588235em 1.05882353em}
+#account-menu-header .menu-main ul li{padding-bottom:.70588235em}
+#account-menu-header .menu-main ul li hr{color:#616161}
+#account-menu-header .menu-main ul li a{padding:0;font-family:HelveticaNeue;font-size:13px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1.38;color:#1869b3;background-color:white;border:0}
+#account-menu-header .menu-main ul .userDetails{margin-left:.70588235em;display:inline}
+#account-menu-header .menu-main ul .userDetails span{font-family:HelveticaNeue;font-size:17px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1.41;color:#1f1f1f}
+#account-menu-header .menu-main ul .loyaltyDetails{display:none}
+#account-menu-header .menu-main span{font-family:HelveticaNeue;font-size:15px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1.4;color:#616161}
+#account-menu-header .menu-main span a{color:#0065b8}
+#account-menu-header .menu-main .btn-label{font-family:Helvetica;font-size:14px;font-weight:bold;font-style:normal;font-stretch:normal;text-align:center;color:#1f1f1f}
+#account-menu-header .menu-main .wrapper{text-align:center}
+#account-menu-header .menu-main .icon-menu-SignedIn img{height:48px;width:48px;border-radius:50%;border:white;border-style:solid;border-width:3px}
+#header-account-signup{display:inline;background-color:white;padding:0}
+.tv-header.site-header-primary .menu a#header-accountMenu-signin{font-weight:normal;min-width:inherit}
+.tv-header.site-header-primary .site-navigation li.ab12855{display:none}
+.site-header-primary .site-navigation li.ab13716status{display:none}
+.site-header{padding-bottom:0;height:auto}
+.site-header .theme-standard+.menu{background-color:#fff;box-shadow:0 9px 27px 0 rgba(0,0,0,0.15);border:solid 3px #00355f}
+.site-header .menu-trigger.btn-text.menu-arrow+.menu{margin-top:0}
+.site-header.site-header-secondary{display:none}
+.site-header.site-header-primary{border-bottom:1px solid transparent;border-color:#ffcb00 transparent #c7c7c7}
+.site-header.site-header-primary.us-pos{padding-top:0}
+.site-header.site-header-primary.us-pos .off-canvas-btn.menu-toggle-btn{margin-top:.45em;margin-bottom:0}
+.site-header.site-header-primary #header-account-signin-expand,.site-header.site-header-primary #header-exclusive-deals{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;-ms-box-sizing:content-box;box-sizing:content-box;-webkit-border-radius:0;-moz-border-radius:0;-o-border-radius:0;border-radius:0;margin-left:-1.6em;margin-right:-1.6em;padding:1.13333333em 1.6em 1.2em;max-width:100%}
+.site-header.site-header-primary #header-exclusive-deals{padding-left:2.47058824em;padding-bottom:0}
+.site-header .mobile-language-links{display:block;position:absolute;right:3em;top:.41176471em}
+.site-header .mobile-language-links li a{font-size:.7647058823529411em}
+.site-header .menu-toggle-btn{display:block;right:-1.06666667em}
+.site-header .menu-toggle-btn:active{color:#0087f5}
+.site-header .emea-cookie-msg{position:static;clear:both}
+.site-header .emea-cookie-msg a{margin-top:-2.46153846em;display:block;float:right;position:absolute;right:.76923077em;top:5.84615385em}
+.site-header .site-navigation{visibility:hidden;height:0;font-size:.8823529411764706em}
+.site-header .site-navigation li,.site-header .site-navigation a{float:none}
+.site-header .site-navigation .language-toggle,.site-header .site-navigation .scratchpad-arrow{display:none}
+.site-header .site-navigation a{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;-ms-box-sizing:content-box;box-sizing:content-box;width:100%;max-width:100%;border-top:1px solid transparent;margin-left:-1.6em;margin-right:-1.6em;-webkit-border-radius:0 !important;-moz-border-radius:0 !important;-o-border-radius:0 !important;border-radius:0 !important;padding:1.13333333em 1.6em 1.2em;border-top-color:#c7c7c7}
+.site-header .site-navigation .menu a{padding-left:2.47058824em;padding-right:.70588235em}
+.site-header .site-navigation,.site-header .site-navigation .nav-group{float:none;clear:both;width:100%}
+.site-header .site-navigation .utility-nav{display:block}
+.site-header .site-navigation .nav-tab .icon{margin-left:.26666667em}
+.site-header .site-navigation .menu{display:none;position:relative;top:0;right:0;left:0;height:0;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;background:#00355f}
+.site-header .site-navigation .menu a{border-top-color:#536d83}
+.site-header .site-navigation .menu li:first-child a,.site-header .site-navigation .menu li:last-child a{border-top-color:#536d83}
+.site-header .site-navigation.responsive-menu-shown,.site-header .site-navigation .nav-group .open>.menu{visibility:visible;display:block;height:auto}
+.site-header .secondary-branding{display:none}
+.ab13323status .site-header .site-navigation .language-toggle{display:block}
+.ab13323status .site-header .mobile-language-links{display:none}
+.site-header-primary.us-pos .site-navigation a{padding-top:.6em;padding-bottom:.6em}
+#home-page .us-pos .secondary-branding{display:none}
+.tv-header.site-header-primary{border-bottom:1px solid transparent;border-color:#004e93 transparent #c7c7c7;padding-bottom:0}
+.tv-header.site-header-primary .mobile-language-links li{float:none;display:inline-block}
+.tv-header.site-header-primary .open>.nav-tab,.tv-header.site-header-primary .open>.nav-tab:focus,.tv-header.site-header-primary .open>.nav-tab:active,.tv-header.site-header-primary .menu a{background:#e5e5e5;color:#1f1f1f}
+.tv-header.site-header-primary .menu a{border-top-color:white;padding-left:2.47058824em}
+.tv-header.site-header-primary .menu li:first-child a{border-bottom:0}
+.tv-header.site-header-primary .menu li:first-child a,.tv-header.site-header-primary .menu li:last-child a{border-top-color:white}
+.tv-header.site-header-primary .site-navigation li,.tv-header.site-header-primary .site-navigation a{display:block}
+.tv-header.site-header-primary .site-navigation li.language-toggle,.tv-header.site-header-primary .site-navigation a.language-toggle{display:none}
+.no-touch #mobile-toggle-header-link:focus{color:#383838}
+.no-touch .tv-header.site-header-primary .nav-tab:hover,.no-touch .tv-header.site-header-primary .nav-tab:focus,.no-touch .tv-header.site-header-primary .nav-tab:active{background:#53a0d3}
+.no-touch .tv-header.site-header-primary .open>.nav-tab:hover,.no-touch .tv-header.site-header-primary .menu a:hover{color:#1f1f1f}
+.no-touch .tv-header.site-header-primary .open>.nav-tab:hover{background:#e5e5e5}
+.no-touch .tv-header.site-header-primary .menu a:hover{background:#f5f5f5}
+}
+@media only screen and (max-width:30.6875em){.site-header li.language-toggle{float:none;margin-top:-0.23529412em}
+}
+@media only screen and (max-width:30.6875em){.site-header-primary .mobile-language-links li,.site-header-primary .mobile-language-links li a{float:none;padding-bottom:0}
+.site-header-primary.cookie-msg-seen .off-canvas-btn.menu-toggle-btn{position:absolute;right:.29411765em}
+.site-header-primary.cookie-msg-seen .emea-cookie-msg{height:.6em}
+.site-header-primary.cookie-msg-seen .emea-cookie-msg a{right:1.07692308em}
+.site-header-primary.cookie-msg-seen .utility-nav li:first-child{margin-top:.94117647em}
+.site-header.hk-pos .mobile-language-links{top:-0.29411765em}
+}
+@media only screen and (max-width:20em){.alert-banner.secondary.redirect-banner .btn-close{top:-0.58823529em}
+}
+.Storefront_2017_B2P_variant_1 #redirectBanner{background-color:#fff;color:#181818}
+.Storefront_2017_B2P_variant_1 #redirectBanner.alert-banner a{color:#181818}
+.Storefront_2017_B2P_variant_1 #redirectBanner .btn-close .btn-label{display:none}
+.Storefront_2017_B2P_variant_1 #header-alert-banner{background-color:#f0dcb4;color:#664408;border:0}
+.Storefront_2017_B2P_variant_1 #header-alert-banner.alert-banner a{color:#664408}
+.Storefront_2017_B2P_variant_1 .travel-arranger.secondary:not(.hidden)+.site-header-primary,.Storefront_2017_B2P_variant_1 #redirectBanner:not(.hidden)+.site-header-primary{-webkit-box-shadow:inset 0 4px 8px -1px rgba(0,0,0,0.2);-moz-box-shadow:inset 0 4px 8px -1px rgba(0,0,0,0.2);box-shadow:inset 0 4px 8px -1px rgba(0,0,0,0.2)}
+.Storefront_2017_B2P_variant_1 #header-logo img{width:124px;height:36px}
+.Storefront_2017_B2P_variant_1 #rewardsHeader{margin-left:10px;margin-top:0;margin-bottom:0}
+.Storefront_2017_B2P_variant_1 #rewardsHeader .benefits_link .tierBadge{border-radius:4px;border:solid 2px #003460;color:#003460;padding:1px 3px;margin-left:0}
+.Storefront_2017_B2P_variant_1 #rewardsHeader .benefits_link .tierBadge.blue{background-color:#52b1ff}
+.Storefront_2017_B2P_variant_1 #rewardsHeader .benefits_link .tierBadge.silver{background-color:#e5e5e5}
+.Storefront_2017_B2P_variant_1 #rewardsHeader .benefits_link .tierBadge.gold{background-color:#e9b300}
+.Storefront_2017_B2P_variant_1 .mobile-language-links li a{color:#00355f}
+.Storefront_2017_B2P_variant_1 .site-header{background-color:#fc0;color:#00355f;border:0}
+.Storefront_2017_B2P_variant_1 .site-header.site-header-primary{box-shadow:none}
+.Storefront_2017_B2P_variant_1 .site-header .secondary-branding-container{display:none}
+.Storefront_2017_B2P_variant_1 .site-header .site-navigation li:not(.open) .nav-tab{color:#00355f;background-color:transparent}
+.Storefront_2017_B2P_variant_1 .site-header .site-navigation li.open .nav-tab{color:#fff}
+.Storefront_2017_B2P_variant_1 .site-header .site-navigation li .bell-trigger-link{color:#00355f}
+.Storefront_2017_B2P_variant_1 .site-header .site-navigation li .bell-trigger-link:focus{color:#00355f !important}
+.Storefront_2017_B2P_variant_1 .site-header .site-navigation li .bell-trigger-link .badge{box-shadow:none !important}
+.Storefront_2017_B2P_variant_1 .site-header-secondary{padding-top:0}
+.Storefront_2017_B2P_variant_1 .site-header-secondary ul.nav-group>li>a{color:#00355f;margin-bottom:3px}
+.Storefront_2017_B2P_variant_1 .site-header-secondary ul.nav-group>li.selected-tab a{border-bottom:3px solid #00355f;margin-bottom:0;background:transparent}
+@media only screen and (max-width:45.3125em){.Storefront_2017_B2P_variant_1 .site-header{padding:0}
+.Storefront_2017_B2P_variant_1 .site-header .menu-toggle-btn{position:unset !important;right:unset;top:unset;margin-top:.41176471em;margin-right:0;margin-bottom:0;margin-left:0;padding:0;color:#00355f}
+.Storefront_2017_B2P_variant_1 .site-header .menu-toggle-btn:active{color:#00355f}
+.Storefront_2017_B2P_variant_1 .site-header .nav-group li:not(.open) .nav-tab{background-color:#fff !important}
+.Storefront_2017_B2P_variant_1 .site-header .nav-group li:not(.open) .nav-tab:focus{background-color:#edf7ff !important}
+.Storefront_2017_B2P_variant_1 .site-header.site-header-primary>.cols-row:not(.partner-loyalty-module){padding:6px 0 0 12px}
+.Storefront_2017_B2P_variant_1 .site-header .site-navigation>ul li:first-child>.nav-tab{border-top:0}
+.Storefront_2017_B2P_variant_1 .site-header .site-navigation li:not(.open) .nav-tab{color:#0065b8}
+.Storefront_2017_B2P_variant_1 #account-menu-header{right:unset;margin:unset}
+.Storefront_2017_B2P_variant_1 #account-menu-header .account-icon-link{padding:5px 9px 8px 12px !important;margin-right:.17647059em}
+.Storefront_2017_B2P_variant_1 #account-menu-header .account-icon-link:hover{background:transparent !important}
+.Storefront_2017_B2P_variant_1 #account-menu-header .btn-text,.Storefront_2017_B2P_variant_1 #account-menu-header .nav-tab{color:#00355f}
+.Storefront_2017_B2P_variant_1 #account-menu-header .menu-bar-inner img.signedInIcon{border-color:#003460}
+.Storefront_2017_B2P_variant_1 #account-menu-header .menu-bar-inner img.signedInIcon.blue{border-color:#0085c9}
+.Storefront_2017_B2P_variant_1 #account-menu-header .menu-bar-inner img.signedInIcon.silver{border-color:#6b6b6b}
+.Storefront_2017_B2P_variant_1 #account-menu-header .menu-bar-inner img.signedInIcon.gold{border-color:#b69000}
+.Storefront_2017_B2P_variant_1 #header-logo{padding:0 0 6px 0 !important}
+.Storefront_2017_B2P_variant_1 #header-logo img{width:101px;height:36px}
+}
+.Storefront_2017_B2P_variant_2 #redirectBanner{background-color:#fff;color:#181818}
+.Storefront_2017_B2P_variant_2 #redirectBanner.alert-banner a{color:#181818}
+.Storefront_2017_B2P_variant_2 #redirectBanner .btn-close .btn-label{display:none}
+.Storefront_2017_B2P_variant_2 #header-alert-banner{background-color:#f0dcb4;color:#664408;border:0}
+.Storefront_2017_B2P_variant_2 #header-alert-banner.alert-banner a{color:#664408}
+.Storefront_2017_B2P_variant_2 .travel-arranger.secondary:not(.hidden)+.site-header-primary,.Storefront_2017_B2P_variant_2 #redirectBanner:not(.hidden)+.site-header-primary{-webkit-box-shadow:inset 0 4px 8px -1px rgba(0,0,0,0.2);-moz-box-shadow:inset 0 4px 8px -1px rgba(0,0,0,0.2);box-shadow:inset 0 4px 8px -1px rgba(0,0,0,0.2)}
+.Storefront_2017_B2P_variant_2 #header-logo img{width:124px;height:36px}
+.Storefront_2017_B2P_variant_2 #rewardsHeader{margin-left:10px;margin-top:0;margin-bottom:0}
+.Storefront_2017_B2P_variant_2 #rewardsHeader .benefits_link .tierBadge{border-radius:4px;border:solid 2px #003460;color:#003460;padding:1px 3px;margin-left:0}
+.Storefront_2017_B2P_variant_2 #rewardsHeader .benefits_link .tierBadge.blue{background-color:#52b1ff}
+.Storefront_2017_B2P_variant_2 #rewardsHeader .benefits_link .tierBadge.silver{background-color:#e5e5e5}
+.Storefront_2017_B2P_variant_2 #rewardsHeader .benefits_link .tierBadge.gold{background-color:#e9b300}
+.Storefront_2017_B2P_variant_2 .mobile-language-links li a{color:#00355f}
+.Storefront_2017_B2P_variant_2 .site-header{background-color:#fff;color:#00355f}
+.Storefront_2017_B2P_variant_2 .site-header.site-header-primary{box-shadow:none;border:0}
+.Storefront_2017_B2P_variant_2 .site-header .secondary-branding-container{display:none}
+.Storefront_2017_B2P_variant_2 .site-header .site-navigation li:not(.open) .nav-tab{color:#00355f;background-color:transparent}
+.Storefront_2017_B2P_variant_2 .site-header .site-navigation li.open .nav-tab{color:#fff}
+.Storefront_2017_B2P_variant_2 .site-header .site-navigation li .bell-trigger-link{color:#00355f}
+.Storefront_2017_B2P_variant_2 .site-header .site-navigation li .bell-trigger-link:focus{color:#00355f !important}
+.Storefront_2017_B2P_variant_2 .site-header .site-navigation li .bell-trigger-link .badge{box-shadow:none !important}
+.Storefront_2017_B2P_variant_2 .site-header-secondary{padding-top:0;border-color:unset;border-bottom:1px solid #c7c7c7}
+.Storefront_2017_B2P_variant_2 .site-header-secondary ul.nav-group>li>a{color:#00355f;margin-bottom:3px}
+.Storefront_2017_B2P_variant_2 .site-header-secondary ul.nav-group>li.selected-tab a{border-bottom:3px solid #00355f;margin-bottom:0;background:transparent}
+@media only screen and (max-width:45.3125em){.Storefront_2017_B2P_variant_2 .site-header{padding:0}
+.Storefront_2017_B2P_variant_2 .site-header .menu-toggle-btn{position:unset !important;right:unset;top:unset;margin-top:.41176471em;margin-right:0;margin-bottom:0;margin-left:0;padding:0;color:#00355f}
+.Storefront_2017_B2P_variant_2 .site-header .menu-toggle-btn:active{color:#00355f}
+.Storefront_2017_B2P_variant_2 .site-header .nav-group li:not(.open) .nav-tab{background-color:#fff !important}
+.Storefront_2017_B2P_variant_2 .site-header .nav-group li:not(.open) .nav-tab:focus{background-color:#edf7ff !important}
+.Storefront_2017_B2P_variant_2 .site-header.site-header-primary>.cols-row:not(.partner-loyalty-module){padding:6px 0 0 12px}
+.Storefront_2017_B2P_variant_2 .site-header .site-navigation li:not(.open) .nav-tab{color:#0065b8}
+.Storefront_2017_B2P_variant_2 #account-menu-header{right:unset;margin:unset}
+.Storefront_2017_B2P_variant_2 #account-menu-header .account-icon-link{padding:5px 9px 8px 12px !important;margin-right:.17647059em}
+.Storefront_2017_B2P_variant_2 #account-menu-header .account-icon-link:hover{background:transparent !important}
+.Storefront_2017_B2P_variant_2 #account-menu-header .btn-text,.Storefront_2017_B2P_variant_2 #account-menu-header .nav-tab{color:#00355f}
+.Storefront_2017_B2P_variant_2 #account-menu-header .menu-bar-inner img.signedInIcon{border-color:#003460}
+.Storefront_2017_B2P_variant_2 #account-menu-header .menu-bar-inner img.signedInIcon.blue{border-color:#0085c9}
+.Storefront_2017_B2P_variant_2 #account-menu-header .menu-bar-inner img.signedInIcon.silver{border-color:#6b6b6b}
+.Storefront_2017_B2P_variant_2 #account-menu-header .menu-bar-inner img.signedInIcon.gold{border-color:#b69000}
+.Storefront_2017_B2P_variant_2 #header-logo{padding:0 0 6px 0 !important}
+.Storefront_2017_B2P_variant_2 #header-logo img{width:101px;height:36px}
+}
+.Storefront_2017_B2P_variant_1 .Storefront_2017_B2P_shadow,.Storefront_2017_B2P_variant_2 .Storefront_2017_B2P_shadow{-webkit-box-shadow:inset 0 4px 8px -1px rgba(0,0,0,0.2) !important;-moz-box-shadow:inset 0 4px 8px -1px rgba(0,0,0,0.2) !important;box-shadow:inset 0 4px 8px -1px rgba(0,0,0,0.2) !important}
+.Storefront_2017_B2P_variant_1#join-rewards-banner,.Storefront_2017_B2P_variant_2#join-rewards-banner{background-color:#ffdd57;color:#1f1f1f;padding-bottom:.58823529em}
+.Storefront_2017_B2P_variant_1#join-rewards-banner #join-rewards-close-btn,.Storefront_2017_B2P_variant_2#join-rewards-banner #join-rewards-close-btn{top:unset}
+.hide_navigation_home_link #all-in-home-header-link{display:none}
+@media only screen and (max-width:960px){.menu.double-wide{right:0 !important}
+.menu.double-wide.two-column{width:31em;right:0 !important}
+.menu.double-wide.two-column .menu-header,.menu.double-wide.two-column .item-list{width:100%}
+.menu.double-wide.two-column .divider{position:static;height:1px;width:90%;margin-left:5%}
+.menu.double-wide .menu-header{float:none}
+.menu.double-wide .menu-header .greeting-icon img{margin:2em 0 -3em 45%}
+.menu.double-wide .menu-header .greeting-message{margin-top:2em}
+.menu.double-wide .menu-header .greeting-view-all{position:absolute;bottom:1em;width:100%;text-align:center}
+.menu.double-wide .item-list{float:none}
+.menu.double-wide .item-list .last-tray-item.pad-1,.menu.double-wide .item-list .last-tray-item.pad-2,.menu.double-wide .item-list .last-tray-item.pad-3{padding-top:0}
+}
+@media only screen and (max-width:45.3125em){.site-navigation .scratchpad.open .nav-tab{color:#fff !important;background:#00355f !important}
+.site-navigation .scratchpad .menu{width:120% !important;left:-1.6em !important;padding-top:0;background-color:#fff;border:0}
+.site-navigation .scratchpad .scratchpad-arrow{display:none !important}
+.site-navigation .scratchpad .menu .menu-header{position:relative;width:auto;padding:0}
+.site-navigation .scratchpad .menu .menu-header+ul li a:first-child{-webkit-border-radius:0;-moz-border-radius:0;-o-border-radius:0;border-radius:0}
+.site-navigation .scratchpad .scratchpad-greeting{width:100%}
+.site-navigation .scratchpad .scratchpad-greeting .greeting-icon img{margin:0 0 -1em 46%}
+.site-navigation .scratchpad .scratchpad-greeting .btn-action{width:10em;white-space:nowrap}
+.site-navigation .scratchpad .scratchpad-greeting .sub-action{margin-left:0;border:0}
+.site-navigation .scratchpad .menu .scratchpad-item .item-link{min-width:100%;min-height:3em;border:0;padding:.8em 1.6em}
+.site-navigation .scratchpad .scratchpad-item .item-data{font-size:.8666666666666667em;padding-left:4.769231em}
+.site-navigation .scratchpad .scratchpad-item .item-data .item-img-icon{font-size:2.769230769230769em}
+.site-navigation .scratchpad .scratchpad-item .item-img-icon{font-size:2.4em;top:0}
+.site-navigation .scratchpad .scratchpad-item.last-tray-item{height:3em;border-radius:0;overflow:visible}
+.site-navigation .scratchpad .scratchpad-item .item-link.view-all-history{-webkit-border-radius:0;-moz-border-radius:0;-o-border-radius:0;border-radius:0;width:100%}
+.site-navigation .scratchpad .menu .item-link .badge{line-height:1.45}
+.site-navigation .shop-nav .scratchpad .menu{right:0;margin-right:0}
+.menu.double-wide{width:100% !important}
+.menu.double-wide .menu-header,.menu.double-wide .item-list{width:100%}
+.menu.double-wide .menu-header{float:none;position:relative;width:100%;min-width:100%;border:0;padding:.8em 1.6em;font-size:15px}
+.menu.double-wide .menu-header .greeting-message{margin-top:0;padding:1em 1.5em}
+.menu.double-wide .menu-header .greeting-submessage{margin:0 auto}
+.menu.double-wide .menu-header button{width:40% !important;min-width:10em;margin:1.5em 0 2em 30%}
+.menu.double-wide .menu-header .greeting-view-all{position:static;bottom:1em;text-align:center}
+.menu.double-wide .menu-header .greeting-view-all a{margin-left:-2.6em;border-top:0}
+.menu.double-wide.two-column .divider{display:none}
+.menu.double-wide .item-list{float:none}
+.menu.double-wide .item-list .scratchpad-item{float:none}
+.menu.double-wide .item-list .item-price-urgency{right:12%}
+}
+@media only screen and (max-width:30.6875em){.site-navigation .scratchpad .menu .scratchpad-menu-wrapper{padding-right:10%;padding-left:3%}
+.site-navigation .scratchpad .menu .scratchpad-menu-wrapper .item-price-urgency{right:0}
+}

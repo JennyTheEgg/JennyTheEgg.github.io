@@ -1,0 +1,79 @@
+(function (Promise) {
+    /**
+     * Time in milliseconds to reject a promise if callback in dctk.onMarketingAttributionUpdated()
+     * has not occurred within the specified time (TIMEOUT_MS)
+     */
+    var TIMEOUT_MS = 3000;
+
+    var LOG_LABEL = 'marketing.utag.loader.';
+
+    define('marketing.utag.loader', function () {
+        function whenPageLoaded() {
+            var dctkLoaded = new Promise(function (resolve) {
+                require(['marketing.utag.loader.dctk'], function (dctkUtagLoader) {
+                    resolve(dctkUtagLoader);
+                });
+            });
+            var timedOut = new Promise(function (resolve, reject) {
+                setTimeout(reject, TIMEOUT_MS);
+            });
+
+            return Promise.race([dctkLoaded, timedOut]);
+        }
+
+        return {
+            load: function (callback) {
+                whenPageLoaded().then(function (dctkUtagLoader) {
+                    dctkUtagLoader.load(callback);
+                }, function () {
+                    logMessage(LOG_LABEL + 'dctk.onMarketingAttributionUpdated.dctk-analytics-core-not-available');
+                    callback();
+                });
+            }
+        };
+    });
+
+    define('marketing.utag.loader.dctk', ['dctk/dctk'], function (dctk) {
+
+        function whenMarketingAttributionUpdated() {
+            var marketingAttributionUpdated = new Promise(dctk.onMarketingAttributionUpdated);
+            var marketingAttributionTimedOut = new Promise(function (resolve, reject) {
+                setTimeout(reject, TIMEOUT_MS);
+            });
+            return Promise.race([marketingAttributionUpdated, marketingAttributionTimedOut]);
+        }
+
+        return {
+
+            /**
+             * @param callback - Callback which will accept a returned cesc object where cesc object can either be
+             *                   an object or undefined (in a failure)
+             *      Example:  callback = function(cesc) {}
+             */
+            load: function (callback) {
+                if ('undefined' === typeof dctk.onMarketingAttributionUpdated) {
+                    logMessage(LOG_LABEL + 'dctk.onMarketingAttributionUpdated.queue-not-available');
+                    callback();
+                    return;
+                }
+                whenMarketingAttributionUpdated().then(callback, function () {
+                    logMessage(LOG_LABEL + 'dctk.onMarketingAttributionUpdated.timed-out');
+                    callback();
+                });
+            }
+
+        }
+    });
+
+    /**
+     * @params same arguments as dctk.logging.logMessage
+     * @see "https://ewegithub.sb.karmalab.net/EWE/datacapture-toolkit/blob/master/datacapture/src/main/resources/datacapture/js/docs/api.md#dctk.logging.logMessage"
+     */
+    function logMessage(message) {
+        if ('undefined' === typeof dctk || 'undefined' === typeof dctk.logging || 'undefined' === typeof dctk.logging.logMessage) {
+            return;
+        }
+        dctk.logging.logMessage(message, new Error('utag-error'));
+    }
+
+})(Yaku);
