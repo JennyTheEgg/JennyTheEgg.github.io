@@ -1,0 +1,2650 @@
+	<!DOCTYPE html>
+	<html lang="zh">
+	<head>
+	<meta charset="utf-8">
+	<title>面向 Enterprise Server、雲和儲存的開放原始程式碼解決方案 | SUSE</title>
+	<meta name="description" content="利用 SUSE Linux Enterprise Server、面向 IaaS 的 雲技術以及 SUSE 的軟體定義儲存來實現基礎設施現代化。">
+	<meta name="keywords" content="Linux、最佳 Linux 伺服器、企業級 Linux、Linux 作業系統、Linux 伺服器作業系統">
+	<style type="text/css">
+
+@media (max-width: 1199px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sp-only {
+    display: none !important;
+  }
+}
+</style>
+	
+	<script type="application/ld+json">
+	{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"url": "https://www.suse.com/",
+	"potentialAction": {
+	"@type": "SearchAction",
+	"target": "https://www.suse.com/search/?s={search_term_string}",
+	"query-input": "required name=search_term_string"
+	}
+	}
+	</script>
+	
+	<meta property="og:image" content="https://www.suse.com/assets/img/suse_logo_1408x640_og-image.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:title" content="面向 Enterprise Server、雲和儲存的開放原始程式碼解決方案"/>
+	<meta property="og:description" content="利用 SUSE Linux Enterprise Server、面向 IaaS 的 雲技術以及 SUSE 的軟體定義儲存來實現基礎設施現代化。"/>
+	
+	<script type="text/javascript">
+	function getCookie(cname) {
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for (var i = 0; i < ca.length; i++) {
+	var c = ca[i];
+	while (c.charAt(0) == ' ') {
+	c = c.substring(1);
+	}
+	if (c.indexOf(name) == 0) {
+	return c.substring(name.length, c.length);
+	}
+	}
+	return "";
+	}
+	
+	var user_language = getCookie("user_language"); //gets language cookie
+	
+	//console.log("user_language cookie = \"" + user_language + "\"");
+	
+	if (user_language == "en-us" || user_language == "") {
+	
+	// console.log("if statement: true");
+	// console.log("Start of Google Analytics Content Experiment Code (current testing variation file: index_ctest.html)");
+	
+	/* Start of Google Analytics Content Experiment Code (current testing variation file: index_ctest.html)*/
+	function utmx_section() {
+	}
+	
+	function utmx() {
+	}
+	
+	(function () {
+	var
+	k = '46697118-34', d = document, l = d.location, c = d.cookie;
+	if (l.search.indexOf('utm_expid=' + k) > 0) return;
+	
+	function f(n) {
+	if (c) {
+	var i = c.indexOf(n + '=');
+	if (i > -1) {
+	var j = c.indexOf(';', i);
+	return escape(c.substring(i + n.length + 1, j < 0 ? c.length : j))
+	}
+	}
+	}
+	
+	var x = f('__utmx'), xx = f('__utmxx'), h = l.hash;
+	d.write(
+	'<sc' + 'ript src="' + 'http' + (l.protocol == 'https:' ? 's://ssl' :
+	'://www') + '.google-analytics.com/ga_exp.js?' + 'utmxkey=' + k +
+	'&utmx=' + (x ? x : '') + '&utmxx=' + (xx ? xx : '') + '&utmxtime=' + new Date().valueOf() + (h ? '&utmxhash=' + escape(h.substr(1)) : '') +
+	'" type="text/javascript" charset="utf-8"><\/sc' + 'ript>')
+	})();
+	
+	//utmx('url','A/B');
+	/* End of Google Analytics Content Experiment Code */
+	
+	// console.log("End of Google Analytics Content Experiment Code (current testing variation file: index_ctest.html)");
+	} else {
+	// console.log("if statement: false");
+	}
+	</script>
+	
+	<script type="text/javascript">
+	if (user_language == "en-us" || user_language == "") { //2nd seperate script tags required for call or function call doesn't work right.
+	// console.log("second script");
+	utmx('url', 'A/B');
+	// console.log("second script complete");
+	}
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-D64V');</script>
+	<!-- End Google Tag Manager -->
+	
+	<link rel="alternate" href="https://www.suse.com/de-de/" hreflang="de" />
+
+	<link rel="alternate" href="https://www.suse.com" hreflang="en" />
+
+	<link rel="alternate" href="https://www.suse.com/es-es/" hreflang="es" />
+
+	<link rel="alternate" href="https://www.suse.com/fr-fr/" hreflang="fr" />
+
+	<link rel="alternate" href="https://www.suse.com/zh-cn/" hreflang="zh-cn" />
+
+	<link rel="alternate" href="https://www.suse.com/ja-jp/" hreflang="ja" />
+
+	<link rel="alternate" href="https://www.suse.com/pt-br/" hreflang="pt" />
+
+	
+	<link rel="icon" type="image/png" href="https://www.suse.com/favicon.ico">
+
+	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7197294/722748/css/fonts.css" />
+
+	
+	
+	<!-- www.Cludo.com search start CSS -->
+	<link href="//customer.cludo.com/assets/10000007/10000007/cludo-search.min.css" type="text/css" rel="stylesheet">
+	<!-- www.Cludo.com search end CSS -->
+	
+	<link rel="stylesheet" href="https://www.suse.com/min/?b=assets/css&f=bootstrap.css,helpers.css,jquery-ui.min.css,featherlight.min.css,featherlight.gallery.min.css,lightslider.css,main.css,iefix.css">
+
+	<link rel="stylesheet" href="https://www.suse.com/assets/css/font-awesome.css"> 
+
+	<script type="text/javascript" src="https://www.suse.com/min/?b=assets/js&f=jquery-2.1.3.min.js,dummyfile.js"></script>
+
+	
+	<link rel="canonical" href="https://www.suse.com/zh-cn/" />
+
+	
+	<script type='text/javascript'>
+	var demandbase_data_promise = jQuery.Deferred();
+	if ( sessionStorage.getItem('demandbase_data') ) {
+	demandbase_data_promise.responseJSON = JSON.parse(sessionStorage.getItem('demandbase_data'));
+	demandbase_data_promise.resolve(demandbase_data_promise.responseJSON);
+	} else {
+	demandbase_data_promise = jQuery.ajax({
+	type: 'get',
+	url: 'https://www.suse.com/lead-data/',
+	dataType: 'json',
+	}).done(function(data) {
+	if ( data.ip && data.country ) {
+	sessionStorage.setItem('demandbase_data',JSON.stringify(data));
+	}
+	});
+	}
+	var isLoggedIn = false;
+	function setLoginStatus() {
+	var cks = document.cookie.split(';');
+	for(var i=0; i < cks.length; i++) {
+	var c = cks[i];
+	while(c.charAt(0)===' ') {
+	c = c.substring(1,c.length);
+	}
+	if(c.indexOf("IPC")===0 && c.indexOf("=")==16) {
+	isLoggedIn = true;
+	}
+	}
+	}
+	setLoginStatus();
+	if (isLoggedIn) {
+	var logged_in_data_promise = jQuery.ajax({
+	type: 'get',
+	url: 'https://www.suse.com/common/util/secure/userInfoJson.php',
+	data: {},
+	xhrFields: {withCredentials: true},
+	success: function(data) { },
+	error: function() {},
+	dataType: 'json'
+	});
+	}
+	</script>
+	
+	<!-- start universal analytics -->
+	<script type="text/javascript" src="https://www.suse.com/common/inc/js/universal_analytics.js?x=14"></script>
+
+	<!-- end universal analytics -->
+	
+	<!-- Start Visual Website Optimizer Asynchronous Code -->
+	<script type='text/javascript'>
+	var _vwo_code=(function(){
+	var account_id=367557,
+	settings_tolerance=2000,
+	library_tolerance=2500,
+	use_existing_jquery=false,
+	/* DO NOT EDIT BELOW THIS LINE */
+	f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b) );h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random() );return settings_timer;}};}() );_vwo_settings_timer=_vwo_code.init();
+	</script>
+	<!-- End Visual Website Optimizer Asynchronous Code -->
+	
+	<script type="text/javascript" src="https://validation.incindio.com/Validation/PhoneInclude"></script>
+
+	<script type="text/javascript" src="https://validation.incindio.com/Validation/EmailInclude"></script>
+
+	<script src="https://kit.fontawesome.com/c9bcffc57e.js" crossorigin="anonymous"></script> <script type="text/javascript" src="/assets/js/home2.js"></script>
+
+	<style media="screen">
+	
+	#derrells-carousel.de-de .digi-transform .content h2 { font-size:58px; }
+	@media screen and (max-width:768px) {
+	#derrells-carousel.de-de .digi-transform .content h2 { font-size:32px; letter-spacing:0; }
+	}
+	@media screen and (max-width:440px) {
+	#derrells-carousel.de-de .digi-transform .content h2 { font-size:26px; }
+	}
+	
+	/* SUSECON! YAY! */
+	#derrells-carousel li.susecon a.cover { display:none; }
+	#derrells-carousel li.susecon .twitbox { text-align:right; margin-top:-60px; }
+	#derrells-carousel li.susecon .twitbox iframe { margin-left:auto; background-color:#0d2c40; }
+	@media screen and (min-width:993px) {
+	#derrells-carousel li.susecon { background-image:none !important; }
+	}
+	@media screen and (max-width:992px) {
+	.twitbox { display:none; }
+	}
+	
+	#derrells-carousel li.bethedifference .content {
+	text-align: right;
+	width: 100%;
+	padding-right: 4%;
+	padding-top: 70px;
+	}
+	@media screen and (max-width:768px) {
+	#derrells-carousel li.bethedifference .content {
+	padding-top: 0;
+	text-align: center;
+	}
+	}
+	#derrells-carousel li.bethedifference .content .button-clear {
+	margin-left: auto;
+	}
+	
+	
+	</style>
+	</head>
+	<body>
+	<div class="container_fluid" id="cookie_box">
+	<div class="cookies-alert active">
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-sm-9">
+	<p>SUSE 使用 Cookie 為您提供最佳的線上體驗。如果您繼續訪問本網站，則表示您同意使用 Cookie。有關詳情，請參閱我們的 <a href="/company/legal/#cookies-policy">Cookie 政策</a>。</p>
+
+	</div>
+	
+	<div class="col-xs-12 col-sm-1"></div>
+	
+	<div class="col-xs-12 col-sm-2"><a class="button-clear align-middle" href="#">同意</a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<header class="nocontent zh-cn">
+	<div class="clear"></div>
+	<div class="container-fluid" style="height:0;">
+	<div class="floating-head-container">
+	<div id="floating-head">
+	<div id="head-image"></div>
+	<div id="head-text">
+	<div id="head-text2">
+	與我們聊天
+	</div>
+	</div>
+	<div id="head-close"></div>
+	</div>
+	</div>
+	</div>
+	
+	<div id="utilitynav">
+	<div class="container-fluid">
+	<div class="logo">
+	<a href="https://www.suse.com/zh-cn/">
+
+	<span class="logo-blurb">We adapt. You succeed.</span>
+	</a>
+	</div>
+	<!--div id="utilitynav-cart">
+	<a href="https://buy.suse.com/store?Action=DisplayPage&Env=BASE&SiteID=suse&id=ThreePgCheckoutShoppingCartPage" onClick="if (typeof ga == 'function') {
+
+	ga('send', {
+	'hitType': 'event', // Required.
+	'eventCategory': 'shop', // Required.
+	'eventAction': 'click', // Required.
+	'eventLabel': 'minicart_link',
+	'anonymizeIp': true
+	});
+	}
+	
+	setTimeout(function() {
+	window.location.href = forward_url;
+	}, 400);"><span class="fa fa-shopping-cart"><span id="cart-number"></span></span>查看購物車</a>
+	</div>
+	<div id="utilitynav-customer" class="hidden-xs"><a href="https://scc.suse.com/" onclick="ga('send', 'event', 'Utility Nav', 'click', 'Customer Center', {'anonymizeIp': true}); return true;">客戶中心</a></div>
+	<div id="utilitynav-contact" class="hidden-xs"><a href="https://www.suse.com/zh-cn/contact/" onclick="ga('send', 'event', 'Utility Nav', 'click', 'Contact', {'anonymizeIp': true}); return true;">聯繫方式</a></div>
+	<div id="utilitynav-login" class="hidden-xs">
+	<a id="login_trigger" href="#" data-di-id="di-id-f1f6f7f2-c9a9d9c5">帳戶<i class="fa fa-user-circle-o"></i></a>
+	</div>
+	
+	<div id="utilitynav-vsep" class="hidden-xs"><span></span></div>
+	
+	<div id="utilitynav-language">
+	<div class="menu-item"> <span id="language-name">中文(簡體)</span>
+	&nbsp;<span class="fa fa-caret-down"></span><i class="fa fa-globe"></i>
+	</div>
+	</div>
+	
+	<div id="utilitynav-search"-->
+	<div id="searchbox">
+	<form id="searchform" action="https://www.suse.com/zh-cn/search/" onsubmit="ga('send', 'event', 'Utility Nav', $('#searchform .search-text').val(), 'Search', {'anonymizeIp': true}); return true;">
+	<input type="text" class="search-text" name="s" placeholder="搜索"/>
+	<button type="submit" class="fa fa-search search-submit"></button>
+	</form>
+	</div>
+	</div>
+	<div id="utilitynav-chat" class="hidden-xs">
+	<a href="#" class="butn" data-toggle="modal" data-target="#talk-modal">與我們聊天</a>
+
+	</div>
+	</div>
+	</div>
+	
+	<div id="menu">
+	<div class="container-fluid">
+	<div class="logo">
+	<a href="https://www.suse.com/zh-cn/">
+
+	We adapt. You succeed.
+	</a>
+	</div>
+	<a href="#" id="toggle" class="navbars" aria-hidden="true"><i class="fa fa-bars fa-2x"></i></a>
+	<!--div id="nav" role="navigation" aria-hidden="false">
+	<div class="categories menu-items">
+	<div class="letstalkmobile"><a href="#" class="mobile-talk" data-toggle="modal" data-target="#talk-modal">與我們聊天</a></div>
+	<div class="sub1 category products-solutions"><a>產品和解決方案<i class="fa fa-angle-right fa-2x"></i></a></div>
+	<div class="sub1 category support"><a>支援和服務<i class="fa fa-angle-right fa-2x"></i></a></div>
+	<div class="sub1 category partners"><a>合作夥伴<i class="fa fa-angle-right fa-2x"></i></a></div>
+	<div class="sub1 category communities"><a>社區<i class="fa fa-angle-right fa-2x"></i></a></div>
+	<div class="sub1 category category-about"><a>關於<i class="fa fa-angle-right fa-2x"></i></a></div>
+	<div class="category downloads "><a href="https://www.suse.com/zh-cn/download-linux/" onclick="ga('send', 'event', 'Main Nav', 'button', 'trial download', {'anonymizeIp': true});">免費下載</a></div>
+	<div class="category shop "><a href="https://www.suse.com/zh-cn/shop/" onclick="ga('send', 'event', 'Main Nav', 'button', 'suse shop', {'anonymizeIp': true});">購買</a></div>
+	</div>
+	</div-->
+	</div>
+	<div class="breadcrumbs-container">
+	<div class="header-border home">
+	<span class="home-start"> </span>
+	</div>
+	</div>
+	
+	
+	</div>
+	
+	<!-- Let's Talk Modal -->
+	<div class="modal fade" id="talk-modal" tabindex="-1" role="dialog" aria-labelledby="letsTalkModal">
+	<div class="modal-dialog" role="document">
+	<div class="modal-content">
+	<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="talk-x">&times;</span></span></button>
+	</div>
+	<div class="modal-body">
+	<div class="row">
+	<!-- <iframe src="/racframe"/> -->
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!-- End Let's Talk Modal -->
+	
+	<!-- Feedback Modal -->
+	<div class="modal fade" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedbackModal">
+	<div class="modal-dialog" role="document">
+	<div class="modal-content">
+	<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="feedback-x">&times;</span></span></button>
+	</div>
+	<div class="modal-body">
+	<div class="row">
+	<div class="col-md-6">
+	<p class="bluebg_h2">向我們提供回饋</p>
+	<p class="feedback-lg-text">是否獲得有關該網站的一些回饋？告訴我們，以便我們能夠修復這些問題。</p>
+	<p class="feedback-sm-text"></p>
+	<div class="feedback-line"></div>
+	<p>有關支援資訊，請訪問<a href="/support/">支持</a>。</p>
+
+	<div class="feedback-numbers">
+	<div class="row">
+	<div class="col-sm-6 feedback-sales">
+	銷售:<br>800-906151
+	</div>
+	<div class="col-sm-6 feedback-support">
+	支持:<br>+1-801-861-4000
+	</div>
+	</div>
+	</div>
+	<div class="feedback-social">
+	<div class="row">
+	<div class="col-md-6">
+	<h4>與我們聯繫</h4>
+	</div>
+	<div class="col-md-6 social-icons">
+	<a href="https://www.facebook.com/SUSEWorldwide"><i class="fa fa-facebook fa-fw"></i></a>
+	<a href="https://twitter.com/SUSE"><i class="fa fa-twitter fa-fw"></i></a>
+
+	<a href="https://www.linkedin.com/company/suse"><i class="fa fa-linkedin fa-fw"></i></a>
+
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="col-md-6">
+	<p class="nobg_h2"><i class="fa fa-pencil-square-o orange"></i> 回饋表</p>
+	<p class="feedback-solution">
+	我們努力適應客戶，助您們取得成功。
+	</p>
+	
+	<div class="feedback-form-wrapper">
+	<iframe data-src-to-load="https://www.suse.com/zh-cn/feedback/" frameborder="0" allowtransparency="true"></iframe>
+	</div>
+	<div class="feedback-form-footer">
+	<div class="row">
+	<div class="col-md-6 talk-privacy">
+	<a href="https://www.suse.com/zh-cn/company/policies/privacy/">閱讀隱私權原則</a>
+
+	</div>
+	<div class="col-md-6 talk-required">
+	必填欄位*
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!-- Feedback Modal -->
+	
+	
+	<!-- Video Player Modal -->
+	<div class="modal fade" id="videoModalOne" tabindex="-3" role="dialog" aria-labelledby="videoModal">
+	<div class="modal-dialog" role="document">
+	<div class="modal-content">
+	<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="talk-x">X</span></span></button>
+	</div>
+	<div class="modal-body">
+	<iframe width="560" height="315" id="videoPlayerFrame" src="" frameborder="0" allowfullscreen></iframe>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<!------- Tags for SUSE oneTag------->
+	<!-- One Tag Conditional Container: Suse (9389) | SUSE oneTag (7534) -->
+	<script type="text/javascript">
+	var ft_onetag_7534 = {
+	ft_vars:{
+	"ftXRef":"",
+	"ftXValue":"",
+	"ftXType":"",
+	"ftXName":"",
+	"ftXNumItems":"",
+	"ftXCurrency":"",
+	"U1":"",
+	"U2":"",
+	"U3":"",
+	"U4":"",
+	"U5":"",
+	"U6":"",
+	"U7":"",
+	"U8":"",
+	"U9":"",
+	"U10":"",
+	"U11":"",
+	"U12":"",
+	"U13":"",
+	"U14":"",
+	"U15":"",
+	"U16":"",
+	"U17":"",
+	"U18":"",
+	"U19":"",
+	"U20":""
+	},
+	ot_dom:document.location.protocol+'//servedby.flashtalking.com',
+	ot_path:'/container/9389;72632;7534;iframe/?',
+	ot_href:'ft_referrer='+escape(document.location.href),
+	ot_rand:Math.random()*1000000,
+	ot_ref:document.referrer,
+	ot_init:function(){
+	var o=this,qs='',count=0,ns='';
+	for(var key in o.ft_vars){
+	qs+=(o.ft_vars[key]==''?'':key+'='+o.ft_vars[key]+'&');
+	}
+	count=o.ot_path.length+qs.length+o.ot_href+escape(o.ot_ref).length;
+	ns=o.ot_ns(count-2000);
+	document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="'+o.ot_dom+o.ot_path+qs+o.ot_href+'&ns='+ns+'&cb='+o.ot_rand+'"></iframe>');
+	},
+	ot_ns:function(diff){
+	if(diff>0){
+	var o=this,qo={},
+	sp=/(?:^|&)([^&=]*)=?([^&]*)/g,
+	fp=/^(http[s]?):\/\/?([^:\/\s]+)\/([\w\.]+[^#?\s]+)(.*)?/.exec(o.ot_ref),
+	ro={h:fp[2],p:fp[3],qs:fp[4].replace(sp,function(p1,p2,p3){if(p2)qo[p2]=[p3]})};
+	return escape(ro.h+ro.p.substring(0,10)+(qo.q?'?q='+unescape(qo.q):'?p='+unescape(qo.p)));
+	}else{
+	var o=this;
+	return escape(unescape(o.ot_ref));
+	}
+	}
+	};
+	ft_onetag_7534.ot_init();
+	</script>
+	</header>
+	
+	<div>
+<div class="pc-only" style="background-color: #0d2c40;">
+<div style="width:720px; margin: 200px auto 0px;">
+<script async data-uid="74fbf1db21" src="https://prodigious-knitter-6185.ck.page/74fbf1db21/index.js"></script>
+</div></div>
+<div class="sp-only">
+<div style="margin: 150px 0px 5px; border: 1px solid red;">
+<script async data-uid="74fbf1db21" src="https://prodigious-knitter-6185.ck.page/74fbf1db21/index.js"></script>
+	  </div></div>
+</div>
+
+<div class="home-blog-module">
+	<!-- Blog Module settings: {"englishFallback":true,"postType":"posts","url":"https:\/\/www.suse.com\/c\/zh-hans\/wp-json\/wp\/v2\/posts\/?per_page=10&_embed","cached":true,"total_posts_found":10}--><!--Start Blog Content -->
+	<div class="blog_module_1 litegray">
+	<div class="blog_module container-fluid">
+	<h2>Latest Whitepapers</h2>
+	<div class="blog_row">
+	<script type="text/javascript">
+	var blog_images = new Array(10);
+	</script>
+	
+	<div class="blog_article">
+	<div class="blog_article2">
+	<div class="featured_img" id="featured_img_2458_0" style="background:transparent url(https://www.suse.com/c/wp-content/uploads/2020/02/Lenovo-Video_Solution-Overview.png) center center no-repeat; background-size:cover;"></div>
+	<div class="blog_details">
+	<a class="button-clear button2" href="https://www.suse.com/c/zh-hans/better-data-orchestration-for-the-intelligent-enterprise-part-5/">
+
+	閱讀詳情
+	</a>
+	<h3 class="title"><a href="https://www.suse.com/zh-tw/media/white-paper/five_reasons_for_choosing_suse_manager_wp.pdf">選擇 SUSE® Manager 的五大理由</a></h3>
+	<p class="excerpt">
+	自動化管理。此功能可減少人為手動操作，即使 Linux 部署的規模與複雜度雙雙增加，管理員...
+	</p>
+	</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+	blog_images[0] = new Image();
+	blog_images[0].onload = function() {
+	if (typeof blog_images[0] != 'undefined') {
+	var height = blog_images[0].height;
+	var width = blog_images[0].width;
+	
+	//console.log("Width was " + width + ", height was " + height);
+	if (width < 427 || height < 150) {
+	//console.log("Image was too small, let's replace it with something better.");
+	document.getElementById('featured_img_2458_0').style.backgroundImage = "url('https://www.suse.com/c/wp-content/uploads/2018/01/man-tablet-1024x683.jpg')";
+	} else {
+	//console.log("do nothing");
+	}
+	}
+	}
+	blog_images[0].src = "https://www.suse.com/c/wp-content/uploads/2020/02/Lenovo-Video_Solution-Overview.png";
+	</script>
+	
+	
+	<div class="blog_article">
+	<div class="blog_article2">
+	<div class="featured_img" id="featured_img_2458_1" style="background:transparent url(https://www.suse.com/c/wp-content/uploads/2020/02/Physical-Infrastructure-300x124.png) center center no-repeat; background-size:cover;"></div>
+	<div class="blog_details">
+	<a class="button-clear button2" href="https://www.suse.com/c/zh-hans/better-data-orchestration-for-the-intelligent-enterprise-part-4/">
+
+	閱讀詳情
+	</a>
+	<h3 class="title"><a href="ttps://www.suse.com/zh-tw/media/white-paper/linux_is_the_future_of_the_sap_data_center_wp.pdf">SAP 資料中心的未來就在 Linux</a></h3>
+	<p class="excerpt">
+	SAP HANA 在 SAP 基礎架構產業吹起一陣改革風潮。SUSE 與其合作夥伴能引領下一代的商業...
+	</p>
+	</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+	blog_images[1] = new Image();
+	blog_images[1].onload = function() {
+	if (typeof blog_images[1] != 'undefined') {
+	var height = blog_images[1].height;
+	var width = blog_images[1].width;
+	
+	//console.log("Width was " + width + ", height was " + height);
+	if (width < 427 || height < 150) {
+	//console.log("Image was too small, let's replace it with something better.");
+	document.getElementById('featured_img_2458_1').style.backgroundImage = "url('https://www.suse.com/communities/blog/files/2017/08/Technology-11-small-450x338.jpg')";
+	} else {
+	//console.log("do nothing");
+	}
+	}
+	}
+	blog_images[1].src = "https://www.suse.com/c/wp-content/uploads/2020/02/Physical-Infrastructure-300x124.png";
+	</script>
+	
+	
+	<div class="blog_article">
+	<div class="blog_article2">
+	<div class="featured_img" id="featured_img_2458_2" style="background:transparent url(https://www.suse.com/c/wp-content/uploads/2020/02/GettyImages-874864110-300x169.jpg) center center no-repeat; background-size:cover;"></div>
+	<div class="blog_details">
+	<a class="button-clear button2" href="https://www.suse.com/c/zh-hans/better-data-orchestration-for-the-intelligent-enterprise-part-3/">
+
+	閱讀詳情
+	</a>
+	<h3 class="title"><a href="https://www.suse.com/zh-tw/media/white-paper/managing_ceph_clusters_with_ceph_dashboard_wp_tw.pdf">使用 Ceph Dashboard 管理 Ceph 叢集</a></h3>
+	<p class="excerpt">
+	功能強大的 Ceph Dashboard 管理平台讓您可使用任何瀏覽器，輕鬆管理和監控 Ceph 叢集。...
+	</p>
+	</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+	blog_images[2] = new Image();
+	blog_images[2].onload = function() {
+	if (typeof blog_images[2] != 'undefined') {
+	var height = blog_images[2].height;
+	var width = blog_images[2].width;
+	
+	//console.log("Width was " + width + ", height was " + height);
+	if (width < 427 || height < 150) {
+	//console.log("Image was too small, let's replace it with something better.");
+	document.getElementById('featured_img_2458_2').style.backgroundImage = "url('https://www.suse.com/communities/blog/files/2017/08/accelerate-450x300.jpg')";
+	} else {
+	//console.log("do nothing");
+	}
+	}
+	}
+	blog_images[2].src = "https://www.suse.com/c/wp-content/uploads/2020/02/GettyImages-874864110-300x169.jpg";
+	</script>
+	
+	
+	</div> 
+	</div>
+	</div>
+	<script>
+	$(function() {
+	// Loop through all the Blog Articles for any given blog module, and set the height equal to the height of the tallest article.
+	if (!jQuery.isFunction(uniformHeight)) { // skip this if this function has already been defined.
+	function uniformHeight() {
+	$(".blog_row").each(function() {
+	var $parent = $(this);
+	var maxHeight = 0;
+	$parent.find(".blog_article2").each(function() {
+	$(this).css("height", "auto");
+	});
+	setTimeout(function() {}, 0);
+	$parent.find(".blog_article2").each(function() {
+	if ($(this).height() > maxHeight) maxHeight = $(this).height();
+	});
+	$parent.find(".blog_article2").each(function() {
+	$(this).height(maxHeight);
+	});
+	});
+	}
+	uniformHeight();
+	$(window).resize(function() {
+	uniformHeight();
+	});
+	}
+	});
+	</script>
+	
+	</div>
+
+<div class="container-fluid download-products">
+		<div class="row">
+			<div class="standard-pad">
+													<div class="col-md-6  first">
+						<img class="product-icon" alt="SUSE Linux Enterprise Server" src="https://www.suse.com/assets/img/products/product-icon-sles.png">
+
+						<div class="product-sum">
+							<h4>SUSE Linux Enterprise Server</h4>
+							<p>在基於帶有擴展支持的 SUSE Linux Enterprise 來實施標準化時，將獲得一流的 Linux 支持，並節省多達 50% 的成本。</p>
+							<a href="/products/server/download/" class="button-clear">立即下載</a>
+						</div>
+
+						<a href="/products/server/download/" class="cover"></a>
+						<div class="clear"></div>
+					</div>
+														<div class="col-md-6 ">
+						<img class="product-icon" alt="SUSE Linux Enterprise Server for z Systems 和 LinuxONE" src="https://www.suse.com/assets/img/products/product-icon-zsystems.png">
+
+						<div class="product-sum">
+							<h4>SUSE Linux Enterprise Server for z Systems 和 LinuxONE</h4>
+							<p>所有主流的伺服器和桌面硬體均支援 SUSE Linux Enterprise。z Systems 可享 180 天免費試用。</p>
+							<a href="/products/server/download/" class="button-clear">立即下載</a>
+						</div>
+
+						<a href="/products/server/download/" class="cover"></a>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+									<div class="col-md-6  first">
+						<img class="product-icon" alt="SUSE Linux Enterprise Server for POWER" src="https://www.suse.com/assets/img/products/product-icon-power.png">
+
+						<div class="product-sum">
+							<h4>SUSE Linux Enterprise Server for POWER</h4>
+							<p>獲得最新一代 Enterprise Linux OS 以及可靠的 IBM 硬體。大多數平臺可享 60 天免費試用。</p>
+							<a href="/products/server/download/" class="button-clear">立即下載</a>
+						</div>
+
+						<a href="/products/server/download/" class="cover"></a>
+						<div class="clear"></div>
+					</div>
+														<div class="col-md-6 ">
+						<img class="product-icon" alt="SUSE Linux Enterprise Server for SAP Applications" src="https://www.suse.com/assets/img/products/product-icon-sap.png">
+
+						<div class="product-sum">
+							<h4>SUSE Linux Enterprise Server for SAP Applications</h4>
+							<p>充分利用 SAP HANA 和 SAP 業務應用程式軟體。大多數平臺可享 60 天免費試用。</p>
+							<a href="/products/sles-for-sap/download/" class="button-clear">立即下載</a>
+						</div>
+
+						<a href="/products/sles-for-sap/download/" class="cover"></a>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+									<div class="col-md-6  first">
+						<img class="product-icon" alt="SUSE Linux Enterprise Server for Arm" src="https://www.suse.com/assets/img/products/product-icon-arm.png">
+
+						<div class="product-sum">
+							<h4>SUSE Linux Enterprise Server for Arm</h4>
+							<p>為 Armv8-A 架構伺服器帶來企業級可靠性和支持。64 位 Arm 伺服器可享 60 天免費試用。</p>
+							<a href="/products/server/download/" class="button-clear">立即下載</a>
+						</div>
+
+						<a href="/products/server/download/" class="cover"></a>
+						<div class="clear"></div>
+					</div>
+														<div class="col-md-6 ">
+						<img class="product-icon" alt="SUSE Linux Enterprise Server for Raspberry Pi" src="https://www.suse.com/assets/img/products/product-icon-arm.png">
+
+						<div class="product-sum">
+							<h4>SUSE Linux Enterprise Server for Raspberry Pi</h4>
+							<p>在 Raspberry Pi 設備上使用 SUSE Linux Enterprise 開展實驗和進行創新。Raspberry Pi 3 Model B 可享 60 天免費試用期。</p>
+							<a href="/products/server/download/" class="button-clear">立即下載</a>
+						</div>
+
+						<a href="/products/server/download/" class="cover"></a>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+									<div class="col-md-6  first">
+						<img class="product-icon" alt="SUSE Linux Enterprise High Availability Extension" src="https://www.suse.com/assets/img/products/product-icon-hae.png">
+
+						<div class="product-sum">
+							<h4>SUSE Linux Enterprise High Availability Extension</h4>
+							<p>充分利用服務可用性，幾乎消除計畫外停機時間。High Availability Extension 免費試用 60 天。</p>
+							<a href="/products/highavailability/download/" class="button-clear">立即下載</a>
+						</div>
+
+						<a href="/products/highavailability/download/" class="cover"></a>
+						<div class="clear"></div>
+					</div>
+														<div class="col-md-6 ">
+						<img class="product-icon" alt="SUSE Linux Enterprise Real Time" src="https://www.suse.com/assets/img/products/product-icon-real.png">
+
+						<div class="product-sum">
+							<h4>SUSE Linux Enterprise Real Time</h4>
+							<p>迅速應對不斷變化的市場。對 SUSE Linux Enterprise Real Time 進行 60 天免費評估。</p>
+							<a href="/products/realtime/download/" class="button-clear">立即下載</a>
+						</div>
+
+						<a href="/products/realtime/download/" class="cover"></a>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+									<div class="col-md-6  first">
+						<img class="product-icon" alt="SUSE Linux Enterprise Live Patching" src="https://www.suse.com/assets/img/products/product-icon-live-patching.png">
+
+						<div class="product-sum">
+							<h4>SUSE Linux Enterprise Live Patching</h4>
+							<p>可縮短停機時間、提升服務可用性並增強安全與合規性，從而增強業務連續性並節省成本。</p>
+							<a href="/products/live-patching/download/" class="button-clear">立即下載</a>
+						</div>
+
+						<a href="/products/live-patching/download/" class="cover"></a>
+						<div class="clear"></div>
+					</div>
+														<div class="col-md-6 ">
+						<img class="product-icon" alt="SUSE CaaS Platform" src="https://www.suse.com/assets/img/products/product-icon-caas-platform.png">
+
+						<div class="product-sum">
+							<h4>SUSE CaaS Platform</h4>
+							<p>使用生產級 Container as a Service Platform 創建基於微服務的容器應用程式和服務。</p>
+							<a href="/products/caas-platform/download/" class="button-clear">立即下載</a>
+						</div>
+
+						<a href="/products/caas-platform/download/" class="cover"></a>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+									<div class="col-md-6  first">
+						<img class="product-icon" alt="SUSE Linux Enterprise Server Workstation Extension" src="https://www.suse.com/assets/img/products/product-icon-sles-ext-ws.png">
+
+						<div class="product-sum">
+							<h4>SUSE Linux Enterprise Server Workstation Extension</h4>
+							<p>將 SUSE Linux Enterprise Server 轉變為功能齊全的開發環境或管理員工作站環境。</p>
+							<a href="/products/workstation-extension/download/" class="button-clear">立即下載</a>
+						</div>
+
+						<a href="/products/workstation-extension/download/" class="cover"></a>
+						<div class="clear"></div>
+					</div>
+												</div>
+		</div>
+	</div>
+	
+	
+	<div class="top-banner"></div>
+	<div id="derrells-carousel" class="container-fluid zh-cn">
+	<div class="row">
+	<ul id="items-container">
+	<li class="global-services" style="background:url(/assets/img/home/services-banner-background.png) 100% center / auto 100% no-repeat white;">
+	<div class=" mobile-background-image-fade ">
+	<div class="content">
+	<h2><span style="display:block; font-size:85%; line-height:110%; color:#0d2c40; margin-bottom:20px;">
+	借助 SUSE 全球服務，營造更明朗的環境
+	</span></h2>
+	<h3><span style="display:block; font-size:70%; line-height:110%; color:#0d2c40; margin-bottom:20px;">
+	實現數位化轉型，並使您的基礎設施飛速發展。
+	</span></h3>
+	<a class="button-clear" href="/programs/global-services/">瞭解更多</a>
+
+	</div>
+	</div>
+	<a class="cover" href="https://www.suse.com/zh-cn/programs/global-services/"></a>
+
+	</li> <li class="" style="background:url(/assets/img/home/AppDelivery_Banner_opt07.jpg) 85% bottom / cover no-repeat white;">
+	<div class=" mobile-background-image-fade ">
+	<div class="content">
+	<h2><span style="color:#02a49c;">成就敏捷的應用程式</span></h2>
+	<h3>加快遞送應用程式，提高敏捷性</h3>
+	<a class="button-clear" href="/solutions/application-delivery/">瞭解更多</a>
+
+	</div>
+	</div>
+	<a class="cover" href="https://www.suse.com/zh-cn/solutions/application-delivery/"></a>
+
+	</li> <li class="" style="background:url(/assets/img/home/SAP2019-HomeBanner_img.png) right center / cover no-repeat white;">
+	<div class=" mobile-background-image-fade ">
+	<div class="content">
+	<h2><span style="color:#02d35f;">借力</span><span style="color:#00c081;">最優秀</span><span style="color:#02a49c;">的平臺！</span></h2>
+	<h3><b>在 SUSE 平臺上運行您的 SAP 解決方案</b></h3>
+	<a class="button-clear" href="/programs/transitioningtosap/">瞭解更多</a>
+
+	</div>
+	</div>
+	<a class="cover" href="https://www.suse.com/zh-cn/programs/transitioningtosap/"></a>
+
+	</li> <li class="" style="background:url(/assets/img/home/digital-jet-aircraft_banner.png) 70% center / auto 100% no-repeat white;">
+	<div class=" mobile-background-image-fade ">
+	<div class="content">
+	<h2><span style="color:#02d35f;">人工智慧的興起</span></h2>
+	<h3>點亮資料決策與洞察，掌控高性能計算</h3>
+	<a class="button-clear" href="/programs/high-performance-computing/">瞭解更多</a>
+
+	</div>
+	</div>
+	<a class="cover" href="https://www.suse.com/zh-cn/programs/high-performance-computing/"></a>
+
+	</li> <li class="" style="background:url(/assets/img/home/digi-transform-home-banner-dev-opt1.png) 80% 0px / auto 100% no-repeat white;">
+	<div class=" mobile-background-image-fade ">
+	<div class="content">
+	<h2><span class="uppercase" style="color: #0d2c40;">跟上業務節拍的<br class="hidden-xs hidden-sm hidden-md">基礎設施</span></h2>
+	<h3><span style="color: #de0080;"><b>即刻為未來做好準備。</b></span></h3>
+	<a class="button-clear" href="/programs/digital-transformation/">瞭解更多</a>
+
+	</div>
+	</div>
+	<a class="cover" href="https://www.suse.com/zh-cn/programs/digital-transformation/"></a>
+
+	</li> <li class="" style="background:url(/assets/img/solutions/cloud/home-banner.png) 90% top / auto 96% no-repeat white;">
+	<div class=" mobile-background-image-fade ">
+	<div class="content">
+	<h2><span style="color:#00aede;">雲</span><br>計算</h2>
+	<h3>哪種戰略適合您的企業？</h3>
+	<a class="button-clear" href="/solutions/cloud/">瞭解更多</a>
+
+	</div>
+	</div>
+	<a class="cover" href="https://www.suse.com/zh-cn/solutions/cloud/"></a>
+
+	</li> 
+	<li class="" style="background:url(/assets/img/promo/expert-days/expert-days-home-banner.png) 85% bottom / auto 90% no-repeat white;">
+	<div class=" mobile-background-image-fade ">
+	<div class="content">
+	<h2><span>SUSE 專家日</span> <br><span class="green">2019 年全球巡講</span></h2>
+	<h3><strong>您周邊的城市即將舉辦巡講！</strong></h3>
+	<a class="button-clear" href="/promo/expert-days/">開始註冊</a>
+
+	</div>
+	</div>
+	<a class="cover" href="https://www.suse.com/zh-cn/promo/expert-days/"></a>
+
+	</li> 
+	</ul>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+	var mainSlider = null;
+	
+	jQuery(document).ready(function () {
+	mainSlider = $("#items-container").lightSlider({
+	autoWidth: false,
+	loop: true,
+	keyPress: true,
+	item: 1,
+	slideMove: 1,
+	slideMargin: 0,
+	enableDrag: true,
+	enableTouch: true,
+	
+	onBeforeStart: function (el) {
+	//this is the fix so the entire list doesn't show up and look crazy for a few seconds while the page is loading you also need to set #derrells-carousel height to none.
+	jQuery('#derrells-carousel').css('height', 'auto');
+	},
+	});
+	
+	// GOOGLE ANALYTICS EVENT GENERATOR FOR THE CAROUSEL.
+	// lightSlider generates a slide before slide1. and one after the last slide, so tecnically there are 7 slides, even tho there are only 5 in the HTML file, somthing to keep in mind when reading this code.
+	var bannerItems = $('#items-container').children();
+	
+	bannerItems.each(function (index, child) {
+	if (index >= 1 && index < bannerItems.length - 1) {
+	var bgImage = $(child).css("background-image");
+	bgImage = bgImage.replace(/(url\(|\)|")/g, '');
+	
+	$(child).find('a.cover').attr("onclick", "ga('send', 'event', 'HP Banner', '" + bgImage + "', '" + index + "', {'anonymizeIp': true});");
+	}
+	});
+	});
+	</script>
+	
+	<main role="main" class="zh-cn">
+	
+	<div class="container-fluid">
+	<div class="row">
+	<div class="topLinks2">
+	<ul id="topLinksSlideshow" class="topLinksRow">
+	<li class="topLink">
+	<a href="/products/suse-manager/" onclick="ga('send', 'event', '2nd Banner', '1', '/products/suse-manager/', {'anonymizeIp': true}); return true;">
+	<div class="content">
+	<h3>IT 轉型中的 3C（成本、複雜性和合規性）是否讓您感到擔憂？</h3>
+	<p class="more">瞭解如何通過基礎設施管理來降低成本、管控複雜性以及確保合規性 ›</p>
+	<span class="border"></span>
+	</div>
+	</a>
+	</li>
+	<li class="topLink">
+	<a href="/programs/business-critical/" onclick="ga('send', 'event', '2nd Banner', '2', '/programs/business-critical/', {'anonymizeIp': true}); return true;">
+	<div class="content">
+	<h3>當您希望業務關鍵型應用程式實現不間斷 IT 時要考慮的 5 件事情。</h3>
+	<p class="more">瞭解如何實現業務恢復能力 ›</p>
+	<span class="border"></span>
+	</div>
+	</a>
+	</li>
+	<li class="topLink">
+	<a href="/products/server/" onclick="ga('send', 'event', '2nd Banner', '3', '/products/server/', {'anonymizeIp': true}); return true;">
+	<div class="content">
+	<h3>準備好迎接全球首款多模態作業系統了嗎？</h3>
+	<p class="more">瞭解最新發佈的 SUSE Linux Enterprise 15 Service Pack 1 ›</p>
+	<span class="border"></span>
+	</div>
+	</a>
+	</li>
+	<li class="topLink">
+	<a href="/products/caas-platform/" onclick="ga('send', 'event', '2nd Banner', '4', '/products/caas-platform/', {'anonymizeIp': true}); return true;">
+	<div class="content">
+	<h3>想要部署 Kubernetes？</h3>
+	<p class="more">瞭解為什麼 SUSE 可以簡化容器管理 ›</p>
+	<span class="border"></span>
+	</div>
+	</a>
+	</li>
+	<li class="topLink">
+	<a href="/promo/cloud/public/" onclick="ga('send', 'event', '2nd Banner', '5', '/promo/cloud/public/', {'anonymizeIp': true}); return true;">
+	<div class="content">
+	<h3>想要充分利用公共雲？</h3>
+	<p class="more">瞭解如何在您選擇的公共雲中快速運行基於企業級開放原始程式碼軟體的應用程式 ›</p>
+	<span class="border"></span>
+	</div>
+	</a>
+	</li>
+	<li class="topLink">
+	<a href="/services/select-services/" onclick="ga('send', 'event', '2nd Banner', '6', '/services/select-services/', {'anonymizeIp': true}); return true;">
+	<div class="content">
+	<h3>在設計和部署基礎設施解決方案方面需要幫助？</h3>
+	<p class="more">通過 SUSE Select Services 快速跟蹤軟體定義的基礎設施的實施 ›</p>
+	<span class="border"></span>
+	</div>
+	</a>
+	</li>
+	
+	</ul>
+	
+	<a href="#" class="topLinksPrev"></a>
+
+	<a href="#" class="topLinksNext"></a>
+
+	
+	<script type="text/javascript">
+	
+	// function to implement a debounce effect; stops events (such as resize) from rapid-firing until minimum window has passed 
+	function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+	var context = this, args = arguments;
+	var later = function() {
+	timeout = null;
+	if (!immediate) func.apply(context, args);
+	};
+	var callNow = immediate && !timeout;
+	clearTimeout(timeout);
+	timeout = setTimeout(later, wait);
+	if (callNow) func.apply(context, args);
+	};
+	};
+	
+	// Sets the height of the topLinks section to be that of the tallest item
+	function setTallestTopLink() {
+	var tallestTopLink = 0;
+	$("#topLinksSlideshow .topLink a").css("height", "auto");
+	$("#topLinksSlideshow .topLink a").each(function(index){
+	if ($(this).height() > tallestTopLink) tallestTopLink = $(this).height();
+	});
+	$("#topLinksSlideshow .topLink a").height(tallestTopLink); 
+	}
+	
+	var topSlider = null;
+	var rawSliderContent = "";
+	var topSliderBreakpoint = 580;
+	var topLinksVersion = "";
+	
+	// This function creates the carousel
+	function createTopLinksCarousel() {
+	// initialize slider for topLinks section
+	topSlider = $("#topLinksSlideshow").lightSlider({
+	loop:true,
+	keyPress:true,
+	item:3,
+	slideMove:1,
+	slideMargin:42,
+	enableDrag:false,
+	enableTouch:true,
+	pager:false,
+	responsive : [
+	{
+	breakpoint:900,
+	settings: {
+	item:2,
+	slideMove:1,
+	slideMargin:38,
+	}
+	},
+	{
+	breakpoint:580,
+	settings: {
+	item:1,
+	slideMove:1
+	}
+	}
+	]
+	}); 
+	}
+	
+	$( document ).ready(function() {
+	rawSliderContent = $(".topLinks2").html();
+	
+	if ($(window).width() > 580) {
+	setTallestTopLink();
+	createTopLinksCarousel();
+	topLinksVersion = "slider";
+	setTallestTopLink();
+	} else {
+	topLinksVersion = "static";
+	}
+	
+	// manually create prev/next buttons for topLinks
+	$(".topLinksPrev").click(function(e) {
+	e.preventDefault();
+	topSlider.goToPrevSlide();
+	});
+	$(".topLinksNext").click(function(e) {
+	e.preventDefault();
+	topSlider.goToNextSlide();
+	});
+	});
+	
+	var efficientResize = debounce(function() {
+	if ($(window).width() > 580) {
+	setTallestTopLink();
+	// If the width of the window has grown beyond the breakpoint, build the carousel
+	if (topLinksVersion != "slider") {
+	createTopLinksCarousel();
+	topLinksVersion = "slider";
+	}
+	} else {
+	// If the width of the window has decreased below the breakpoint, destroy the carousel
+	if (topLinksVersion != "static") {
+	$(".topLinks2").html(rawSliderContent);
+	$("#topLinksSlideshow .topLink a").css("height", "auto");
+	topLinksVersion = "static";
+	}
+	}
+	}, 100);
+	
+	window.addEventListener('resize', efficientResize);
+	
+	</script>
+	</div>
+	</div>
+	</div>
+	
+	<div class="container-fluid">
+	<div class="row">
+	<div class="wereOpenSrc">
+	<div class="openSrcCont">
+	<div class="openSrcHead">
+	<h1>我們奉行開放精神，<br>是一家開放原始程式碼公司</h1>
+	</div>
+	<div class="openBorder"></div>
+	<div class="openSrcBody">
+	<p><strong>開放原始程式碼已經融入我們的基因中。</strong>對我們而言，開放不僅僅意味著共用原始程式碼，更是我們開展所有工作所遵循的理念和方法。它是我們開發軟體、與合作夥伴和客戶合作以及與社區互動的方式。最重要的是，它能夠讓我們對新理念保持開放態度。</p>
+	<a href="/company/about/" class="button-clear button2">瞭解有關 SUSE 的更多資訊</a>
+
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="u-divider"></div>
+	</div>
+	
+	
+	<div id="sam-home" style="display:none;">
+	</div>
+	<script>
+	$(function() {
+	if ( typeof demandbase_data_promise == 'object' ) {
+	jQuery.when(demandbase_data_promise).done(function(demandbase_ip_data) {
+	if (typeof demandbase_ip_data == 'object') {
+	if (typeof demandbase_ip_data.registry_country == 'string') {
+	country_code = demandbase_ip_data.country_code;
+	
+	if (country_code == 'US' || country_code == 'CA' || country_code == 'AU' || country_code == 'UK' || country_code == 'GB' || country_code == 'IE') {
+	$("#sam-home").show();
+	}
+	}
+	}
+	});
+	}
+	});
+	</script>
+	
+	
+	
+	<div class="home-blog-module">
+	<!-- Blog Module settings: {"englishFallback":true,"postType":"posts","url":"https:\/\/www.suse.com\/c\/zh-hans\/wp-json\/wp\/v2\/posts\/?per_page=10&_embed","cached":true,"total_posts_found":10}--><!--Start Blog Content -->
+	<div class="blog_module_1 litegray">
+	<div class="blog_module container-fluid">
+	<h2>Latest Whitepapers</h2>
+	<div class="blog_row">
+	<script type="text/javascript">
+	var blog_images = new Array(10);
+	</script>
+	
+	<div class="blog_article">
+	<div class="blog_article2">
+	<div class="featured_img" id="featured_img_2458_0" style="background:transparent url(https://www.suse.com/c/wp-content/uploads/2020/02/Lenovo-Video_Solution-Overview.png) center center no-repeat; background-size:cover;"></div>
+	<div class="blog_details">
+	<a class="button-clear button2" href="https://www.suse.com/c/zh-hans/better-data-orchestration-for-the-intelligent-enterprise-part-5/">
+
+	閱讀詳情
+	</a>
+	<h3 class="title"><a href="https://www.suse.com/zh-tw/media/white-paper/five_reasons_for_choosing_suse_manager_wp.pdf">選擇 SUSE® Manager 的五大理由</a></h3>
+	<p class="excerpt">
+	自動化管理。此功能可減少人為手動操作，即使 Linux 部署的規模與複雜度雙雙增加，管理員...
+	</p>
+	</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+	blog_images[0] = new Image();
+	blog_images[0].onload = function() {
+	if (typeof blog_images[0] != 'undefined') {
+	var height = blog_images[0].height;
+	var width = blog_images[0].width;
+	
+	//console.log("Width was " + width + ", height was " + height);
+	if (width < 427 || height < 150) {
+	//console.log("Image was too small, let's replace it with something better.");
+	document.getElementById('featured_img_2458_0').style.backgroundImage = "url('https://www.suse.com/c/wp-content/uploads/2018/01/man-tablet-1024x683.jpg')";
+	} else {
+	//console.log("do nothing");
+	}
+	}
+	}
+	blog_images[0].src = "https://www.suse.com/c/wp-content/uploads/2020/02/Lenovo-Video_Solution-Overview.png";
+	</script>
+	
+	
+	<div class="blog_article">
+	<div class="blog_article2">
+	<div class="featured_img" id="featured_img_2458_1" style="background:transparent url(https://www.suse.com/c/wp-content/uploads/2020/02/Physical-Infrastructure-300x124.png) center center no-repeat; background-size:cover;"></div>
+	<div class="blog_details">
+	<a class="button-clear button2" href="https://www.suse.com/c/zh-hans/better-data-orchestration-for-the-intelligent-enterprise-part-4/">
+
+	閱讀詳情
+	</a>
+	<h3 class="title"><a href="ttps://www.suse.com/zh-tw/media/white-paper/linux_is_the_future_of_the_sap_data_center_wp.pdf">SAP 資料中心的未來就在 Linux</a></h3>
+	<p class="excerpt">
+	SAP HANA 在 SAP 基礎架構產業吹起一陣改革風潮。SUSE 與其合作夥伴能引領下一代的商業...
+	</p>
+	</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+	blog_images[1] = new Image();
+	blog_images[1].onload = function() {
+	if (typeof blog_images[1] != 'undefined') {
+	var height = blog_images[1].height;
+	var width = blog_images[1].width;
+	
+	//console.log("Width was " + width + ", height was " + height);
+	if (width < 427 || height < 150) {
+	//console.log("Image was too small, let's replace it with something better.");
+	document.getElementById('featured_img_2458_1').style.backgroundImage = "url('https://www.suse.com/communities/blog/files/2017/08/Technology-11-small-450x338.jpg')";
+	} else {
+	//console.log("do nothing");
+	}
+	}
+	}
+	blog_images[1].src = "https://www.suse.com/c/wp-content/uploads/2020/02/Physical-Infrastructure-300x124.png";
+	</script>
+	
+	
+	<div class="blog_article">
+	<div class="blog_article2">
+	<div class="featured_img" id="featured_img_2458_2" style="background:transparent url(https://www.suse.com/c/wp-content/uploads/2020/02/GettyImages-874864110-300x169.jpg) center center no-repeat; background-size:cover;"></div>
+	<div class="blog_details">
+	<a class="button-clear button2" href="https://www.suse.com/c/zh-hans/better-data-orchestration-for-the-intelligent-enterprise-part-3/">
+
+	閱讀詳情
+	</a>
+	<h3 class="title"><a href="https://www.suse.com/zh-tw/media/white-paper/managing_ceph_clusters_with_ceph_dashboard_wp_tw.pdf">使用 Ceph Dashboard 管理 Ceph 叢集</a></h3>
+	<p class="excerpt">
+	功能強大的 Ceph Dashboard 管理平台讓您可使用任何瀏覽器，輕鬆管理和監控 Ceph 叢集。...
+	</p>
+	</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+	blog_images[2] = new Image();
+	blog_images[2].onload = function() {
+	if (typeof blog_images[2] != 'undefined') {
+	var height = blog_images[2].height;
+	var width = blog_images[2].width;
+	
+	//console.log("Width was " + width + ", height was " + height);
+	if (width < 427 || height < 150) {
+	//console.log("Image was too small, let's replace it with something better.");
+	document.getElementById('featured_img_2458_2').style.backgroundImage = "url('https://www.suse.com/communities/blog/files/2017/08/accelerate-450x300.jpg')";
+	} else {
+	//console.log("do nothing");
+	}
+	}
+	}
+	blog_images[2].src = "https://www.suse.com/c/wp-content/uploads/2020/02/GettyImages-874864110-300x169.jpg";
+	</script>
+	
+	
+	</div> 
+	</div>
+	</div>
+	<script>
+	$(function() {
+	// Loop through all the Blog Articles for any given blog module, and set the height equal to the height of the tallest article.
+	if (!jQuery.isFunction(uniformHeight)) { // skip this if this function has already been defined.
+	function uniformHeight() {
+	$(".blog_row").each(function() {
+	var $parent = $(this);
+	var maxHeight = 0;
+	$parent.find(".blog_article2").each(function() {
+	$(this).css("height", "auto");
+	});
+	setTimeout(function() {}, 0);
+	$parent.find(".blog_article2").each(function() {
+	if ($(this).height() > maxHeight) maxHeight = $(this).height();
+	});
+	$parent.find(".blog_article2").each(function() {
+	$(this).height(maxHeight);
+	});
+	});
+	}
+	uniformHeight();
+	$(window).resize(function() {
+	uniformHeight();
+	});
+	}
+	});
+	</script>
+	
+	</div>
+	
+	
+	<div class="container-fluid">
+	<div class="row">
+	<div id="pop-topics">
+	<h2>熱門話題</h2>
+	<div class="drag-instructions">左右滑動可查看更多內容。</div>
+	<ul id="content-slider" class="content-slider">
+	<li>
+	<a href="https://www.suse.com/zh-cn/products/suse-enterprise-storage/academic/" class="prevent-click"
+	onclick="ga('send', 'event', 'HP Popular Topics', '0', 'https://www.suse.com/zh-cn/products/suse-enterprise-storage/academic/', {'anonymizeIp': true})">
+	<div class="image"
+	style="background:#777777 url(/assets/img/home/hot-offer-cost-savings.jpg) center center no-repeat; background-size:cover;"></div>
+	<div class="content">
+	<p><strong>瞭解各所大學如何使用 SUSE 的產品和軟體定義的儲存</strong></p>
+	<div class="cta">查看詳情</div>
+	</div>
+	</a>
+	</li>
+	<li>
+	<a href="https://www.suse.com/zh-cn/lp/idc-support/" class="prevent-click"
+
+	onclick="ga('send', 'event', 'HP Popular Topics', '1', 'https://www.suse.com/zh-cn/lp/idc-support/', {'anonymizeIp': true})">
+	<div class="image"
+	style="background:#777777 url(/assets/img/home/hot-offer-digital-transformation.jpg) center center no-repeat; background-size:cover;"></div>
+	<div class="content">
+	<p><strong>閱讀 IDC 對社區和商業支援下的開源軟體的評論</strong></p>
+	<div class="cta">查看詳情</div>
+	</div>
+	</a>
+	</li>
+	<li>
+	<a href="https://www.suse.com/zh-cn/solutions/software-defined-storage/body-camera/" class="prevent-click"
+	onclick="ga('send', 'event', 'HP Popular Topics', '2', 'https://www.suse.com/zh-cn/solutions/software-defined-storage/body-camera/', {'anonymizeIp': true})">
+	<div class="image"
+	style="background:#777777 url(/assets/img/solutions/software-defined/body-cam-header.png) center center no-repeat; background-size:cover;"></div>
+	<div class="content">
+	<p><strong>滿足隨身攝像機的儲存需求</strong></p>
+	<div class="cta">查看詳情</div>
+	</div>
+	</a>
+	</li>
+	<li>
+	<a href="https://www.suse.com/zh-cn/solutions/software-defined-storage/disk-to-disk-backup-storage-requirements/" class="prevent-click"
+
+	onclick="ga('send', 'event', 'HP Popular Topics', '3', 'https://www.suse.com/zh-cn/solutions/software-defined-storage/disk-to-disk-backup-storage-requirements/', {'anonymizeIp': true})">
+	<div class="image"
+	style="background:#777777 url(/assets/img/home/hot-offer-digital-transformation.jpg) center center no-repeat; background-size:cover;"></div>
+	<div class="content">
+	<p><strong>通過磁片到磁片的備份儲存，節省開支並保護更多資料</strong></p>
+	<div class="cta">查看詳情</div>
+	</div>
+	</a>
+	</li>
+	<li>
+	<a href="https://www.suse.com/media/brochure/5_steps_to_getting_started_with_open_source_software_defined_storage.pdf" class="prevent-click"
+
+	onclick="ga('send', 'event', 'HP Popular Topics', '4', 'https://www.suse.com/media/brochure/5_steps_to_getting_started_with_open_source_software_defined_storage.pdf', {'anonymizeIp': true})">
+	<div class="image"
+	style="background:#777777 url(/assets/img/home/hot-offer-cost-savings.jpg) center center no-repeat; background-size:cover;"></div>
+	<div class="content">
+	<p><strong>開放原始程式碼軟體定義的儲存 5 大入門步驟</strong></p>
+	<div class="cta">查看詳情</div>
+	</div>
+	</a>
+	</li>
+	<li>
+	<a href="https://www.suse.com/media/white-paper/three_key_best_practices_for_devops_teams_to_ensure_compliance.pdf" class="prevent-click"
+	onclick="ga('send', 'event', 'HP Popular Topics', '5', 'https://www.suse.com/media/white-paper/three_key_best_practices_for_devops_teams_to_ensure_compliance.pdf', {'anonymizeIp': true})">
+	<div class="image"
+	style="background:#777777 url(/assets/img/home/hot-offer-software-defined-future.jpg) center center no-repeat; background-size:cover;"></div>
+	<div class="content">
+	<p><strong>DevOps 團隊確保合規性的三項關鍵最佳實踐</strong></p>
+	<div class="cta">查看詳情</div>
+	</div>
+	</a>
+	</li>
+	</ul>
+	<a href="#" class="popTopicsPrev"></a>
+
+	<a href="#" class="popTopicsNext"></a>
+
+	</div>
+	</div>
+	</div>
+	
+	
+	
+	<div class="home_success_stories">
+	<div class="success-stories-carousel-module " >
+	<div class="container-fluid promo2_subpage"> 
+	<div class="row">
+	<div id="success" class="success_stories">
+	<div class="stories">
+	<div id="ss0" class="story selected ">
+	<div class="logo">
+	<a href="/success/stories/hillarys/">
+
+	<span class="logobg" style="background:transparent url(/assets/img/promo/transitioningtosap/logo_hillarys.png) center center no-repeat; background-size:contain;"></span>
+	</a>
+	</div>
+	<div class="content">
+	<h3>Hillarys</h3>
+	<ul>
+	<li>加快了 CRM 系統的運行速度，以此減少客戶致電次數，提高首次致電問題解決率，進而改善客戶體驗</li>
+	<li>將通宵資料上載所花時間縮短 50% 以上，實現及時報告</li>
+	<li>提供卓越的穩健性和可靠性，確保業務持續地順利運轉</li>
+	</ul>
+	<div class="ss-read-more">
+	<a href="/success/stories/hillarys/">閱讀詳情</a>
+
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+	<div id="ss1" class="story ">
+	<div class="logo">
+	<a href="/success/stories/vectus-industries/">
+
+	<span class="logobg" style="background:transparent url(/assets/img/promo/transitioningtosap/logo_fullsize_vectus.png) center center no-repeat; background-size:contain;"></span>
+	</a>
+	</div>
+	<div class="content">
+	<h3>Vectus</h3>
+	<ul>
+	<li>將整體運營效率提高了 60%</li>
+	<li>將可用性提升至接近“五個九 (99.999%)”，而之前一個月中曾經出現過 24 小時的停機時間</li>
+	<li>減少了手動資料登錄，支援即時帳單和發票</li>
+	<li>單一事實源使業務情況一目了然</li>
+	</ul>
+	<div class="ss-read-more">
+	<a href="/success/stories/vectus-industries/">閱讀詳情</a>
+
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+	<div id="ss2" class="story ">
+	<div class="logo">
+	<a href="/success/stories/implema/">
+
+	<span class="logobg" style="background:transparent url(/assets/img/promo/transitioningtosap/logo_fullsize_implema02.png) center center no-repeat; background-size:contain;"></span>
+	</a>
+	</div>
+	<div class="content">
+	<h3>Implema</h3>
+	<ul>
+	<li>在有限的時間和預算內，成功地將十名客戶遷移至 SAP HANA</li>
+	<li>面向 SAP 軟體的優化解決方案，確保可靠性和高性能，且無需手動調整</li>
+	<li>使得 SAP 應用程式的操作更具成本效益（與其他 Linux 發行套件相比）</li>
+	</ul>
+	<div class="ss-read-more">
+	<a href="/success/stories/implema/">閱讀詳情</a>
+
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+	<div id="ss3" class="story ">
+	<div class="logo">
+	<a href="/success/stories/fitch-ratings/">
+
+	<span class="logobg" style="background:transparent url(/assets/img/promo/transitioningtosap/logo_fullsize_fitch.png) center center no-repeat; background-size:contain;"></span>
+	</a>
+	</div>
+	<div class="content">
+	<h3>Fitch Ratings</h3>
+	<ul>
+	<li>將完成流程鏈所花的時間從數小時縮短為數分鐘</li>
+	<li>在數周而非數月內交付基於 AWS 基礎設施而構建的功能環境</li>
+	</ul>
+	<div class="ss-read-more">
+	<a href="/success/stories/fitch-ratings/">閱讀詳情</a>
+
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+	<div id="ss4" class="story ">
+	<div class="logo">
+	<a href="/success/stories/boydak-holding/">
+
+	<span class="logobg" style="background:transparent url(/assets/img/promo/transitioningtosap/logo_fullsize_boydak.gif) center center no-repeat; background-size:contain;"></span>
+	</a>
+	</div>
+	<div class="content">
+	<h3>Boydak Holding</h3>
+	<ul>
+	<li>在 IBM POWER8 上快速實現低風險的 SAP HANA TDI 部署</li>
+	<li>將資料庫的規模縮減 74% 並簡化其管理</li>
+	<li>通過記憶體內技術將一些 SAP 報告的生成速度加快 120 倍以上</li>
+	<li>提高了客戶滿意度</li>
+	</ul>
+	<div class="ss-read-more">
+	<a href="/success/stories/boydak-holding/">閱讀詳情</a>
+
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+	</div>
+	<div class="storynav">
+	<ul>
+	<li><a href="#" id="sss0" onclick="selectStory('ss0'); return false;" class="selected "><img src="/assets/img/promo/transitioningtosap/menu-hillarys.png" alt="Hillarys"></a></li>
+
+	<li><a href="#" id="sss1" onclick="selectStory('ss1'); return false;" class=""><img src="/assets/img/home/menu-vectus02.png" alt="Vectus"></a></li>
+
+	<li><a href="#" id="sss2" onclick="selectStory('ss2'); return false;" class=""><img src="/assets/img/promo/transitioningtosap/menu-implema02.png" alt="Implema"></a></li>
+
+	<li><a href="#" id="sss3" onclick="selectStory('ss3'); return false;" class=""><img src="/assets/img/promo/transitioningtosap/menu-fitch.png" alt="Fitch Ratings"></a></li>
+
+	<li><a href="#" id="sss4" onclick="selectStory('ss4'); return false;" class=""><img src="/assets/img/home/menu-boydak02.png" alt="Boydak Holding"></a></li>
+
+	</ul>
+	</div> 
+	<p class="seeMore"><a class="button-clear button2" href="https://www.suse.com/success/">查看所有的客戶成功案例</a></p>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+	// Show the selected story, and update the current icon to the selected state
+	function selectStory(ssid) {
+	$(".story").removeClass("selected");
+	$("#"+ssid).addClass("selected");
+	$(".storynav a").removeClass("selected");
+	$("#s"+ssid).addClass("selected");
+	
+	// If we're on mobile, scroll to the top of the success story
+	if ($(".mobile-talk").css("display") == "block") {
+	var newTop = $("#success").offset().top - 45.0;
+	$('html, body').animate({
+	scrollTop: newTop
+	}, 500);
+	}
+	}
+	
+	// Update the height of the success story window to be that of the tallest story
+	function storiesHeight() {
+	var tallestTale = 220;
+	$(".story").each(function(){
+	if ($(this).height() > tallestTale) tallestTale = $(this).height();
+	});
+	$(".success_stories .stories").height(tallestTale);
+	}
+	$( window ).resize(function() {
+	storiesHeight();
+	});
+	$(function() {
+	storiesHeight();
+	});
+	</script>
+	</div>
+	
+	<div class="container-fluid">
+	<div class="row">
+	<div id="neoPartners2" class="neoPartners2 dark">
+	<h2>戰略聯盟</h2>
+	<ul id="strategic-partners-new2" class="partners content-slider">
+	<li>
+	<a href="/partners/alliance/sap/" class="sss0 prevent-click" onclick="return selectStory2(this, '0');">
+	<span class="about">SAP 和 SUSE 之間的合作關係基於雙方原本已將近 20 年的相互協作。雙方的協作關係十分深厚，SAP 在 SUSE 平臺上構建了首款 SAP HANA 解決方案，並且將繼續與 SUSE 在 Cloud Foundry 和 SAP 雲平臺上協作。</span>
+	<span class="logo" style="width:103px; background:transparent url(/assets/img/partners/alliance-partners2/sap_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/supermicro/" class="sss1 prevent-click" onclick="return selectStory2(this, '1');">
+	<span class="about">作為 SUSE 合作夥伴家族的最新成員，Supermicro 攜帶其在高效綠色伺服器技術方面的專業知識與 SUSE 展開協作，共同開發面向 Ceph、SAP HANA 和 HPC 的端到端解決方案。</span>
+	<span class="logo" style="width:90px; background:transparent url(/assets/img/partners/alliance-partners2/supermicro_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/vmware/" class="sss2 prevent-click" onclick="return selectStory2(this, '2');">
+	<span class="about">SUSE 與 VMware 自 2004 年起就開始合作，確保 SUSE Linux Enterprise Server 成為 VMware vSphere 上的理想 guest 作業系統，無論是在資料中心還是在雲端。</span>
+	<span class="logo" style="width:129px; background:transparent url(/assets/img/partners/alliance-partners2/vmware_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/microsoft/" class="sss3 prevent-click" onclick="return selectStory2(this, '3');">
+	<span class="about">SUSE 與 Microsoft 的合作已長達逾十年，為成千上萬的客戶提供了聯合解決方案，目前旨在通過 Microsoft Azure 的智慧、混合型雲平臺交付創新且高性能的產品和服務。</span>
+	<span class="logo" style="width:120px; background:transparent url(/assets/img/partners/alliance-partners2/microsoft_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/aws/" class="sss4 prevent-click" onclick="return selectStory2(this, '4');">
+	<span class="about">AWS 和 SUSE 共同合作提供各類解決方案，以構建、擴展並管理企業級雲應用程式。這類程式在 SUSE 上運行，確保為 AWS 上的業務關鍵型工作負載提供卓越可靠性和安全性。</span>
+	<span class="logo" style="width:125px; background:transparent url(/assets/img/partners/alliance-partners2/amazon_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/cisco/" class="sss5 prevent-click" onclick="return selectStory2(this, '5');">
+	<span class="about">Cisco 和 SUSE 使用 SUSE Linux Enterprise Server 和 Cisco UCS 集成其各自的技術，為企業客戶提供經濟、可靠且可縮放的解決方案，涵蓋網路、虛擬化、雲基礎設施和儲存。</span>
+	<span class="logo" style="width:74px; background:transparent url(/assets/img/partners/alliance-partners2/cisco_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/dell/" class="sss6 prevent-click" onclick="return selectStory2(this, '6');">
+	<span class="about">SUSE 和 Dell 共同合作，在 Dell 行業領先的 PowerEdge 伺服器上提供行業領先的 Linux 解決方案，同時我們還可以幫助您通過 SAP HANA 重構即時業務、管理雲戰略並勾勒出資料中心的未來。</span>
+	<span class="logo" style="width:122px; background:transparent url(/assets/img/partners/alliance-partners2/dell_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/fujitsu/" class="sss7 prevent-click" onclick="return selectStory2(this, '7');">
+	<span class="about">Fujitsu 和 SUSE 聯合提供開放的、可靠的和創新的基礎設施和服務，旨在讓各種組織利用大資料實現成長和創新。</span>
+	<span class="logo" style="width:89px; background:transparent url(/assets/img/partners/alliance-partners2/fujitsu_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/hpe/" class="sss8 prevent-click" onclick="return selectStory2(this, '8');">
+	<span class="about">SUSE 是 HPE 有關 Linux 和 Cloud Foundry 的首選合作夥伴，雙方已有 25 年的合作關係。同時，我們還提供針對關鍵任務和 SAP 環境、軟體定義的存儲、雲等方面的世界級開放原始程式碼解決方案。</span>
+	<span class="logo" style="width:122px; background:transparent url(/assets/img/partners/alliance-partners2/hp_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/hds/" class="sss9 prevent-click" onclick="return selectStory2(this, '9');">
+	<span class="about">在 Hitachi 融合系統上運行 SUSE Linux Enterprise Server 的可靠高性能解決方案支持關鍵任務和高可靠性方案，能夠縱向和橫向擴展，可説明貴組織在大資料經濟下不斷發展。</span>
+	<span class="logo" style="width:116px; background:transparent url(/assets/img/partners/alliance-partners2/hitachi_logo2.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/huawei/" class="sss10 prevent-click" onclick="return selectStory2(this, '10');">
+	<span class="about">Huawei 和 SUSE 同為電信級 Linux 和 SAP 解決方案領域的佼佼者，我們的聯合關鍵任務產品和服務彰顯出我們的共同承諾，為全球企業客戶構建高度可靠的高性能關鍵任務解決方案。</span>
+	<span class="logo" style="width:116px; background:transparent url(/assets/img/partners/alliance-partners2/huawei_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/ibm/" class="sss11 prevent-click" onclick="return selectStory2(this, '11');">
+	<span class="about">從 z Systems、LinuxONE、Power、x86-64 到雲，IBM 和 SUSE 攜手合作 20 年，為貴企業提供最佳解決方案，幫助降低成本、複雜性並激發創新。</span>
+	<span class="logo" style="width:115px; background:transparent url(/assets/img/partners/alliance-partners2/ibm_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/intel/" class="sss12 prevent-click" onclick="return selectStory2(this, '12');">
+	<span class="about">SUSE 和 Intel 之間的戰略聯盟可以追溯到數十年前，共同專注于卓越工程設計以及優化產品的性能和可靠性。</span>
+	<span class="logo" style="width:77px; background:transparent url(/assets/img/partners/alliance-partners2/intel_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	<li>
+	<a href="/partners/alliance/lenovo/" class="sss13 prevent-click" onclick="return selectStory2(this, '13');">
+	<span class="about">Lenovo 和 SUSE 可以幫助您通過 Lenovo ThinkSystem 伺服器以及 SUSE 產品和服務，構建面向關鍵任務和 SAP 環境、軟體定義的儲存、高性能計算、雲等方面的未來定義的資料中心。</span>
+	<span class="logo" style="width:120px; background:transparent url(/assets/img/partners/alliance-partners2/lenovo_logo.png) center top no-repeat;"></span>
+	</a>
+	</li>
+	</ul>
+	<div class="strat-nav-cont">
+	<ul class="strat-partners-nav">
+	<li><a href="#" class="ssn0 prevent-click" onclick="return selectStory2(this, '0');"></a></li>
+
+	<li><a href="#" class="ssn1 prevent-click" onclick="return selectStory2(this, '1');"></a></li>
+
+	<li><a href="#" class="ssn2 prevent-click" onclick="return selectStory2(this, '2');"></a></li>
+
+	<li><a href="#" class="ssn3 prevent-click" onclick="return selectStory2(this, '3');"></a></li>
+
+	<li><a href="#" class="ssn4 prevent-click" onclick="return selectStory2(this, '4');"></a></li>
+
+	<li><a href="#" class="ssn5 prevent-click" onclick="return selectStory2(this, '5');"></a></li>
+
+	<li><a href="#" class="ssn6 prevent-click" onclick="return selectStory2(this, '6');"></a></li>
+
+	<li><a href="#" class="ssn7 prevent-click" onclick="return selectStory2(this, '7');"></a></li>
+
+	<li><a href="#" class="ssn8 prevent-click" onclick="return selectStory2(this, '8');"></a></li>
+
+	<li><a href="#" class="ssn9 prevent-click" onclick="return selectStory2(this, '9');"></a></li>
+
+	<li><a href="#" class="ssn10 prevent-click" onclick="return selectStory2(this, '10');"></a></li>
+
+	<li><a href="#" class="ssn11 prevent-click" onclick="return selectStory2(this, '11');"></a></li>
+
+	<li><a href="#" class="ssn12 prevent-click" onclick="return selectStory2(this, '12');"></a></li>
+
+	<li><a href="#" class="ssn13 prevent-click" onclick="return selectStory2(this, '13');"></a></li>
+
+	</ul>
+	</div>
+	<p class="partners-end"><a href="https://www.suse.com/zh-cn/partners/alliance/" class="button-clear button2">查看全部戰略聯盟合作夥伴</a></p>
+	</div>
+	</div>
+	</div> 
+	
+	<script type="text/javascript">
+	var slider = null;
+	var currentSlide = 4;
+	if ($(window).width() <= 440) currentSlide = 0;
+	else if ($(window).width() <= 700) currentSlide = 1;
+	else if ($(window).width() <= 1000) currentSlide = 2;
+	else if ($(window).width() <= 1200) currentSlide = 3;
+	
+	$( document ).ready(function() {
+	if ($("#strategic-partners-new2 li").length) {
+	
+	//Set the height of the partner stories to be that of the highest story.
+	var tallestPartner = 0;
+	$("#strategic-partners-new2 span.about").each(function () {
+	var thisHeight = $(this).outerHeight();
+	if (thisHeight > tallestPartner) tallestPartner = thisHeight;
+	});
+	$("#strategic-partners-new2 li a").css("height", tallestPartner);
+	
+	var seletedStoryClassNum = 4;
+	if ($(window).width() <= 440) seletedStoryClassNum = 0;
+	else if ($(window).width() <= 700) seletedStoryClassNum = 1;
+	else if ($(window).width() <= 1000) seletedStoryClassNum = 2;
+	else if ($(window).width() <= 1200) seletedStoryClassNum = 3;
+	$("ul.partners li a.sss"+seletedStoryClassNum).addClass("selected");
+	$("ul.strat-partners-nav li a.ssn"+seletedStoryClassNum).addClass("selected");
+	
+	
+	slider = $("#strategic-partners-new2").lightSlider({
+	loop:true,
+	keyPress:true,
+	item:9,
+	slideMove:1,
+	slideMargin:15,
+	enableDrag:true,
+	enableTouch:true,
+	duration:5,
+	//autoWidth:true,
+	//speed: 400,
+	//auto: true,
+	centerSlide:true,//center the active slide
+	onBeforeSlide: function(el) {
+	// This code just highlights the appropriate slide.
+	
+	var theOffset = 3;
+	if ($(window).width() <= 440) theOffset = 14 - 1;
+	else if ($(window).width() <= 700) theOffset = 0;
+	else if ($(window).width() <= 1000) theOffset = 1;
+	else if ($(window).width() <= 1200) theOffset = 2;
+	
+	$("ul.partners li a").removeClass("selected");
+	$("ul.strat-partners-nav li a").removeClass("selected");
+	var slideToHighlight = el.getCurrentSlideCount() + theOffset;
+	if (slideToHighlight >= 14) slideToHighlight -= 14;
+	$("ul.partners li a.sss"+slideToHighlight).addClass("selected");
+	$("ul.strat-partners-nav li a.ssn"+slideToHighlight).addClass("selected");
+	currentSlide = slideToHighlight;
+	},
+	responsive : [
+	{
+	breakpoint:1200,
+	settings: {
+	item:7,
+	slideMove:1,
+	slideMargin:10,
+	}
+	},
+	{
+	breakpoint:1000,
+	settings: {
+	item:5,
+	slideMove:1,
+	slideMargin:10,
+	}
+	},
+	{
+	breakpoint:700,
+	settings: {
+	item:3,
+	slideMove:1
+	}
+	},
+	{
+	breakpoint:440,
+	settings: {
+	item:1,
+	slideMove:1
+	}
+	}
+	]
+	}); 
+	
+	} 
+	});
+	
+	function selectStory2(theLink, storyId) {
+	if (theLink.className.indexOf("selected") !== -1) return true;
+	
+	var slideToHighlight = storyId;
+	
+	console.log("currentSlide: " + currentSlide + ", slideToHighlight: " + slideToHighlight);
+	// To prevent whiplash (slider suddenly reverting to the original copy of a given slide), I'm mostly using the prev/next functions to navigate
+	
+	if (slideToHighlight == currentSlide - 1 || slideToHighlight == currentSlide + 13) {
+	slider.goToPrevSlide();
+	} else if (slideToHighlight == currentSlide - 2 || slideToHighlight == currentSlide + 12) {
+	slider.goToPrevSlide();
+	slider.goToPrevSlide();
+	} else if (slideToHighlight == currentSlide - 3 || slideToHighlight == currentSlide + 11) {
+	slider.goToPrevSlide();
+	slider.goToPrevSlide();
+	slider.goToPrevSlide();
+	} else if (slideToHighlight == currentSlide - 4 || slideToHighlight == currentSlide + 10) {
+	slider.goToPrevSlide();
+	slider.goToPrevSlide();
+	slider.goToPrevSlide();
+	slider.goToPrevSlide();
+	} else if (slideToHighlight == currentSlide + 1 || slideToHighlight == currentSlide - 13) {
+	slider.goToNextSlide();
+	} else if (slideToHighlight == currentSlide + 2 || slideToHighlight == currentSlide - 12) {
+	slider.goToNextSlide();
+	slider.goToNextSlide();
+	} else if (slideToHighlight == currentSlide + 3 || slideToHighlight == currentSlide - 11) {
+	slider.goToNextSlide();
+	slider.goToNextSlide();
+	slider.goToNextSlide();
+	} else if (slideToHighlight == currentSlide + 4 || slideToHighlight == currentSlide - 10) {
+	slider.goToNextSlide();
+	slider.goToNextSlide();
+	slider.goToNextSlide();
+	slider.goToNextSlide();
+	} else {
+	slideToHighlight = storyId - 3;
+	if (slideToHighlight < 0) slideToHighlight += 14;
+	slider.goToSlide(slideToHighlight); 
+	}
+	return false;
+	}; 
+	
+	
+	</script>
+	
+	
+	
+	
+	
+	
+	<div class="modal fade" id="tei-calculator" tabindex="-99" role="dialog" aria-labelledby="teiCalculator">
+	<div class="modal-dialog" role="document">
+	<div class="modal-content">
+	<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+	aria-hidden="true"><span class="talk-x">X</span></span></button>
+	</div>
+	<div class="modal-body">
+	<div class="talk-form tei-form">
+	<h2>立即獲取“總體經濟影響”™報告！</h2>
+	<div id="form_wrap">
+	<div id="form_content">
+	<div id="marketoThankYou-106" style="display:none;">
+	
+	</div>
+	<script src="https://more.suse.com/js/forms2/js/forms2.min.js"></script>
+
+	<form id="mktoForm_106"></form>
+	<script> 
+	if (typeof MktoForms2 != 'object') {
+	document.write('<p>您似乎啟用了內容攔截。要使用此網站的全部功能，請使用非私有視窗，或關閉此網站的<a href="https://support.mozilla.org/en-US/kb/content-blocking#w_turn-content-blocking-off-on-individual-sites">內容攔截</a>。</p>');
+	}
+	MktoForms2.setOptions({ formXDPath : "/rs/937-DCH-261/images/marketo-xdframe-relative.html" });
+	MktoForms2.loadForm("//more.suse.com", "937-DCH-261", 106, function(form) {
+	
+	form.addHiddenFields({
+	"elqFormName":"Promo",
+	"elqSiteID":"1163",
+	"eventId":"",
+	"thankyouPage":"https://tools.totaleconomicimpact.com/go/suse/linuxenterprise/register.html?reg=1",
+	"deliveryEmail":"",
+	"w_product":"",
+	"campaign_description":"SUSE TEI Calculator",
+	"campaign_id":"M00009236",
+	"product":"SUSE TEI Calculator",
+	"formSubmitURL":window.location.href //no trailing comma
+	});
+	
+	var firstTouchURL = readCookie("firstTouchURL");
+	if (firstTouchURL != null) {
+	$('#mktoForm_106 input[name=landingPageURL]').val(firstTouchURL);
+	} else {
+	$('#mktoForm_106 input[name=landingPageURL]').val(window.location.href);
+	}
+	
+	$('#mktoForm_106 input[name=customCampaignInput]').val("U2L_II_Forrester_TEI_Calculator");
+	
+	var querystringData = decodeQueryString(window.location.href);
+	if (querystringData.hasOwnProperty("campaign_name") && querystringData["campaign_name"].length > 0) {
+	$('#mktoForm_106 input[name=customCampaignInput]').val(querystringData.campaign_name);
+	}
+	
+	$('#mktoForm_106 button.mktoButton[type="submit"]').html("提交");
+	
+	
+	form.onSuccess(function(values, followUpUrl) {
+	
+	
+	window.location.href = "https://tools.totaleconomicimpact.com/go/suse/linuxenterprise/register.html?reg=1";
+	return false;
+	});
+	
+	if (typeof demandbase_data_promise == 'object') {
+	jQuery.when(demandbase_data_promise).done(function (demandbase_ip_data) {
+	if (typeof demandbase_ip_data == 'object') {
+	for (var property in demandbase_ip_data) {
+	if (demandbase_ip_data.hasOwnProperty(property)) {
+	var key = "dA" + property.toLowerCase();
+	key = key.replace(/_/g, "");
+	// if the value is an array, convert to CSV so that it can be stuffed into field value
+	if (Object.prototype.toString.call(demandbase_ip_data[property]) == '[object Array]') {
+	var valueArray = demandbase_ip_data[property];
+	$('#mktoForm_106 input[name='+key+']').val(valueArray.join());
+	} else {
+	$('#mktoForm_106 input[name='+key+']').val(demandbase_ip_data[property]);
+	}
+	}
+	}
+	}
+	});
+	}
+	
+	});
+	MktoForms2.whenRendered(function (form) {
+	$("#mktoForm_106 textarea").closest(".mktoFormCol").addClass("fullWidth");
+	$("#mktoForm_106 input[type='checkbox']").closest(".mktoFormCol").addClass("fullWidth").addClass("hasCheckbox");
+	
+	$("#mktoForm_106 #Email").closest(".mktoFormCol").addClass("fullWidth");
+	$("#mktoForm_106 #PostalCode").closest(".mktoFormCol").addClass("fullWidth");
+	$("#mktoForm_106 #State").closest(".mktoFormCol").addClass("fullWidth");
+	});
+	</script>
+	</div>
+	</div> </div>
+	</div>
+	</div>
+	
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+	$(document).ready(function () {
+	if (window.location.href.indexOf('overlay=tei-calculator') > 0) {
+	$("#tei-calculator").modal("show");
+	}
+	});
+	
+	
+	// Add smooth scrolling to all links
+	$("a").on('click', function(event) {
+	
+	// Make sure this.hash has a value before overriding default behavior
+	if (this.hash !== "") {
+	// Prevent default anchor click behavior
+	event.preventDefault();
+	
+	// Store hash
+	var hash = this.hash;
+	
+	// Using jQuery's animate() method to add smooth page scroll
+	// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	$('html, body').animate({
+	scrollTop: $(hash).offset().top
+	}, 800, function(){
+	
+	// Add hash (#) to URL when done scrolling (default click behavior)
+	window.location.hash = hash;
+	});
+	} // End if
+	});
+	
+	</script>
+	
+	<style>
+	
+	</style>
+	</main>
+	
+	<!--back to top-->
+	<div class="container-fluid" style="height:0;">
+	<div class="row">
+	<div class="col-xs-12">
+	<div id="scrollTop">
+	<span class="fa fa-chevron-circle-up" onclick="backToTop()"></span>
+	</div>
+	</div>
+	</div>
+	</div>
+	<footer>
+	<div class="container-fluid zh-cn">
+	<div class="row">
+	<div class="footer">
+	<div class="float" id="footer-language">
+	<div id="lang-dropdown" class="lang-select popup">
+	<div class="col-sm-6 lang-left">
+	<h5>語言</h5>
+	<p>選擇語言</p>
+	<a href="https://www.suse.com/de-de/" data-country="de-de">Deutsch</a>
+
+	<a href="https://www.suse.com/en-us/" data-country="en-us">English</a>
+
+	<a href="https://www.suse.com/es-es/" data-country="es-es">Espa&ntilde;ol</a>
+
+	<a href="https://www.suse.com/fr-fr/" data-country="fr-fr">Fran&ccedil;ais</a>
+
+	<a class="current" href="https://www.suse.com/zh-cn/" data-country="zh-cn" title="">中文(簡體)</a>
+	<a href="https://www.suse.com/ja-jp/" data-country="ja-jp">日本語</a>
+
+	<a href="https://www.suse.com/pt-br/" data-country="pt-br">Portugu&ecirc;s (Brasil)</a>
+
+	<script>
+	$(".lang-left a").on("click", function() {
+	chosenLanguage = $(this).text();
+	sessionStorage.setItem('header_lang_name', chosenLanguage);
+	localStorage.setItem('header_lang_name', chosenLanguage);
+	sessionStorage.removeItem('header_country_name');
+	ga('send', 'event', 'Utility Nav', $(this).attr('data-country'), 'Lang/Country', {'anonymizeIp': true});
+	return true;
+	});
+	$(".lang-select .countries a").on("click", function() {
+	chosenCountry = $(this).text();
+	sessionStorage.setItem('header_country_name', chosenCountry);
+	});
+	function changeHeaderLanguage(elem) {
+	language = $(elem).data("country-name");
+	//console.log(language);
+	sessionStorage.setItem('header_lang_name', language);
+	localStorage.setItem('header_lang_name', language);
+	sessionStorage.removeItem('header_country_name');
+	}
+	function changeHeaderCountry(elem) {
+	country = $(elem).data("country-name");
+	//console.log(country);
+	sessionStorage.setItem('header_country_name', country);
+	}
+	</script>
+	</div>
+	<div class="col-sm-6 lang-right hidden-xs">
+	<h5>流覽</h5>
+	<p>瞭解世界各地發生的事情</p>
+	
+	<a href="https://www.suse.com/zh-cn/local/benelux/" title="Belgi&euml;">比利時</a>
+
+	<a href="https://www.suse.com/zh-cn/local/czech-republic/" title="Czech-Republic">捷克共和國</a>
+	<a href="https://www.suse.com/zh-cn/local/nordic-region/" title="Danmark">丹麥</a>
+
+	<a href="https://www.suse.com/zh-cn/local/italy/" title="Italy">義大利</a>
+
+	<a href="https://www.suse.com/zh-cn/local/benelux/" title="Luxembourg">盧森堡</a>
+
+	<a href="https://www.suse.com/zh-cn/local/hungary/" title="Hungary">匈牙利</a>
+
+	<a href="https://www.suse.com/zh-cn/local/benelux/" title="Nederland">荷蘭</a>
+
+	<a href="https://www.suse.com/zh-cn/local/nordic-region/" title="Norge">挪威</a>
+
+	<a href="https://www.suse.com/zh-cn/local/poland/" title="Poland">波蘭</a>
+
+	<a href="https://www.suse.com/zh-cn/local/russia/" title="Russia">俄羅斯</a>
+
+	<a href="https://www.suse.com/zh-cn/local/finland/" title="Finland">芬蘭</a>
+
+	<a href="https://www.suse.com/zh-cn/local/nordic-region/" title="Sverige">瑞典</a>
+
+	
+	<!--<a href="https://www.suse.com/zh-cn/local/benelux/" title="Benelux">比荷盧</a>-->
+	<script type="text/javascript">
+	function handleSelect(elm) {
+	window.location = elm.value;
+	}
+	</script>
+	</div>
+	</div>
+	</div>
+	
+	<div id="account_data">
+	<div id="account_drop" style="display:none;">
+	<h5>您好 <span class="account-firstname"></span></h5>
+	<div class="account-links">
+	<a href="https://www.suse.com/selfreg/html/about.jsp">關於您的登錄</a>
+
+	<a href="https://www.suse.com/selfreg/jsp/protected/manageAccount.jsp">編輯您的帳戶</a>
+
+	<a href="https://www.suse.com/company/subscribe/">您的通訊自選設置</a>
+
+	<a href="https://www.suse.com/AGLogout">註銷</a>
+
+	</div>
+	</div>
+	</div>
+	
+	<div id="login_form">
+	<div id="login_drop" style="display:none;">
+	<h5>登錄</h5>
+	<form action="https://login.microfocus.com/nidp/app/login?id=132" method="post" id="overlay_form">
+	<input type="hidden" class="targetUrl" name="target" value="https://www.suse.com/common/util/secure/login.php">
+	<label for="Ecom_User_ID">用戶名</label>
+	<input type="text" id="Ecom_User_ID" name="Ecom_User_ID" value="" tabindex="1" placeholder="用戶名">
+	<label for="Ecom_Password" id="overlay_pw">口令</label>
+	<input type="password" id="Ecom_Password" name="Ecom_Password" value="" tabindex="2" placeholder="口令">
+	<p id="overlay_forgot"><a href="https://www.suse.com/selfreg/jsp/forgotAll.jsp" onclick="ga('send', 'event', 'Utility Nav', 'Forgot Password', 'Account', {'anonymizeIp': true}); return true;">忘記口令</a></p>
+	<input type="submit" id="overlay_submit" value="登錄" onclick="ga('send', 'event', 'Utility Nav', 'Sign In', 'Account', {'anonymizeIp': true}); return true;">
+	</form>
+	
+	<script type="text/javascript">
+	$("#login_drop form input.targetUrl").each(function() {
+	var baseTarget = $(this).val();
+	$(this).val(baseTarget + "?r=" + encodeURI(location.href) );
+	});
+	// open request a call dropdown when the floating head is clicked
+	$('#floating-head').on("click",function () {
+	ga('send', 'event', 'lets-talk', window.location.href, 'click', {'anonymizeIp': true});
+	$('#utilitynav-chat .butn').trigger("click");
+	});
+	</script>
+	
+	<p id="overlay_create_acct">
+	<a href="https://www.suse.com/selfreg/jsp/protected/manageAccount.jsp" onclick="ga('send', 'event', 'Utility Nav', 'Manage Your Account', 'Account', {'anonymizeIp': true}); return true;">管理帳戶</a>
+	<a href="https://www.suse.com/selfreg/jsp/createAccount.jsp" onclick="ga('send', 'event', 'Utility Nav', 'Create an Account', 'Account', {'anonymizeIp': true}); return true;">創建帳戶</a>
+	</p>
+	</div>
+	</div>
+	
+	
+	<div class="logo">
+	<a href="https://www.suse.com/zh-cn/" onclick="ga('send', 'event', 'Footer Nav', 'Home', 'https://www.suse.com/zh-cn/');">
+	<img src="https://www.suse.com/assets/img/fn-suse-ico.png" alt=""/>
+
+	</a>
+	</div>
+	<div class="inline-container">
+	<div class="phone">
+	
+	<div class="number">
+	銷售:
+	800-906151
+	</div>
+	<div class="number">支持: +1-801-861-4000</div>
+	</div>
+	<div class="social">
+	<ul>
+	<li><a href="https://www.facebook.com/SUSEWorldwide" onclick="ga('send', 'event', 'Footer Nav', 'Facebook', 'https://www.facebook.com/SUSEWorldwide');"><img src="https://www.suse.com/assets/img/fn-fbook-ico.png" alt=""/></a></li>
+
+	<li><a href="https://www.twitter.com/SUSE" onclick="ga('send', 'event', 'Footer Nav', 'Twitter', 'https://www.twitter.com/SUSE');"><img src="https://www.suse.com/assets/img/fn-twit-ico.png" alt=""/></a></li>
+
+	<li><a href="https://www.linkedin.com/company/suse" onclick="ga('send', 'event', 'Footer Nav', 'Linked In', 'https://www.linkedin.com/company/suse');"><img src="https://www.suse.com/assets/img/fn-link-ico.png" alt=""/></a></li>
+
+	</ul>
+	</div>
+	<div class="foot-nav">
+	<ul>
+	<li><a href="https://www.suse.com/zh-cn/company/careers/" onclick="ga('send', 'event', 'Footer Nav', 'Careers', 'https://www.suse.com/zh-cn/company/careers/');">招賢納士</a></li>
+	<li><a href="https://www.suse.com/zh-cn/company/legal/" onclick="ga('send', 'event', 'Footer Nav', 'Legal', 'https://www.suse.com/zh-cn/company/legal/');">法律</a></li>
+	<li id="anti-slavery"><a href="https://www.suse.com/media/agreement/suse_anti_slavery_statement.pdf" onclick="ga('send', 'event', 'Footer Nav', 'Anti Slavery Statement', 'https://www.suse.com/media/agreement/suse_anti_slavery_statement.pdf');">反奴隸制聲明</a></li>
+	<li><a href="#" data-toggle="modal" data-target="#feedback-modal" onclick="ga('send', 'event', 'Footer Nav', 'Feedback', 'https://www.suse.com/zh-cn/feedback/');">回饋</a></li>
+	<li><a href="https://www.suse.com/zh-cn/company/about/" onclick="ga('send', 'event', 'Footer Nav', 'About', 'https://www.suse.com/zh-cn/company/about/');">關於</a></li>
+	<li><a href="https://www.suse.com/zh-cn/company/subscribe/" onclick="ga('send', 'event', 'Footer Nav', 'Subscribe', 'https://www.suse.com/zh-cn/company/subscribe/');">通訊自選設置</a></li>
+	<li><a href="https://www.suse.com/zh-cn/contact/" onclick="ga('send', 'event', 'Footer Nav', 'Contact', 'https://www.suse.com/zh-cn/contact/');">聯繫方式</a></li>
+	<li><a href="#" data-toggle="modal" data-target="#talk-modal" onclick="ga('send', 'event', 'Footer Nav', 'Lets Chat', 'https://www.suse.com/zh-cn/racframe/');">與我們聯繫</a></li>
+	</ul>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+	<div class="divider"></div>
+	<div class="copy-left">
+	©<script type="text/javascript">var d = new Date(); document.write(d.getFullYear() + " ");</script>SUSE，保留所有權利   |   黔ICP備16006126號-3
+	</div>
+	<div class="copy">
+	<a href="https://www.suse.com/zh-cn/company/policies/privacy/" style="color:white;" onclick="ga('send', 'event', 'Footer Nav', 'Privacy and Cookie Policy', 'https://www.suse.com/zh-cn/company/policies/privacy/');">隱私與 Cookie 策略</a>
+	</div>
+	<div class="clear"></div>
+	</div>
+	</div>
+	</div>
+	</footer>
+	
+	<script>
+	$('.products-solutions a').on("click",function () {
+	ga('send','event','header','tab-click','enterprise-linux', {'anonymizeIp': true});
+	});
+	function sendGACode(tab) {
+	switch(tab) {
+	case 1:
+	ga('send','event','header','tab-click','enterprise-linux', {'anonymizeIp': true});
+	break;
+	case 2:
+	ga('send','event','header','tab-click','mission-critical-computing', {'anonymizeIp': true});
+	break;
+	case 3:
+	ga('send','event','header','tab-click','cloud-solutions', {'anonymizeIp': true});
+	break;
+	case 4:
+	ga('send','event','header','tab-click','software-defined-storage', {'anonymizeIp': true});
+	break;
+	case 5:
+	ga('send','event','header','tab-click','sap-solutions', {'anonymizeIp': true});
+	break;
+	case 6:
+	ga('send','event','header','tab-click','it-infrastructure-management', {'anonymizeIp': true});
+	break;
+	case 7:
+	ga('send','event','header','tab-click','application-delivery', {'anonymizeIp': true});
+	break;
+	default:
+	}
+	}
+	</script>
+	<div class="menudropdowns">
+	<div class="outer products">
+	<div class="mnavback"><i class="fa fa-angle-left fa-2x"></i> <span class="goback">返回</span></div>
+	<div class="dropdown" style="background-color:transparent;box-shadow: none;">
+	<div class="container">
+	<div class="shad">
+	<div class="col-sm-4 nav-col">
+	<div class="inner-1">
+	<h5>解決方案</h5>
+	<h6 id="prod1" class="nav-solutions product-selected" onclick="showSlide(1);sendGACode(1);"><img src="https://www.suse.com/assets/img/products/product-icon-sles.png" alt="SUSE Linux Enterprise Live Patching"><span>企業級 Linux</span><i class="plusminus fa fa-plus"></i></h6>
+	<div id="prodcontent1" class="prodcontent"></div>
+	<div id="popcontent1" class="popcontent"></div>
+	<h6 id="prod2" class="nav-solutions" onclick="showSlide(2);sendGACode(2);"><img src="https://www.suse.com/assets/img/products/mission-critical.png" alt="SUSE Linux Enterprise High Availability Extension"><span>業務關鍵型計算</span><i class="plusminus fa fa-plus"></i></h6>
+	<div id="prodcontent2" class="prodcontent"></div>
+	<div id="popcontent2" class="popcontent"></div>
+	<h6 id="prod3" class="nav-solutions" onclick="showSlide(3);sendGACode(3);"><img src="https://www.suse.com/assets/img/products/product-icon-osc02.png" alt="SUSE Cloud Solutions"><span>雲解決方案</span><i class="plusminus fa fa-plus"></i></h6>
+	<div id="prodcontent3" class="prodcontent"></div>
+	<div id="popcontent3" class="popcontent"></div>
+	<h6 id="prod4" class="nav-solutions" onclick="showSlide(4);sendGACode(4);"><img src="https://www.suse.com/assets/img/products/product-icon-stor02.png" alt="SUSE Enterprise Storage"><span>軟體定義的儲存解決方案</span><i class="plusminus fa fa-plus"></i></h6>
+	<div id="prodcontent4" class="prodcontent"></div>
+	<div id="popcontent4" class="popcontent"></div>
+	<h6 id="prod5" class="nav-solutions" onclick="showSlide(5);sendGACode(5);"><img src="https://www.suse.com/assets/img/products/product-icon-sap.png" alt="SUSE Linux Enterprise Server for SAP Applications"><span>SAP 解決方案</span><i class="plusminus fa fa-plus"></i></h6>
+	<div id="prodcontent5" class="prodcontent"></div>
+	<div id="popcontent5" class="popcontent"></div>
+	<h6 id="prod6" class="nav-solutions" onclick="showSlide(6);sendGACode(6);"><img src="https://www.suse.com/assets/img/products/product-icon-man02.png" alt="SUSE Manager"><span>IT 基礎設施管理</span><i class="plusminus fa fa-plus"></i></h6>
+	<div id="prodcontent6" class="prodcontent"></div>
+	<div id="popcontent6" class="popcontent"></div>
+	<h6 id="prod7" class="nav-solutions" onclick="showSlide(7);sendGACode(7);"><img src="https://www.suse.com/assets/img/products/product-icon-application-delivery.png" alt="SUSE Application Delivery"><span>應用程式遞送解決方案</span><i class="plusminus fa fa-plus"></i></h6>
+	<div id="prodcontent7" class="prodcontent"></div>
+	<div id="popcontent7" class="popcontent"></div>
+	<a id="a-to-z" class="button-clear stay-bottom" href="https://www.suse.com/zh-cn/products/">所有產品</a>
+	<div class="clearfix"></div>
+	</div>
+	</div>
+	<div class="col-sm-5 nav-col" id="sub-products">
+	<div class="inner-2">
+	<h5>產品</h5>
+	<div id="slide-content1" class="slide-content" style="display:block;">
+	<a href="https://www.suse.com/zh-cn/products/server/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'suse linux enterprise server', {'anonymizeIp': true});"><span class="h6title">SUSE Linux Enterprise Server</span>
+	<p>提高可用性、效率和創新性</p></a>
+	<ul>
+	<li><a href="https://www.suse.com/zh-cn/products/server/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'for x86-64', {'anonymizeIp': true});">適用於 x86-64</a></li>
+	<li><a href="https://www.suse.com/zh-cn/products/power/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'for ibm power', {'anonymizeIp': true});">適用於 IBM Power</a></li>
+	<li><a href="https://www.suse.com/zh-cn/products/arm/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'for arm', {'anonymizeIp': true});">適用於 Arm</a></li>
+	<li><a href="https://www.suse.com/zh-cn/products/systemz/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'for z systems & linuxone', {'anonymizeIp': true});">適用於 z Systems 和 LinuxONE</a></li>
+	<li><a href="https://www.suse.com/zh-cn/products/server/hpc/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'for high performance computing', {'anonymizeIp': true});">適用於高性能計算</a></li>
+	<li><a href="https://www.suse.com/zh-cn/products/sles-for-sap/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'for sap applications', {'anonymizeIp': true});">適用于 SAP 應用程式</a></li>
+	<li><a href="https://www.suse.com/zh-cn/products/linux-point-of-service/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'for linux enterprise point of service', {'anonymizeIp': true});">適用於 Linux Enterprise Point of Service</a></li>
+	</ul>
+	<a href="https://www.suse.com/zh-cn/products/vmdriverpack/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'virtual machine driver pack', {'anonymizeIp': true});"><span class="h6title">Virtual Machine Driver Pack</span>
+	<p>半虛擬化磁片、網路和氣球驅動程式</p></a>
+	<a href="https://www.suse.com/zh-cn/products/desktop/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'suse linux enterprise desktop', {'anonymizeIp': true});"><span class="h6title">SUSE Linux Enterprise Desktop</span>
+	<p>可用於 Windows、Mac 和 UNIX 的辦公工具</p></a>
+	<a href="https://www.suse.com/zh-cn/products/workstation-extension/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'suse linux enterprise workstation extension', {'anonymizeIp': true});"><span class="h6title">SUSE Linux Enterprise Workstation Extension</span>
+	<p>將您的企業伺服器用作工作站</p></a>
+	<a href="https://www.suse.com/zh-cn/partners/embedded/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'suse embedded', {'anonymizeIp': true});"><span class="h6title">SUSE Embedded</span>
+	<p>適用于穩定而安全的專用設備和系統</p></a>
+	<a href="https://www.suse.com/zh-cn/solutions/enterprise-linux/" onclick="ga('send', 'event', 'Main Nav', 'button', 'enterprise linux', {'anonymizeIp': true});" id="enterprise-linux-cta" class="button-clear button-clear2 stay-bottom prod-cta">企業級 Linux</a>
+	<div class="clearfix"></div>
+	</div>
+	<div class="clearfix"></div>
+	<div id="slide-content2" class="slide-content">
+	<a href="https://www.suse.com/zh-cn/products/highavailability/" onclick="ga('send', 'event', 'Main Nav', 'business-critical computing', 'high availability', {'anonymizeIp': true});"><span class="h6title">High Availability</span>
+	<p>物理和虛擬伺服器叢集</p></a>
+	<a href="https://www.suse.com/zh-cn/products/highavailability/geo-clustering/" onclick="ga('send', 'event', 'Main Nav', 'business-critical computing', 'geo clustering', {'anonymizeIp': true});"><span class="h6title">Geo Clustering</span>
+	<p>沒有距離限制的群集</p></a>
+	<a href="https://www.suse.com/zh-cn/products/realtime/" onclick="ga('send', 'event', 'Main Nav', 'business-critical computing', 'real time', {'anonymizeIp': true});"><span class="h6title">Real Time</span>
+	<p>減少系統延遲並加快回應速度</p></a>
+	<a href="https://www.suse.com/zh-cn/products/live-patching/" onclick="ga('send', 'event', 'Main Nav', 'business-critical computing', 'live patching', {'anonymizeIp': true});"><span class="h6title">Live Patching</span>
+	<p>在不關閉系統的情況下應用內核增補程式</p></a>
+	<a href="https://www.suse.com/zh-cn/programs/business-critical/" onclick="ga('send', 'event', 'Main Nav', 'button', 'business-critical computing', {'anonymizeIp': true});" class="button-clear button-clear2 prod-cta">業務關鍵型計算</a>
+	<div class="clearfix"></div>
+	</div>
+	<div id="slide-content3" class="slide-content">
+	<a href="https://www.suse.com/zh-cn/promo/cloud/public/" onclick="ga('send', 'event', 'Main Nav', 'cloud and as a service solutions', 'suse public cloud', {'anonymizeIp': true});"><span class="h6title">SUSE Public Cloud</span>
+	<p>在全球公共雲提供商處運行您的 SUSE 解決方案</p></a>
+	<a href="https://www.suse.com/zh-cn/solutions/cloud/" onclick="ga('send', 'event', 'Main Nav', 'button', 'cloud and as a service solutions', {'anonymizeIp': true});" class="button-clear button-clear2">雲解決方案</a>
+	<div class="clearfix"></div>
+	</div>
+	<div id="slide-content4" class="slide-content">
+	<a href="https://www.suse.com/zh-cn/products/suse-enterprise-storage/" onclick="ga('send', 'event', 'Main Nav', 'software-defined-storage', 'enterprise storage', {'anonymizeIp': true});"><span class="h6title">SUSE Enterprise Storage</span>
+	<p>由 Ceph 提供支援的基於軟體的資料儲存解決方案</p></a>
+	<a href="https://www.suse.com/zh-cn/solutions/software-defined-storage/" onclick="ga('send', 'event', 'Main Nav', 'button', 'software-defined storage', {'anonymizeIp': true});" class="button-clear button-clear2 prod-cta">軟體定義的儲存解決方案</a>
+	<div class="clearfix"></div>
+	</div>
+	<div id="slide-content5" class="slide-content">
+	<a href="https://www.suse.com/zh-cn/products/sles-for-sap/" onclick="ga('send', 'event', 'Main Nav', 'sap solutions', 'suse linux enterprise server for sap applications', {'anonymizeIp': true});"><span class="h6title">SUSE Linux Enterprise Server for SAP Applications</span>
+	<p>適用于 SAP 應用程式和資料庫的經過優化且具有恢復能力的平臺</p></a>
+	<a href="https://www.suse.com/zh-cn/promo/cloud/public/" onclick="ga('send', 'event', 'Main Nav', 'sap solutions', 'suse public cloud', {'anonymizeIp': true});"><span class="h6title">SUSE Public Cloud</span>
+	<p>在全球公共雲提供商處運行您的 SUSE 解決方案</p></a>
+	<a href="https://www.suse.com/zh-cn/solutions/sap/" onclick="ga('send', 'event', 'Main Nav', 'button', 'sap solutions', {'anonymizeIp': true});" class="button-clear button-clear2 prod-cta">SAP 解決方案</a>
+	<div class="clearfix"></div>
+	</div>
+	<div id="slide-content6" class="slide-content">
+	<a href="https://www.suse.com/zh-cn/products/suse-manager/" onclick="ga('send', 'event', 'Main Nav', 'it infrastructure management', 'suse manager', {'anonymizeIp': true});"><span class="h6title">SUSE Manager</span>
+	<p>面向企業 DevOps 和 IT Operations 的開放原始程式碼基礎設施管理解決方案</p></a>
+	<ul>
+	<li class="indent"><a href="https://www.suse.com/zh-cn/products/suse-manager-retail/" onclick="ga('send', 'event', 'Main Nav', 'it infrastructure management', 'suse manager for retail', {'anonymizeIp': true});">
+	<span class="h6title">SUSE Manager for Retail</span>
+	<p>針對零售和服務點環境量身打造的基於 SUSE Manager 的解決方案</p></a>
+	</li>
+	</ul>
+	
+	<p></p>
+	<a href="https://www.suse.com/zh-cn/solutions/it-infrastructure-management/" onclick="ga('send', 'event', 'Main Nav', 'button', 'it infrastructure management', {'anonymizeIp': true});" class="button-clear button-clear2 prod-cta">IT 基礎設施管理</a>
+	<div class="clearfix"></div>
+	</div>
+	<div id="slide-content7" class="slide-content">
+	<a href="https://www.suse.com/zh-cn/products/caas-platform/" onclick="ga('send', 'event', 'Main Nav', 'application delivery', 'suse caas platform', {'anonymizeIp': true});"><span class="h6title">SUSE CaaS Platform</span>
+	<p>創建基於微服務的容器應用程式和服務</p></a>
+	<a href="https://www.suse.com/zh-cn/products/cloud-application-platform/" onclick="ga('send', 'event', 'Main Nav', 'application delivery', 'suse cloud application platform', {'anonymizeIp': true});"><span class="h6title">SUSE Cloud Application Platform</span>
+	<p>簡化傳統和全新雲原生應用程式的生命週期管理</p></a>
+	<a href="https://www.suse.com/zh-cn/solutions/application-delivery/" onclick="ga('send', 'event', 'Main Nav', 'button', 'application delivery', {'anonymizeIp': true});" class="button-clear button-clear2">應用程式遞送解決方案</a>
+	<div class="clearfix"></div>
+	</div>
+	</div>
+	</div>
+	<div class="col-sm-3 nav-col">
+	<div class="inner-3">
+	<div id="pop-topic1" class="banner-popular-topics" style="display:block;">
+	<h5>熱門主題</h5>
+	
+	
+	<a href="https://www.suse.com/zh-cn/solutions/sap/hana/s4hana/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 's4hana', {'anonymizeIp': true});">S/4HANA</a>
+	
+	<a href="https://www.suse.com/zh-cn/solutions/digital-transformation/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'digital transformation', {'anonymizeIp': true});">數字變革</a>
+	<a href="https://www.suse.com/zh-cn/solutions/containers/" onclick="ga('send', 'event', 'Main Nav', 'enterprise linux', 'containers', {'anonymizeIp': true});">容器</a>
+	</div>
+	<div id="pop-topic2" class="banner-popular-topics">
+	<h5>熱門主題</h5>
+	<a href="https://www.suse.com/zh-cn/solutions/sle/high-performance-computing/" onclick="ga('send', 'event', 'Main Nav', 'business-critical computing', 'high performance computing', {'anonymizeIp': true});">高性能計算</a>
+	<a href="https://www.suse.com/zh-cn/solutions/software-defined-infrastructure/" onclick="ga('send', 'event', 'Main Nav', 'business-critical computing', 'software-defined infrastructure', {'anonymizeIp': true});">軟體定義的基礎設施</a>
+	</div>
+	<div id="pop-topic3" class="banner-popular-topics">
+	<h5>熱門主題</h5>
+	<a href="https://www.suse.com/zh-cn/solutions/software-defined-infrastructure/" onclick="ga('send', 'event', 'Main Nav', 'cloud and as a service solutions', 'software-defined infrastructure', {'anonymizeIp': true});">軟體定義的基礎設施</a>
+	<a href="https://www.suse.com/zh-cn/solutions/kubernetes/" onclick="ga('send', 'event', 'Main Nav', 'cloud and as a service solutions', 'kubernetes', {'anonymizeIp': true});">Kubernetes</a> <a href="https://www.suse.com/zh-cn/solutions/devops/" onclick="ga('send', 'event', 'Main Nav', 'cloud and as a service solutions', 'devops', {'anonymizeIp': true});">DevOps</a>
+	
+	<a href="https://www.suse.com/zh-cn/solutions/digital-transformation/" onclick="ga('send', 'event', 'Main Nav', 'cloud and as a service solutions', 'digital transformation', {'anonymizeIp': true});">數字變革</a> </div>
+	<div id="pop-topic4" class="banner-popular-topics">
+	<h5>熱門主題</h5>
+	<a href="https://www.suse.com/zh-cn/promo/software-defined-storage/ceph/" onclick="ga('send', 'event', 'Main Nav', 'software-defined storage', 'ceph', {'anonymizeIp': true});">Ceph</a>
+	<a href="https://www.suse.com/zh-cn/solutions/software-defined-infrastructure/" onclick="ga('send', 'event', 'Main Nav', 'software-defined storage', 'software-defined infrastructure');">軟體定義的基礎設施</a>
+	<a href="https://www.suse.com/zh-cn/solutions/digital-transformation/" onclick="ga('send', 'event', 'Main Nav', 'software-defined storage', 'digital transformation', {'anonymizeIp': true});">數字變革</a>
+	<a href="https://www.suse.com/zh-cn/solutions/software-defined-storage/body-camera/" onclick="ga('send', 'event', 'Main Nav', 'software-defined storage', 'body camera storage', {'anonymizeIp': true});">隨身攝像機儲存</a>
+	<a href="https://www.suse.com/zh-cn/solutions/software-defined-storage/disk-to-disk-backup-storage-requirements/" onclick="ga('send', 'event', 'Main Nav', 'software-defined storage', 'disk to disk backup storage', {'anonymizeIp': true});">磁片到磁片備份儲存</a>
+	</div>
+	<div id="pop-topic5" class="banner-popular-topics">
+	<h5>熱門主題</h5>
+	<a href="https://www.suse.com/zh-cn/solutions/sap/hana/s4hana/" onclick="ga('send', 'event', 'Main Nav', 'sap solutions', 's/4hana', {'anonymizeIp': true});">S/4HANA</a>
+	<a href="https://www.suse.com/zh-cn/solutions/software-defined-infrastructure/" onclick="ga('send', 'event', 'Main Nav', 'sap solutions', 'software-defined infrastructure', {'anonymizeIp': true});">軟體定義的基礎設施</a>
+	
+	<a href="https://www.suse.com/zh-cn/solutions/digital-transformation/" onclick="ga('send', 'event', 'Main Nav', 'sap solutions', 'digital transformation', {'anonymizeIp': true});">數字變革</a> <a href="https://www.suse.com/zh-cn/programs/transitioningtosap/" onclick="ga('send', 'event', 'Main Nav', 'sap solutions', 'transitioning to s/4hana', {'anonymizeIp': true});">過渡到 S/4HANA</a> </div>
+	<div id="pop-topic6" class="banner-popular-topics">
+	<h5>熱門主題</h5>
+	<a href="https://www.suse.com/zh-cn/solutions/software-defined-infrastructure/" onclick="ga('send', 'event', 'Main Nav', 'it infrastructure management', 'software-defined infrastructure', {'anonymizeIp': true});">軟體定義的基礎設施</a>
+	<a href="https://www.suse.com/zh-cn/solutions/devops/" onclick="ga('send', 'event', 'Main Nav', 'it infrastructure management', 'devops', {'anonymizeIp': true});">DevOps</a>
+	<a href="https://www.suse.com/zh-cn/solutions/digital-transformation/" onclick="ga('send', 'event', 'Main Nav', 'it infrastructure management', 'digital transformation', {'anonymizeIp': true});">數字變革</a>
+	</div>
+	<div id="pop-topic7" class="banner-popular-topics">
+	<h5>熱門主題</h5>
+	<a href="https://www.suse.com/zh-cn/solutions/digital-transformation/" onclick="ga('send', 'event', 'Main Nav', 'application delivery', 'digital transformation', {'anonymizeIp': true});">數字變革</a>
+	<a href="https://www.suse.com/zh-cn/solutions/devops/" onclick="ga('send', 'event', 'Main Nav', 'application delivery', 'devops', {'anonymizeIp': true});">DevOps</a>
+	<a href="https://www.suse.com/zh-cn/solutions/kubernetes/" onclick="ga('send', 'event', 'Main Nav', 'application delivery', 'kubernetes', {'anonymizeIp': true});">Kubernetes</a>
+	<a href="https://www.suse.com/zh-cn/products/cloud-application-platform/cloud-foundry/" onclick="ga('send', 'event', 'Main Nav', 'application delivery', 'cloud foundry', {'anonymizeIp': true});">Cloud Foundry</a>
+	<a href="https://www.suse.com/zh-cn/solutions/containers/" onclick="ga('send', 'event', 'Main Nav', 'application delivery', 'containers', {'anonymizeIp': true});">容器</a>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<script type="text/javascript">
+	$(".prodcontent, .popcontent").css("display","none");
+	window.onresize = function(event) {
+	if (window.innerWidth < 768) {
+	//mobile
+	$(".inner-3").hide();
+	$(".nav-solutions").removeClass("product-selected");
+	$(".inner-1, .inner-3").css("height","1500");
+	$(".inner-3").css("padding-bottom","100px");
+	$("#a-to-z, #enterprise-linux-cta").removeClass("stay-bottom");
+	} else {
+	//desktop
+	$(".inner-3").show();
+	$(".prodcontent, .popcontent").hide();
+	$(".inner-1, .inner-3").css("height","600px");
+	$(".inner-3").css("padding-bottom","0");
+	$("#a-to-z, #enterprise-linux-cta").addClass("stay-bottom");
+	}
+	};
+	if (window.innerWidth < 768) {
+	//mobile
+	$(".nav-solutions").removeClass("product-selected");
+	$(".inner-3").hide();
+	$(".inner-1, .inner-3, .dropdown .shad").css("height","1500");
+	$(".dropdown").css("height","100%");
+	$("#a-to-z, #enterprise-linux-cta").removeClass("stay-bottom");
+	$(".inner-3").css("padding-bottom","100px");
+	} else {
+	//desktop
+	$(".inner-1, .inner-3, .dropdown .shad").css("height","600px");
+	$("#a-to-z, #enterprise-linux-cta").addClass("stay-bottom");
+	$(".inner-3").css("padding-bottom","0");
+	}
+	function showSlide(slide) {
+	if (window.innerWidth < 768) {
+	//mobile
+	thisSolution = '#prod'+slide;
+	$(".nav-solutions").not(thisSolution).children("i").removeClass('fa-minus').addClass('fa-plus');
+	if ($(thisSolution).children("i.fa-plus").length > 0) {
+	$(thisSolution).children("i").removeClass('fa-plus').addClass('fa-minus');
+	} else {
+	$(thisSolution).children("i").removeClass('fa-minus').addClass('fa-plus');
+	}
+	$(".nav-solutions").removeClass("product-selected");
+	thisSlide = '#prodcontent'+slide;
+	popSlide = '#popcontent'+slide;
+	html = $("#slide-content"+slide).html();
+	poptopic = $("#pop-topic"+slide).html();
+	$(thisSlide).html(html);
+	$(popSlide).html(poptopic);
+	$('.prodcontent').not(thisSlide).slideUp();
+	$('.popcontent').not(popSlide).slideUp();
+	$(thisSlide).slideToggle();
+	$(popSlide).slideToggle();
+	$("#a-to-z, #enterprise-linux-cta").removeClass("stay-bottom");
+	thisOffset = slide * 60;
+	$( ".dropdown" ).scrollTop( $(thisSolution).offset().top - 120 ).scrollTop( $(".dropdown").offset().top - 100 + thisOffset);
+	} else {
+	//desktop
+	$('.prodcontent,.popcontent').hide();
+	$(".slide-content,.banner-popular-topics").hide();
+	$("#slide-content"+slide).show();
+	$("#pop-topic"+slide).show();
+	$("#a-to-z, #enterprise-linux-cta").addClass("stay-bottom");
+	}
+	}
+	
+	</script>
+	<div class="outer support">
+	<div class="mnavback"><i class="fa fa-angle-left fa-2x"></i> <span class="goback">返回</span></div>
+	<div class="dropdown">
+	<div class="container-fluid">
+	<div class="col-sm-4">
+	<div class="innercol">
+	<h5>支援服務</h5>
+	<a href="https://www.suse.com/zh-cn/renewals/" onclick="ga('send', 'event', 'Main Nav', 'support offerings', 'renew your support subscription', {'anonymizeIp': true})"><span class="h6title">續訂您的支持訂閱</span></a><br/>
+	<a href="https://www.suse.com/zh-cn/support/" onclick="ga('send', 'event', 'Main Nav', 'support offerings', 'product support subscriptions')"><span class="h6title">產品支援訂閱</span>
+	<p>獲得購買支持</p></a><br/>
+	<a href="https://www.suse.com/zh-cn/products/long-term-service-pack-support/" onclick="ga('send', 'event', 'Main Nav', 'support offerings', 'long term service support', {'anonymizeIp': true})"><span class="h6title">長期服務支援</span>
+	<p>保持現有產品版本</p></a><br/>
+	<a href="https://www.suse.com/zh-cn/products/expandedsupport/" onclick="ga('send', 'event', 'Main Nav', 'support offerings', 'expanded support', {'anonymizeIp': true})"><span class="h6title">擴展支持</span>
+	<p>支持普通 Linux 平臺</p></a><br/>
+	<a href="https://www.suse.com/zh-cn/shop/" onclick="ga('send', 'event', 'Main Nav', 'support offerings', 'suse shop', {'anonymizeIp': true})"><span class="h6title">SUSE 商店</span>
+	<p>線上購買訂閱</p></a><br/>
+	
+	
+	
+	
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="innercol">
+	<h5>支援資源</h5>
+	<a href="https://www.suse.com/zh-cn/support/kb/" onclick="ga('send', 'event', 'Main Nav', 'support resources', 'knowledgebase', {'anonymizeIp': true})"><span class="h6title">知識庫</span></a><br/>
+	<a href="https://scc.suse.com/login" onclick="ga('send', 'event', 'Main Nav', 'support resources', 'suse customer center', {'anonymizeIp': true})"><span class="h6title">SUSE 客戶中心</span></a><br/>
+	<a href="https://download.suse.com/patch/finder/" onclick="ga('send', 'event', 'Main Nav', 'support resources', 'patches & updates', {'anonymizeIp': true})"><span class="h6title">增補程式與更新</span></a><br/>
+	<a href="https://drivers.suse.com/" onclick="ga('send', 'event', 'Main Nav', 'support resources', 'driver search', {'anonymizeIp': true})"><span class="h6title">驅動程式搜索</span></a><br/>
+	<a href="https://documentation.suse.com/" onclick="ga('send', 'event', 'Main Nav', 'support resources', 'product documentation', {'anonymizeIp': true})"><span class="h6title">產品文檔</span></a><br/>
+	<a href="https://www.suse.com/zh-cn/lifecycle/" onclick="ga('send', 'event', 'Main Nav', 'support resources', 'products support life cycle', {'anonymizeIp': true})"><span class="h6title">產品支援生命週期</span></a><br/>
+	<a href="https://packagehub.suse.com/" onclick="ga('send', 'event', 'Main Nav', 'support resources', 'package hub', {'anonymizeIp': true})"><span class="h6title">Package Hub</span>
+	<p>SUSE Linux Enterprise Server 社區套裝軟體</p></a><br/>
+	<a href="https://forums.suse.com/forum.php" onclick="ga('send', 'event', 'Main Nav', 'support resources', 'support forums', {'anonymizeIp': true})"><span class="h6title">支持論壇</span></a><br/>
+	<a href="https://www.suse.com/zh-cn/support/handbook/" onclick="ga('send', 'event', 'Main Nav', 'support resources', 'technical support handbook', {'anonymizeIp': true})"><span class="h6title">技術支援手冊</span></a><br/>
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="innercol">
+	<h5>服務</h5>
+	<a href="https://www.suse.com/zh-cn/services/" onclick="ga('send', 'event', 'Main Nav', 'services', 'global services', {'anonymizeIp': true})"><span class="h6title">SUSE 全球服務</span><p>靈活的服務，助您隨心所願</p></a><br/>
+	<a href="https://www.suse.com/zh-cn/services/consulting/" onclick="ga('send', 'event', 'Main Nav', 'services', 'consulting', {'anonymizeIp': true})"><span class="h6title">諮詢服務</span><p>體系結構、設計、實施服務</p></a><br/>
+	<a href="https://www.suse.com/zh-cn/services/select-services/" onclick="ga('send', 'event', 'Main Nav', 'services', 'select services', {'anonymizeIp': true})"><span class="h6title">Select Services</span>
+	<p>該服務旨在快速跟蹤 SUSE Enterprise Storage</p></a><br/>
+	<a href="https://www.suse.com/zh-cn/services/premium/" onclick="ga('send', 'event', 'Main Nav', 'services', 'premium support services', {'anonymizeIp': true})"><span class="h6title">高級支援服務</span><p>直接聯繫指定的高級團隊</p></a><br/>
+	<a href="https://training.suse.com/" onclick="ga('send', 'event', 'Main Nav', 'services', 'training & certification', {'anonymizeIp': true})"><span class="h6title">培訓和認證</span></a><br/>
+	<a href="https://www.suse.com/zh-cn/licensing/business/" onclick="ga('send', 'event', 'Main Nav', 'services', 'licensing', {'anonymizeIp': true})"><span class="h6title">許可</span></a><br/>
+	<a href="https://www.suse.com/zh-cn/services/support-offerings/developer-services/" onclick="ga('send', 'event', 'Main Nav', 'services', 'developer services', {'anonymizeIp': true})"><span class="h6title">開發人員服務</span></a><br/>
+	<a href="https://www.suse.com/zh-cn/support/beta-program/" onclick="ga('send', 'event', 'Main Nav', 'services', 'beta program', {'anonymizeIp': true})"><span class="h6title">beta 測試計畫</span></a><br/>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="outer partners">
+	<div class="mnavback"><i class="fa fa-angle-left fa-2x"></i> <span class="goback">返回</span></div>
+	<div class="dropdown">
+	<div class="container-fluid">
+	<div class="innercol">
+	<h5>
+	<a href="https://www.suse.com/zh-cn/partners/" onclick="ga('send', 'event', 'Main Nav', 'partners', 'partners', {'anonymizeIp': true})">合作夥伴</a>
+	</h5>
+	<p>
+	<a href="https://www.suse.com/zh-cn/partners/find-partner/" onclick="ga('send', 'event', 'Main Nav', 'partners', 'find a partner', {'anonymizeIp': true})">
+	<strong>尋找合作夥伴</strong>
+	尋找通過認證的提供商、集成商和經銷商
+	</a>
+	</p>
+	
+	<p>
+	<a href="https://www.suse.com/zh-cn/partners/become-partner/" onclick="ga('send', 'event', 'Main Nav', 'partners', 'become a partner', {'anonymizeIp': true})">
+	<strong>成為合作夥伴</strong>
+	為您的客戶提供屢獲殊榮的解決方案
+	</a>
+	</p>
+	
+	<p>
+	<a href="https://partner.suse.com/" onclick="ga('send', 'event', 'Main Nav', 'partners', 'suse partner portal login', {'anonymizeIp': true})">
+	<strong>SUSE 合作夥伴門戶登錄</strong>
+	獲取“SUSE 合作夥伴計畫”的工具、資源和優勢
+	</a>
+	</p>
+	
+	
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="outer communities">
+	<div class="mnavback"><i class="fa fa-angle-left fa-2x"></i> <span class="goback">返回</span></div>
+	<div class="dropdown">
+	<div class="container-fluid">
+	<div class="innercol">
+	<p><strong><a href="https://www.suse.com/zh-cn/communities/blog/" onclick="ga('send', 'event', 'Main Nav', 'communities', 'suse blog', {'anonymizeIp': true})">SUSE 博客</a></strong></p>
+	<p><strong><a href="https://developer.suse.com/" onclick="ga('send', 'event', 'Main Nav', 'communities', 'suse developer', {'anonymizeIp': true})">SUSE 開發人員</a></strong></p>
+	<p><strong><a href="https://forums.suse.com/forum.php" onclick="ga('send', 'event', 'Main Nav', 'communities', 'suse forums', {'anonymizeIp': true})">SUSE 論壇</a></strong></p>
+	
+	<!-- -->
+	<p><strong><a href="https://www.suse.com/zh-cn/academic/" onclick="ga('send', 'event', 'Main Nav', 'communities', 'suse academic', {'anonymizeIp': true})">SUSE 院校</a></strong></p>
+	<p><strong><a href="https://www.opensuse.org/" onclick="ga('send', 'event', 'Main Nav', 'communities', 'opensuse.org', {'anonymizeIp': true})">openSUSE.org</a></strong></p>
+	<p><strong><a href="https://openattic.org/" onclick="ga('send', 'event', 'Main Nav', 'communities', 'openattic.org', {'anonymizeIp': true})">openATTIC.org</a></strong></p>
+	<p><strong><a href="https://openbuildservice.org/" onclick="ga('send', 'event', 'Main Nav', 'communities', 'openbuildservice.org', {'anonymizeIp': true})">Open Build Service</a></strong></p>
+	
+	<!--<p class="local-hidden" data-country="Benelux"><strong><a href="https://www.suse.com/zh-cn/local/benelux/">SUSE 比荷盧</a></strong></p>-->
+	<p class="local-hidden" data-country="Belgium"><strong><a href="https://www.suse.com/zh-cn/local/benelux/">SUSE 比利時</a></strong></p>
+
+	<p class="local-hidden" data-country="Czech-Republic"><strong><a href="https://www.suse.com/zh-cn/local/czech-republic/">SUSE 捷克共和國</a></strong></p>
+	<p class="local-hidden" data-country="Italy"><strong><a href="https://www.suse.com/zh-cn/local/italy/">SUSE 義大利</a></strong></p>
+
+	<p class="local-hidden" data-country="Hungary"><strong><a href="https://www.suse.com/zh-cn/local/hungary/">SUSE 匈牙利</a></strong></p>
+
+	<p class="local-hidden" data-country="Luxembourg"><strong><a href="https://www.suse.com/zh-cn/local/benelux/">SUSE 盧森堡</a></strong></p>
+
+	<p class="local-hidden" data-country="Netherlands"><strong><a href="https://www.suse.com/zh-cn/local/benelux/">SUSE 荷蘭</a></strong></p>
+
+	<p class="local-hidden" data-country="Nordic-Region"><strong><a href="https://www.suse.com/zh-cn/local/nordic-region/">SUSE 北歐地區</a></strong></p>
+
+	<p class="local-hidden" data-country="Poland"><strong><a href="https://www.suse.com/zh-cn/local/poland/">SUSE 波蘭</a></strong></p>
+
+	<p class="local-hidden" data-country="Russia"><strong><a href="https://www.suse.com/zh-cn/local/russia/">SUSE 俄羅斯</a></strong></p>
+
+	<p class="local-hidden" data-country="Finland"><strong><a href="https://www.suse.com/zh-cn/local/finland/">SUSE 芬蘭</a></strong></p>
+
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="outer about">
+	<div class="mnavback"><i class="fa fa-angle-left fa-2x"></i> <span class="goback">返回</span></div>
+	<div class="dropdown">
+	<div class="container-fluid">
+	<div class="innercol">
+	<p><strong><a href="https://www.suse.com/zh-cn/company/about/" onclick="ga('send', 'event', 'Main Nav', 'about', 'about us', {'anonymizeIp': true})">關於我們</a></strong></p>
+	<p><strong><a href="https://www.suse.com/zh-cn/company/careers/" onclick="ga('send', 'event', 'Main Nav', 'about', 'jobs', {'anonymizeIp': true})">招賢納士</a></strong></p>
+	<p><strong><a href="https://www.suse.com/zh-cn/success/" onclick="ga('send', 'event', 'Main Nav', 'about', 'success stories', {'anonymizeIp': true})">成功案例</a></strong></p>
+	<p><strong><a href="https://www.suse.com/zh-cn/events/" onclick="ga('send', 'event', 'Main Nav', 'about', 'events', {'anonymizeIp': true})">活動</a></strong></p>
+	<p><strong><a href="https://www.suse.com/zh-cn/events/webinars/" onclick="ga('send', 'event', 'Main Nav', 'about', 'webinars', {'anonymizeIp': true})">網路研討會</a></strong></p>
+	<p><strong><a href="https://www.susemerchandise.com/" onclick="ga('send', 'event', 'Main Nav', 'about', 'merchandise store', {'anonymizeIp': true})">商店</a></strong></p>
+	<p><strong><a href="https://www.suse.com/zh-cn/newsroom/" onclick="ga('send', 'event', 'Main Nav', 'about', 'newsroom')">新聞編輯室</a></strong></p>
+	<p><strong><a href="https://www.suse.com/zh-cn/company/open-source/" onclick="ga('send', 'event', 'Main Nav', 'about', 'open source contributions', {'anonymizeIp': true})">開放原始程式碼貢獻</a></strong></p>
+	<p><strong><a href="https://www.suse.com/zh-cn/company/subscribe/" onclick="ga('send', 'event', 'Main Nav', 'about', 'communications preferences', {'anonymizeIp': true})">通訊自選設置</a></strong></p>
+	<p><strong><a href="https://www.suse.com/brandcentral/suse/identity.php" onclick="ga('send', 'event', 'Main Nav', 'about', 'suse logo and brand', {'anonymizeIp': true})">SUSE 徽標和品牌</a></strong></p>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	<script type="text/javascript" src="https://www.suse.com/min/?b=assets/js&f=bootstrap.js,core.js,lightslider.js,jquery.corner.js,jScrollPane.js,jquery-ui.min.js,dummyfile.js,mobile-nav.js,shop.js,jquery.cookie.js,featherlight.min.js,livechat.js,featherlight.gallery.min.js,analytics.js,formbuilder.js,banner-tracking.js"></script>
+
+	
+	<!--
+	*.suse.com
+	HTTP Large: cs183.cn.wpc.gammacdn.net
+	黔ICP備16006126號-3
+	--> </body>
+	</html>
+	
+
