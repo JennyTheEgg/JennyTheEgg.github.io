@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, textarea, label, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      position: absolute;
+      margin: 0;
+      font-size: 40px;
+      color: #fff;
+      z-index: 2;
+      line-height: 83px;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      border-radius: 3px;
+      background: #fcf2de;
+      /*box-shadow: 0 0 8px  #FFFFFF; */
+      }
+      .banner {
+      position: relative;
+      height: 300px;
+      background-image: url("/uploads/media/default/0001/02/c1504011491c4e04e5158b63a27a4ea654b03ed1.jpeg"); 
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.2); 
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      input[type="date"] {
+      padding: 4px 5px;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+      color:  #669999;
+      }
+      .item input:hover, .item select:hover, .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 3px 0  #669999;
+      color: #669999;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      .item span {
+      color: red;
+      }
+      .week {
+      display:flex;
+      justfiy-content:space-between;
+      }
+      .colums {
+      display:flex;
+      justify-content:space-between;
+      flex-direction:row;
+      flex-wrap:wrap;
+      }
+      .colums div {
+      width:48%;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      font-size: 20px;
+      color:  #a3c2c2;
+      }
+      .item i {
+      right: 1%;
+      top: 30px;
+      z-index: 1;
+      }
+      input[type=radio], input[type=checkbox]  {
+      display: none;
+      }
+      label.radio {
+      position: relative;
+      display: inline-block;
+      margin: 5px 20px 15px 0;
+      cursor: pointer;
+      }
+	  label.checkbox {
+      position: relative;
+      display: inline-block;
+      margin: 5px 20px 15px 0;
+      cursor: pointer;
+      }
+      .question span {
+      margin-left: 30px;
+      }
+      .question-answer label {
+      display: block;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      }
+      input[type=radio]:checked + label:before, label.radio:hover:before {
+      border: 2px solid  #669999;
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 8px;
+      height: 4px;
+      border: 3px solid  #669999;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      .flax {
+      display:flex;
+      justify-content:space-around;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background:  #669999;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background:  #a3c2c2;
+      }
+      @media (min-width: 568px) {
+      .name-item, .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, .name-item div {
+      width: calc(50% - 20px);
+      }
+      .name-item div input {
+      width:97%;}
+      .name-item div label {
+      display:block;
+      padding-bottom:5px;
+      }
+      }
+	  #region{
+	  width: calc(100% - 12px);
+      padding: 6px;  
+	  }
+	  #noofemployees{
+	  width: calc(100% - 12px);
+      padding: 6px;  
+	  }
+	  #bannerbg {
+  background-image: url('assets/images/path149345.png'); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   /* position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  Preserve aspet ratio 
+  width: 100%;
+  min-height: 100%;*/
+}
+    </style>
+    <title>DevBook - Bootstrap 4 Book/eBook Landing Page Template For Developers</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap 4 Book/eBook Landing Page Template For Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:400,400i,700&display=swap" rel="stylesheet">
+    
+    <!--FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!--Theme CSS-->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body>    
+    <header class="header">	
+        <div class="branding" id="top1">
+            <div class="container-fluid position-relative py-3">
+                <div class="logo-wrapper text-center">
+				本專題由 Salesforce 贊助，《中時新聞網》籌劃製作及推廣
+	                <!--div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon mr-2" src="assets/images/site-logo.svg" alt="logo" ><span class="logo-text">DevBook</span></a></div-->    
+                </div><!--//docs-logo-wrapper-->
+	        
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    <section class="hero-section">
+	<div id="bannerbg">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-12 col-md-7 pt-5 mb-5 align-self-center">
+				    <div class="promo pr-md-3 pr-lg-5">
+
+<div class="testbox">
+      <form method='post' action='contact-form-proc.php' name='contactform' id='contactform'>
+       <div class="colums">
+          <div class="item">
+            <label for="lname">姓氏<span>*</span></label>
+            <input id="lname" type="text" name="lname" oninvalid="this.setCustomValidity('請填寫欄目')" oninput="this.setCustomValidity('')" required/>
+          </div>
+          <div class="item">
+            <label for="fname">名字<span>*</span></label>
+            <input id="fname" type="text" name="fname" required/>
+          </div>
+          <div class="item">
+            <label for="address1">公司名稱<span>*</span></label>
+            <input id="address1" type="text"   name="address1" required/>
+          </div>
+          <div class="item">
+            <label for="address2">職稱<span>*</span></label>
+            <input id="address2" type="text"   name="address2" required/>
+          </div>
+          <div class="item">
+            <label for="state">Email<span>*</span></label>
+            <input id="state" type="text"   name="state" required/>
+          </div>
+		   <div class="item">
+            <label for="noofemployees">公司人數規模<span>*</span></label>
+			<br />
+            <select id="noofemployees" name="noofemployees" aria-required="true" required="">
+<option disabled="" label="員工人數" selected="" value="">員工人數</option>
+<option value="9">少於 15 位員工</option>
+<option value="75">16 至 100 位員工</option>
+<option value="250">101 至 500 位員工</option>
+<option value="750">501 至 1,000 位員工</option>
+<option value="1100">超過 1,000 位員工</option>
+</select>
+          </div>
+
+          <div class="item">
+            <label for="phone">電話<span>*</span></label>
+            <input id="phone" type="tel"   name="phone" required/>
+          </div>
+		  <div class="item">
+            <label for="region">國家/地區<span>*</span></label>
+            <select id="region" name="region" aria-required="true" required="">
+<option disabled="" label="國家/地區" selected="" value="">國家/地區</option><option value="TW" selected>台灣</option>
+<option value="US">美國</option><option value="AF">阿富汗</option><option value="AL">阿爾巴尼亞</option><option value="DZ">阿爾及利亞</option><option value="AS">美屬薩摩亞</option><option value="AD">安道爾</option><option value="AI">安圭拉</option><option value="AQ">南極大陸</option><option value="AG">安地卡及巴布達</option><option value="AR">阿根廷</option><option value="AM">亞美尼亞</option><option value="AW">阿路巴</option><option value="AU">澳大利亞</option><option value="AT">奧地利</option><option value="AZ">愛爾拜占</option><option value="BS">巴哈馬</option><option value="BH">巴林</option><option value="BD">孟加拉</option><option value="BB">巴貝多</option><option value="BY">白俄羅斯</option><option value="BZ">貝里斯</option><option value="BE">比利時</option><option value="BJ">貝南</option><option value="BM">百慕達</option><option value="BT">不丹</option><option value="BO">玻利維亞</option><option value="BV">布威島</option><option value="BA">波士尼亞赫塞哥維納</option><option value="BW">波札那</option><option value="BR">巴西</option><option value="IO">英屬印度洋領土</option><option value="BN">汶萊</option><option value="BG">保加利亞</option><option value="BF">布吉納法索</option><option value="BI">蒲隆地</option><option value="KH">柬埔寨</option><option value="CM">喀麥隆</option><option value="CA">加拿大</option><option value="CV">維德角</option><option value="KY">開曼群島</option><option value="CF">中非共和國</option><option value="TD">查德</option><option value="CL">智利</option><option value="CN">中國</option><option value="HK">香港</option><option value="MO">澳門</option><option value="CX">聖誕島</option><option value="CC">可可斯群島</option><option value="CO">哥倫比亞</option><option value="KM">葛摩</option><option value="CK">科克群島</option><option value="CR">哥斯大黎加</option><option value="CI">科特迪瓦 (象牙海岸)</option><option value="HR">克羅埃西亞</option><option value="CY">賽普勒斯</option><option value="CZ">捷克共和國</option><option value="CD">剛果民主共和國</option><option value="DK">丹麥</option><option value="DM">多米尼克</option><option value="DO">多明尼加共和國</option><option value="DJ">吉布地</option><option value="EC">厄瓜多爾</option><option value="EG">埃及</option><option value="SV">薩爾瓦多</option><option value="GQ">赤道幾內亞</option><option value="ER">厄利垂亞</option><option value="EE">愛沙尼亞</option><option value="ET">衣索比亞</option><option value="FK">福克蘭群島 (馬爾維納斯群島)</option><option value="FO">法羅群島</option><option value="FJ">斐濟群島</option><option value="FI">芬蘭</option><option value="FR">法國</option><option value="GF">法屬圭亞那</option><option value="PF">法屬波里尼西亞</option><option value="TF">法屬南部領土</option><option value="MK">前南斯拉夫 馬其頓共和國</option><option value="GA">加彭</option><option value="GM">甘比亞</option><option value="GE">喬治亞</option><option value="DE">德國</option><option value="GH">迦納</option><option value="GI">直布羅陀</option><option value="GR">希臘</option><option value="GL">格陵蘭</option><option value="GD">格瑞那達</option><option value="GP">哥德普洛</option><option value="GU">關島</option><option value="GT">瓜地馬拉</option><option value="GN">幾內亞</option><option value="GW">幾內亞比索</option><option value="GY">蓋亞納</option><option value="HT">海地</option><option value="HM">赫德島及麥當勞群島</option><option value="HN">宏都拉斯</option><option value="HU">匈牙利</option><option value="IS">冰島</option><option value="IN">印度</option><option value="ID">印尼</option><option value="IE">愛爾蘭</option><option value="IL">以色列</option><option value="IT">義大利</option><option value="JM">牙買加</option><option value="JP">日本</option><option value="JO">約旦</option><option value="KZ">哈薩克</option><option value="KE">肯亞</option><option value="KI">吉里巴斯</option><option value="KR">南韓</option><option value="KW">科威特</option><option value="KG">吉爾吉斯</option><option value="LA">寮國</option><option value="LV">拉脫維亞</option><option value="LB">黎巴嫩</option><option value="LS">賴索托</option><option value="LR">賴比瑞亞</option><option value="LI">列支敦斯登</option><option value="LT">立陶宛</option><option value="LU">盧森堡</option><option value="MG">馬達加斯加</option><option value="MW">馬拉威</option><option value="MY">馬來西亞</option><option value="MV">馬爾地夫</option><option value="ML">馬利</option><option value="MT">馬爾他</option><option value="MH">馬紹爾群島</option><option value="MR">茅利塔尼亞</option><option value="MU">模里西斯</option><option value="MQ">馬丁尼克</option><option value="YT">馬約特島</option><option value="MX">墨西哥</option><option value="FM">密克羅尼西亞</option><option value="MD">摩爾多瓦</option><option value="MC">摩納哥</option><option value="MN">蒙古</option><option value="MS">蒙特色拉特島</option><option value="MA">摩洛哥</option><option value="MZ">莫三比克</option><option value="MM">緬甸</option><option value="NA">那米比亞</option><option value="NR">諾魯</option><option value="NP">尼泊爾</option><option value="NL">荷蘭</option><option value="AN">荷屬安替列斯</option><option value="NC">新喀里多尼亞群島</option><option value="NZ">紐西蘭</option><option value="NI">尼加拉瓜</option><option value="NE">尼日</option><option value="NG">奈及利亞</option><option value="NU">紐威島</option><option value="NO">挪威</option><option value="NF">諾福克島</option><option value="MP">北馬里亞納群島</option><option value="OM">阿曼</option><option value="PK">巴基斯坦</option><option value="PW">帛琉</option><option value="PA">巴拿馬</option><option value="PG">巴布亞紐幾內亞</option><option value="PY">巴拉圭</option><option value="PE">祕魯</option><option value="PH">菲律賓</option><option value="PN">皮特康群島</option><option value="PL">波蘭</option><option value="PT">葡萄牙</option><option value="PR">波多黎各</option><option value="QA">卡達</option><option value="CG">剛果共和國</option><option value="RE">留尼旺</option><option value="RO">羅馬尼亞</option><option value="RU">俄羅斯</option><option value="RW">盧安達</option><option value="SH">聖赫勒拿島</option><option value="KN">聖克里斯多福及尼維斯</option><option value="LC">聖露西亞</option><option value="PM">聖匹島</option><option value="VC">聖文森及格瑞那丁</option><option value="WS">薩摩亞</option><option value="SM">聖馬利諾</option><option value="ST">聖多美及普林西比</option><option value="SA">沙烏地阿拉伯</option><option value="SN">塞內加爾</option><option value="RS">塞爾維亞</option><option value="SC">塞席爾</option><option value="SL">獅子山</option><option value="SG">新加坡</option><option value="SK">斯洛伐克</option><option value="SI">斯洛維尼亞</option><option value="SB">索羅門群島</option><option value="SO">索馬利亞</option><option value="ZA">南非</option><option value="GS">南喬治亞及南三明治群島</option><option value="ES">西班牙</option><option value="LK">斯里蘭卡</option><option value="SR">蘇利南</option><option value="SJ">冷岸及央棉群島</option><option value="SZ">史瓦濟蘭</option><option value="SE">瑞典</option><option value="CH">瑞士</option><option value="TJ">塔吉克</option><option value="TZ">坦尚尼亞</option><option value="TH">泰國</option><option value="TL">東帝汶</option><option value="TG">多哥</option><option value="TK">托克勞群島</option><option value="TO">東加</option><option value="TT">千里達及托巴哥</option><option value="TN">突尼西亞</option><option value="TR">土耳其</option><option value="TC">土克斯及開科斯群島</option><option value="TM">土庫曼</option><option value="TV">吐瓦魯</option><option value="UG">烏干達</option><option value="UA">烏克蘭</option><option value="AE">阿拉伯聯合大公國</option><option value="GB">英國</option><option value="UM">美屬外部小群島</option><option value="UY">烏拉圭</option><option value="UZ">烏茲別克</option><option value="VU">萬那杜</option><option value="VA">梵蒂岡 (教廷)</option><option value="VE">委內瑞拉</option><option value="VN">越南</option><option value="VG">英屬維爾京群島</option><option value="VI">美屬維爾京群島</option><option value="WF">瓦利斯及福杜納群島</option><option value="EH">西撒哈拉</option><option value="YE">葉門</option><option value="ZM">尚比亞</option><option value="ZW">辛巴威</option></select>
+          </div>
+          <div class="item">
+            <label for="eaddress">XXXXX<span>*</span></label>
+            <input id="eaddress" type="text"   name="eaddress" required/>
+          </div>
+          <div class="item">
+            <label for="phone">XXXXXX<span>*</span></label>
+            <input id="phone" type="tel"   name="phone" required/>
+          </div>
+        </div>
+        <div class="question">
+          <label>XXXXXXX</label>
+          <div class="question-answer">
+            <div>
+              <input type="radio" value="none" id="radio_1" name="type"/>
+              <label for="radio_1" class="radio"><span>XXXXXX</span></label>
+            </div>
+          </div>
+        </div>
+        <div>
+<input type="checkbox" name="fruit" value="Apple" required/>
+<input type="checkbox" style="border:4px dotted #00f;display:block;background:#ff0000;" name="fruit" value="Orange">
+<input type="checkbox" style="border:4px dotted #00f;display:block;background:#ff0000;" name="fruit" value="Banana">
+        </div>
+        <h2>同意</h2>
+        <input type="checkbox" name="checkbox1">
+        <label>同意接收我們的電子通訊。我們將通過電子郵件或電話與您聯繫。您同意，我們以電子方式提供給您的所有協議，通知，披露和其他通訊均應滿足任何以書面形式進行通訊的法律要求。</label>
+        <div class="btn-block" width=50%>
+          <!--button type="submit" href="/">Submit</button-->
+		  <input class="btn btn-primary mr-lg-2" style="font-size:24px;" type='submit' name='submit' value='立即免費下載完整報告' />
+        </div>
+      </form>
+    </div>
+					    
+					    
+				    </div><!--//promo-->
+			    </div><!--col-->
+			    <div class="col-12 col-md-5 mb-5 align-self-center">
+				 <div><h2 class="text-center mb-3" style="font-size:24px">《中時新聞網》2021 銷售行業專題</h2>
+				 <div class="section-intro single-col-max mx-auto text-left py-4" style="line-height:1.2;font-size:18px">《中時新聞網》本次專題為讀者介紹 Salesforce 最新編訂的第四版銷售現況報告，Salesforce 匯集 7,000 名專業銷售人員的洞察見解，帶領企業走向成功。帶領企業走向成功。帶領企業走向成功。帶領企業走向成功。帶領企業走向成功。帶領企業走帶領企業走向帶領企業走向帶領企業</div>
+				 <div id="quotes-carousel" class="quotes-carousel carousel slide carousel-fade mb-5"  data-ride="carousel" data-interval="8000">
+								<ol class="carousel-indicators">
+									<li data-target="#quotes-carousel" data-slide-to="0" class="active"></li>
+									<li data-target="#quotes-carousel" data-slide-to="1" class=""></li>
+									<li data-target="#quotes-carousel" data-slide-to="2" class=""></li>
+								</ol>
+							  
+							    <div class="carousel-inner" >
+								    <div class="carousel-item active">
+								        <blockquote class="quote p-3 theme-bg-light" style="font-size: 18px; border-radius: 10px;">
+									        銷售代表在全新銷售格局下的戰術調整     
+								        </blockquote><!--//item-->
+								        <div class="source media flex-column flex-md-row align-items-center">
+									        <img class="source-profile mr-md-3" src="assets/images/strategy.png" alt="image"-->
+											
+									        <div class="source-info media-body text-center text-md-left">
+										        <div class="source-name"></div>
+										        <div class="soure-title"></div>
+										    </div>
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+								    <div class="carousel-item">
+								        <blockquote class="quote p-3 theme-bg-light" style="font-size: 18px; border-radius: 10px;">
+									             銷售營運人員的地位愈趨重要
+								        </blockquote><!--//item-->
+								        <div class="source media flex-column flex-md-row align-items-center">
+									        <img class="source-profile mr-md-3" src="assets/images/good.png" alt="image">
+									        <div class="source-info media-body text-center text-md-left">
+										        <div class="source-name"></div>
+										        <div class="soure-title"></div>
+										    </div>
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+								    <div class="carousel-item">
+								        <blockquote class="quote p-3 theme-bg-light" style="font-size: 18px; border-radius: 10px;">
+									        銷售主管如何引領公司業務復甦，重回增長軌道     
+								        </blockquote><!--//item-->
+								        <div class="source media flex-column flex-md-row align-items-center">
+									        <img class="source-profile mr-md-3" src="assets/images/startup.png" alt="image">
+									        <div class="source-info media-body text-center text-md-left">
+										        <div class="source-name"></div>
+										        <div class="soure-title"></div>
+										    </div>
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+								</div><!--//carousel-inner-->
+							</div>
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+					    </div>
+				    <div class="book-cover-holder">
+					    <img class="img-fluid book-cover" src="assets/images/path342.png" alt="book cover" >
+					    <!--div class="book-badge d-inline-block shadow">
+						    New<br>Release
+					    </div-->
+				    </div><!--//book-cover-holder-->
+				    <!--div class="text-center"><a class="theme-link scrollto" href="#reviews-section">See all book reviews</a></div-->
+			    </div><!--col-->
+		    </div><!--//row-->
+	    </div><!--//container--></div><br />
+    </section><!--//hero-section-->
+    
+    <!--section id="benefits-section" class="benefits-section theme-bg-light-gradient py-5" -->
+	<section id="benefits-section" class="benefits-section" >
+	<div class="container py-5" style="background-color:white;">
+		    <h2 class="section-heading text-center mb-3" >《中時新聞網》搶先提供 2021 最新銷售行業報告下載</h2><br />
+		    <div class="section-intro single-col-max mx-auto text-left" style="line-height:1.6;">《中時新聞網》本次專題為讀者介紹 Salesforce 最新編訂的第四版銷售現況報告，Salesforce 匯集 7,000 名專業銷售人員的洞察見解，帶領企業走向成功。<br /></div><br /><br /><br /><br />
+			
+			<div class="text-center">
+			<img style="  display:block; margin-left: auto;margin-right: auto; width:100%" src="assets/images/24.png" alt="" ></div>
+
+			
+	
+			
+			</div>
+			
+	    <!--div class="container py-5">
+		    <h2 class="section-heading text-center mb-3">What Will You Get From This Book?</h2>
+		    <div class="section-intro single-col-max mx-auto text-center mb-5">Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit consequat consequat. Orci varius natoque penatibus et magnis. </div>
+		    <div class="row text-center">
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fas fa-laptop-code"></i></div>
+						    <h3 class="item-heading">Build Lorem Ipsum lobortis nec mauris habitant morbi</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit consequat consequat. 
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fab fa-js-square"></i></div>
+						    <h3 class="item-heading">Learn from lorem ipsum dolor sit amet consectetur</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes.
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fab fa-rocketchat"></i></div>
+						    <h3 class="item-heading">Discover phasellus id egestas tellus maximus</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fab fa-angular"></i></div>
+						    <h3 class="item-heading">Master aliquet augue ac ipsum lobortis interdum</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fas fa-code-branch"></i></div>
+						    <h3 class="item-heading">Deploy elementum mauris tincidunt tempus sagittis</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fas fa-hand-holding-usd"></i></div>
+						    <h3 class="item-heading">Become mattis est et mauris tempus non imperdiet</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+		    </div><!--//row>
+	    </div><!--//container-->
+    </section><!--//benefits-section-->
+    
+    <section id="content-section" class="content-section">
+	    <div class="container">
+		    <div class="single-col-max mx-auto">
+		    <h2 class="section-heading text-center mb-5">下載《銷售現況報告》以取得：</h2>
+			    <div class="row">
+				    <div class="col-12 col-md-6">
+					    <div class="figure-holder mb-5">
+						    <a href="#top"><img class="img-fluid" src="assets/images/devbook-devices.png" alt="image" ></a>
+					    </div><!--//figure-holder-->
+				    </div><!--//col-->
+				    <div class="col-12 col-md-6 mb-5">
+					    <div class="key-points mb-4 text-center">
+						<br /><br />
+						    <ul class="key-points-list list-unstyled mb-4 mx-auto d-inline-block text-left">
+							    <li><i class="fas fa-check-circle mr-2"></i>地理區域和行業數據</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>銷售代表如何適應管理者和客戶的新期望</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>銷售職責的演變和重要性的提升</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>銷售管理者為業務復甦採取的新策略</li>
+
+						    </ul>
+							<br /><br />
+							<!--button class="btn btn-primary" onclick="window.location.href='#top1'">免費立即下載報告</button-->
+						    <div class="text-center"><a class="btn btn-primary" href="#top1" ><span style="font-size:24px">免費立即下載完整報告</span></a></div>
+					    </div><!--//key-points-->
+					    
+				    </div><!--//col-12-->   
+			    </div><!--//row-->
+		    </div><!--//single-col-max-->
+	    </div><!--//container-->
+    </section><!--//content-section-->
+    
+    <!--section id="audience-section" class="audience-section py-5">
+	    <div class="container">
+		    <h2 class="section-heading text-center mb-4">Who This Book Is For</h2>
+		    <div class="section-intro single-col-max mx-auto text-center mb-5">
+			    List your target readers in this section and back up with reviews. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie. Vivamus hendrerit nisi condimentum erat tempus, vitae accumsan odio euismod.
+		    </div><!--//section-intro>
+		    <div class="audience mx-auto">
+			    <div class="item media">
+				    <div class="item-icon mr-3"><i class="fas fa-user-check"></i></div>
+				    <div class="media-body">
+					    <h4 class="item-title">Software Developers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//media-body>
+			    </div><!--//item>
+			    <div class="item media">
+				    <div class="item-icon mr-3"><i class="fas fa-user-check"></i></div>
+				    <div class="media-body">
+					    <h4 class="item-title">App Developers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//media-body>
+			    </div><!--//item>
+			    <div class="item media">
+				    <div class="item-icon mr-3"><i class="fas fa-user-check"></i></div>
+				    <div class="media-body">
+					    <h4 class="item-title">Web Developers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//media-body>
+			    </div><!--//item>
+			    <div class="item media">
+				    <div class="item-icon mr-3"><i class="fas fa-user-check"></i></div>
+				    <div class="media-body">
+					    <h4 class="item-title">Product Designers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//media-body>
+			    </div><!--//item>
+		    </div><!--//audience>
+	    </div><!--//container>
+    </section><!--//audience-section-->
+    
+    <section id="form-section" class="form-section" style="background-color:#F3F3F3;"><span style="font-size:6px">&nbsp;</span>
+	    <!--div class="container" -->
+		    <!--div class="lead-form-wrapper single-col-max mx-auto theme-bg-light rounded p-5" >
+			    <!--h2 class="form-heading text-center">Get A Free Preview</h2>
+			    <div class="form-intro text-center mb-3">Sign up to get a free preview of the book. <br>You can offer visitors free book previews to generate leads.</div>
+			    <div class="form-wrapper">
+				    <form class="form-inline justify-content-center flex-wrap">
+						<div class="form-group mr-md-2 mb-3 mb-md-0">
+							<label for="email" class="sr-only">Email</label>
+							<input type="email" class="form-control " id="email" placeholder="Your Email">
+						</div>
+						<div><table><tr><td></td></tr></table></div>
+						<button class="btn btn-primary" onclick="window.location.href='#top1'">免費立即下載報告</button>
+						<button type="submit" class="btn btn-primary btn-submit mb-3 mb-md-0">Send</button>
+					</form>
+			    </div--><!--//form-wrapper-->
+		    <!--/div--><!--//lead-form-wrapper-->
+	    <!--/div--><!--//container-->
+    </section><!--//form-section-->
+    
+    <section id="reviews-section" class="reviews-section py-5" >
+	    <div class="container">
+		    <h2 class="section-heading text-center">銷售報告內容：</h2>
+		    <!--div class="section-intro text-center single-col-max mx-auto mb-5">See what our readers are saying. </div-->
+		    <div class="row justify-content-center">
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    
+					    <blockquote class="quote">
+					             
+				        </blockquote><!--//item-->
+				        <div class="source media flex-column flex-md-row align-items-center">
+					        <!--img class="source-profile mr-md-3" src="assets/images/profiles/profile-1.png" alt="image"-->
+					        <!--div class="source-info media-body text-center text-md-left"-->
+							<div class="source-info media-body text-center">
+						        <!--div class="source-name">James Doe</div>
+						        <div class="soure-title">Co-Founder, Startup Week</div-->
+								<img width=300px src="assets/images/r1.jpg" alt="image" > 
+						    </div>
+				        </div><!--//source-->
+				        
+						<!--div class="icon-holder"><i class="fas fa-quote-right"></i></div-->
+						<!--div><i class="fas fa-quote-right"></i></div-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+   
+				        </blockquote><!--//item-->
+				        <div class="source media flex-column flex-md-row align-items-center">
+					        <!--img class="source-profile mr-md-3" src="assets/images/profiles/profile-2.png" alt="image" -->
+					        <!--div class="source-info media-body text-center text-md-left"-->
+							<div class="source-info media-body text-center">
+						        <!--div class="source-name">Jean Doe</div>
+						        <div class="soure-title">Co-Founder, Company Tristique</div-->
+								<img width=300px src="assets/images/r2.jpg" alt="image" > 
+						    </div>
+				        </div><!--//source-->
+				         <!--div class="icon-holder"><i class="fas fa-quote-right"></i></div-->
+						<!--div><i class="fas fa-quote-right"></i></div-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+    
+				        </blockquote><!--//item-->
+				        <div class="source media flex-column flex-md-row align-items-center">
+					        <!--img class="source-profile mr-md-3" src="assets/images/profiles/profile-3.png" alt="image" -->
+					        <!--div class="source-info media-body text-center text-md-left"-->
+							<div class="source-info media-body text-center">
+						        <!--div class="source-name">Tom Doe</div>
+						        <div class="soure-title">Product Designer, Company Lorem</div-->
+								<img width=300px src="assets/images/r3.jpg" alt="image" > 
+						    </div>
+				        </div><!--//source-->
+				         <!--div class="icon-holder"><i class="fas fa-quote-right"></i></div-->
+						<!--div><i class="fas fa-quote-right"></i></div-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+					             
+				        </blockquote><!--//item-->
+				        <div class="source media flex-column flex-md-row align-items-center">
+					        <!--img class="source-profile mr-md-3" src="assets/images/profiles/profile-4.png" alt="image" -->
+					        <!--div class="source-info media-body text-center text-md-left"-->
+							<div class="source-info media-body text-center">
+						        <!--div class="source-name">Alice Doe</div>
+						        <div class="soure-title">App Developer, Company Ipsum</div-->
+								<img width=300px src="assets/images/r4.jpg" alt="image" >
+						    </div>
+				        </div><!--//source-->
+				         <!--div class="icon-holder"><i class="fas fa-quote-right"></i></div-->
+						<!--div><i class="fas fa-quote-right"></i></div-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+					           
+				        </blockquote><!--//item-->
+				        <div class="source media flex-column flex-md-row align-items-center">
+					        <!--img class="source-profile mr-md-3" src="assets/images/profiles/profile-5.png" alt="image" -->
+					        <!--div class="source-info media-body text-center text-md-left"-->
+							<div class="source-info media-body text-center">
+						        <!--div class="source-name">Sam Doe</div>
+						        <div class="soure-title">Co-Founder, Company Integer</div-->
+								<img width=300px src="assets/images/r5.jpg" alt="image" >
+								
+						    </div>
+				        </div><!--//source-->
+				         <!--div class="icon-holder"><i class="fas fa-quote-right"></i></div-->
+						<!--div><i class="fas fa-quote-right"></i></div-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+		    </div><!--//row-->
+		    <!--div class="text-center">
+		        <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-4-book-ebook-landing-page-template-for-developers/">Get Your Copy Today</a>
+		    </div-->
+			<div class="text-center"><a class="btn btn-primary" href="#top1" style="font-size:30px">搶先免費下載 42 頁完整報告</a></div>
+	    </div><!--//container-->
+    </section><!--//reviews-section-->
+        <footer class="footer">
+	    <div class="footer-bottom text-right">
+	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright" style="font-size:8px; color:grey">Designed by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a></small>
+ 
+	    </div>
+	    
+    </footer>
+    <section id="author-section" class="author-section section theme-bg-primary py-3"style="background-color:#F58211;">
+	    <div class="container" >
+		    <div class="author-profile text-center mb-5">
+			    <!--img class="author-pic" src="assets/images/profiles/author-profile.png" alt="image" -->
+		    </div><!--//author-profile-->
+		    <h2 class="section-heading text-center text-white mb-3">《中時新聞網》聲明</h2>
+		    <div class="author-bio single-col-max mx-auto">
+			    <p>聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明</p>
+			    <!--div class="author-links text-center pt-4">
+			        <h5 class="text-white mb-4">Follow Author</h5>
+				    <ul class="social-list list-unstyled">
+					    <li class="list-inline-item"><a href="https://twitter.com/3rdwave_themes"><i class="fab fa-twitter"></i></a></li>
+					    <li class="list-inline-item"><a href="https://github.com/xriley"><i class="fab fa-github-alt"></i></a></li> 
+			            <li class="list-inline-item"><a href="https://medium.com/@3rdwave_themes"><i class="fab fa-medium-m"></i></a></li>
+			            
+			            <li class="list-inline-item"><a href="https://themes.3rdwavemedia.com/"><i class="fas fa-globe-europe"></i></a></li>
+			        </ul><!--//social-list>
+			    </div><!--//author-links-->
+			    
+		    </div><!--//author-bio-->
+		    
+	    </div><!--//container-->
+    </section><!--//author-section-->
+    
+    
+
+    <footer class="footer">
+		<br />
+		<div class="text-center py-3"><a href="https://www.salesforce.com/tw/company/privacy/">Salesforce 隱私說明</a></div>
+
+	    
+    </footer>
+       
+    <!-- Javascript-->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>  
+    <script src="assets/plugins/back-to-top.js"></script>  
+    
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html> 
+
