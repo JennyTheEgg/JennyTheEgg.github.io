@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, textarea, label, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      position: absolute;
+      margin: 0;
+      font-size: 40px;
+      color: #fff;
+      z-index: 2;
+      line-height: 83px;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+	  border-radius: 6px;
+      /*background: red;*/
+      }
+	  .testbox2 {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+	  border-radius: 6px;
+      background: #F9EBC3;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      border-radius: 3px;
+      background: #fcf2de;
+      /*box-shadow: 0 0 8px  #FFFFFF; */
+      }
+      .banner {
+      position: relative;
+      height: 300px;
+      background-image: url("/uploads/media/default/0001/02/c1504011491c4e04e5158b63a27a4ea654b03ed1.jpeg"); 
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.2); 
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      input[type="date"] {
+      padding: 4px 5px;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+      color:  #669999;
+      }
+      .item input:hover, .item select:hover, .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 3px 0  #669999;
+      color: #669999;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      .item span {
+      color: red;
+      }
+      .week {
+      display:flex;
+      justfiy-content:space-between;
+      }
+      .colums {
+      display:flex;
+      justify-content:space-between;
+      flex-direction:row;
+      flex-wrap:wrap;
+      }
+      .colums div {
+      width:48%;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      font-size: 20px;
+      color:  #a3c2c2;
+      }
+      .item i {
+      right: 1%;
+      top: 30px;
+      z-index: 1;
+      }
+      input[type=radio], input[type=checkbox]  {
+      /*display: none;*/
+		width: auto;
+		box-shadow: none;
+
+      }
+      label.radio {
+      position: relative;
+      display: inline-block;
+      margin: 5px 20px 15px 0;
+      cursor: pointer;
+      }
+	  label.checkbox {
+      position: relative;
+      display: inline-block;
+      margin: 5px 20px 15px 0;
+      cursor: pointer;
+      }
+      .question span {
+      margin-left: 30px;
+      }
+      .question-answer label {
+      display: block;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      }
+      input[type=radio]:checked + label:before, label.radio:hover:before {
+      border: 2px solid  #669999;
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 8px;
+      height: 4px;
+      border: 3px solid  #669999;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      .flax {
+      display:flex;
+      justify-content:space-around;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background:  #669999;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background:  #a3c2c2;
+      }
+      @media (min-width: 568px) {
+      .name-item, .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, .name-item div {
+      width: calc(50% - 20px);
+      }
+      .name-item div input {
+      width:97%;}
+      .name-item div label {
+      display:block;
+      padding-bottom:5px;
+      }
+      }
+	  #region{
+	  width: calc(100% - 12px);
+      padding: 6px;  
+	  }
+	  #noofemployees{
+	  width: calc(100% - 12px);
+      padding: 6px;  
+	  }
+	  #bannerbg {
+  background-image: url('assets/images/path149345.png'); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   /* position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  Preserve aspet ratio 
+  width: 100%;
+  min-height: 100%;*/
+}
+    </style>
+    <title>DevBook - Bootstrap 4 Book/eBook Landing Page Template For Developers</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap 4 Book/eBook Landing Page Template For Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:400,400i,700&display=swap" rel="stylesheet">
+    
+    <!--FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!--Theme CSS-->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body>    
+    <header class="header">	
+        <div class="branding" id="top1">
+            <div class="container-fluid position-relative py-3">
+                <div class="logo-wrapper text-center">
+				專題由 Salesforce 贊助，《T客邦》籌劃製作及推廣
+	                <!--div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon mr-2" src="assets/images/site-logo.svg" alt="logo" ><span class="logo-text">DevBook</span></a></div-->    
+                </div><!--//docs-logo-wrapper-->
+	        
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    <section class="hero-section">
+	<div id="bannerbg">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-12 col-md-7 pt-5 mb-5 align-self-center">
+				    <div class="promo pr-md-3 pr-lg-5">
+<!--form method='post' action='contact-form-proc-v2.php' name='contactform' id='contactform'>
+
+
+<label for='fname'>Your Name:</label><br/>
+<input type='text' name='fname' />
+
+<label for='company'>Your Name:</label><br/>
+<input type='text' name='company' />
+
+<label for='position'>Your Name:</label><br/>
+<input type='text' name='position' />
+
+<label for='phone'>Your Name:</label><br/>
+<input type='text' name='phone' />
+
+<label for='region'>Your Name:</label><br/>
+<input type='text' name='region' />
+
+<label for='noofemployees'>Your Name:</label><br/>
+<input type='text' name='noofemployees' />
+
+<label for='email'>Your Name:</label><br/>
+<input type='text' name='email' />
+
+<label for='agree'>Your Name:</label><br/>
+<input type='text' name='agree' />
+
+<!--input type='submit' name='submit' value='Submit Form' -->
+		  
+		  
+		  <!--div class="item">
+            <label for="lname">姓氏<span>*</span></label>
+            <input id="lname" type="text" name="lname" oninvalid="this.setCustomValidity('請填寫欄目')" oninput="this.setCustomValidity('')" required/>
+          </div><input class="btn btn-primary mr-lg-2" style="font-size:24px;" type='submit' name='submit' value='立即下載完整報告' />
+<!--p>
+<label for='fname'>Your Name:</label><br/>
+<input type='text' name='fname' />
+</p>
+<p>
+<label for='email' >Email Address:</label><br/>
+<input type='text' name='email' />
+</p>
+<input type='submit' name='submit' value='Submit Form' />
+</form-->
+
+<!--div class="container" id="ff-compose"></div>
+<script async defer src="https://formfacade.com/include/115743897657064383997/form/1FAIpQLScADXuxjx09_aBr5hVZwHJbHpEUFF4F72MP6E1t0DBbvmiybw/bootstrap.js?div=ff-compose"></script-->
+
+<div class="testbox2">
+<div>
+<div id="ff-compose"></div>
+<script async defer src="https://formfacade.com/include/115743897657064383997/form/1FAIpQLScADXuxjx09_aBr5hVZwHJbHpEUFF4F72MP6E1t0DBbvmiybw/classic.js?div=ff-compose"></script></div><div style="margin: 15px 30px 30px 30px;background-color: #F9EBC3;">通過遞交此表格，我確認同意 Salesforce 按照<a href="https://www.salesforce.com/tw/company/privacy/" target="_blank">隱私權聲明</a>存儲及處理我的個人資料。Salesforce 可能會使用我的個人資料作行銷用途。我可以隨時按照<a href="https://www.salesforce.com/tw/company/privacy/" target="_blank">隱私權聲明</a>所述取消訂閱 Salesforce 的市場行銷資訊。我同意將聯絡資料，包括電郵地址，給予 Salesforce 與 T客邦。基於本場活動通知及聯繫使用，T客邦及 Salesforce 將共同保有我的個人資料。T客邦個資蒐集聲明如下。</div></div>
+
+
+<div class="testbox">
+<div class="book-cover-holder">
+					    <!--img class="img-fluid book-cover" src="assets/images/path342.png" alt="book cover" width=400px-->
+					    <!--div class="book-badge d-inline-block shadow">
+						    New<br>Release
+					    </div-->
+				    </div>
+    </div>
+	<!--script type="text/javascript">
+  if ( document.contactform.agree.checked == false )
+    {
+        alert ( "Please check the Terms & Conditions box." );
+        valid = false;
+    }
+</script-->
+					    
+					    
+				    </div><!--//promo-->
+			    </div><!--col-->
+			    <div class="col-12 col-md-5 mb-5 align-self-center">
+				 <div><h2 class="text-center mb-3" style="font-size:24px">《T客邦》2021 銷售行業專題</h2>
+				 <div class="section-intro single-col-max mx-auto text-left py-3" style="line-height:1.5;font-size:18px;color:black">本次專題為讀者介紹 Salesforce 最新編訂的《第四版銷售現況報告》。6,000 名銷售專家和你分享新冠疫情下最新的策略，帶領企業走向成功。<br /><br /></div>
+				 <div id="quotes-carousel" class="quotes-carousel carousel slide carousel-fade mb-5"  data-ride="carousel" data-interval="8000">
+								<ol class="carousel-indicators">
+									<li data-target="#quotes-carousel" data-slide-to="0" class="active"></li>
+									<li data-target="#quotes-carousel" data-slide-to="1" class=""></li>
+									<li data-target="#quotes-carousel" data-slide-to="2" class=""></li>
+								</ol>
+							  
+							    <div class="carousel-inner" >
+								    <div class="carousel-item active">
+								        <blockquote class="text-center quote p-3 theme-bg-light" style="font-size: 18px; border-radius: 10px;">
+									        銷售代表在全新銷售格局下的戰術調整     
+								        </blockquote><!--//item-->
+								        <div class="source media flex-column flex-md-row align-items-center">
+									        <img class="source-profile mr-md-3" src="assets/images/strategy.png" alt="image"-->
+											
+									        <div class="source-info media-body text-center text-md-left">
+										        <div class="source-name"></div>
+										        <div class="soure-title"></div>
+										    </div>
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+								    <div class="carousel-item">
+								        <blockquote class="text-center quote p-3 theme-bg-light" style="font-size: 18px; border-radius: 10px;">
+									             銷售營運人員的地位愈趨重要
+								        </blockquote><!--//item-->
+								        <div class="source media flex-column flex-md-row align-items-center">
+									        <img class="source-profile mr-md-3" src="assets/images/good.png" alt="image">
+									        <div class="source-info media-body text-center text-md-left">
+										        <div class="source-name"></div>
+										        <div class="soure-title"></div>
+										    </div>
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+								    <div class="carousel-item">
+								        <blockquote class="text-center quote p-3 theme-bg-light" style="font-size: 18px; border-radius: 10px;">
+									        銷售主管如何引領公司業務復甦，重回增長軌道     
+								        </blockquote><!--//item-->
+								        <div class="source media flex-column flex-md-row align-items-center">
+									        <img class="source-profile mr-md-3" src="assets/images/startup.png" alt="image">
+									        <div class="source-info media-body text-center text-md-left">
+										        <div class="source-name"></div>
+										        <div class="soure-title"></div>
+										    </div>
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+								</div><!--//carousel-inner-->
+							</div>
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+					    </div>
+				    <div class="book-cover-holder">
+					    <img class="img-fluid book-cover" src="assets/images/path342.png" alt="book cover" >
+					    <!--div class="book-badge d-inline-block shadow">
+						    New<br>Release
+					    </div-->
+				    </div><!--//book-cover-holder-->
+				    <!--div class="text-center"><a class="theme-link scrollto" href="#reviews-section">See all book reviews</a></div-->
+			    </div><!--col-->
+		    </div><!--//row-->
+	    </div><!--//container--></div><br />
+    </section><!--//hero-section-->
+    
+    <!--section id="benefits-section" class="benefits-section theme-bg-light-gradient py-5" -->
+	<section id="benefits-section" class="benefits-section" >
+	<div class="container py-5" style="background-color:white;">
+		    <h2 class="section-heading text-center mb-3" >《T客邦》搶先提供 2021 最新銷售行業報告下載</h2><br />
+		    <div class="section-intro single-col-max mx-auto text-left" style="line-height:1.6;">《T客邦》本次專題為讀者介紹 Salesforce 最新編訂的第四版銷售現況報告，Salesforce 匯集 6,000 名專業銷售專家的洞察見解，帶領企業走向成功。<br /></div>
+			
+			<!--section id="form-section" class="form-section" style="background-color:#F3F3F3;"><span style="font-size:3px">&nbsp;</span></section-->
+			<div class="text-center">
+			<img style="  display:block; margin-left: auto;margin-right: auto; width:70%" src="https://i.imgur.com/Sggw3OM.png" alt="" ></div>
+			<section id="form-section" class="form-section" style="background-color:#F3F3F3;"><span style="font-size:3px">&nbsp;</span></section>
+			<div class="text-center">
+			<img style="  display:block; margin-left: auto;margin-right: auto; width:70%" src="https://i.imgur.com/rRkUdMx.png" alt="" ></div>
+			<section id="form-section" class="form-section" style="background-color:#F3F3F3;"><span style="font-size:3px">&nbsp;</span></section>
+			<div class="text-center">
+			<a href="#top1"><img style="  display:block; margin-left: auto;margin-right: auto; width:70%" src="https://i.imgur.com/5PWSmXu.png" alt="" ></a></div>
+			<section id="form-section" class="form-section" style="background-color:#F3F3F3;"><span style="font-size:3px">&nbsp;</span></section>
+			
+
+			
+	
+			
+			</div>
+			
+	    <!--div class="container py-5">
+		    <h2 class="section-heading text-center mb-3">What Will You Get From This Book?</h2>
+		    <div class="section-intro single-col-max mx-auto text-center mb-5">Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit consequat consequat. Orci varius natoque penatibus et magnis. </div>
+		    <div class="row text-center">
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fas fa-laptop-code"></i></div>
+						    <h3 class="item-heading">Build Lorem Ipsum lobortis nec mauris habitant morbi</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit consequat consequat. 
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fab fa-js-square"></i></div>
+						    <h3 class="item-heading">Learn from lorem ipsum dolor sit amet consectetur</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes.
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fab fa-rocketchat"></i></div>
+						    <h3 class="item-heading">Discover phasellus id egestas tellus maximus</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fab fa-angular"></i></div>
+						    <h3 class="item-heading">Master aliquet augue ac ipsum lobortis interdum</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fas fa-code-branch"></i></div>
+						    <h3 class="item-heading">Deploy elementum mauris tincidunt tempus sagittis</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fas fa-hand-holding-usd"></i></div>
+						    <h3 class="item-heading">Become mattis est et mauris tempus non imperdiet</h3>
+					    </div><!--//item-heading>
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc>
+				    </div><!--//item-inner>
+			    </div><!--//item>
+		    </div><!--//row>
+	    </div><!--//container-->
+    </section><!--//benefits-section-->
+    
+    <section id="content-section" class="content-section">
+	    <div class="container">
+		    <div class="single-col-max mx-auto">
+		    <h2 class="section-heading text-center mb-5">下載《銷售現況報告》以取得：</h2>
+			    <div class="row">
+				    <div class="col-12 col-md-6">
+					    <div class="figure-holder mb-5">
+						    <a href="#top"><img class="img-fluid" src="assets/images/devbook-devices.png" width=70% alt="image" ></a>
+					    </div><!--//figure-holder-->
+				    </div><!--//col-->
+				    <div class="col-12 col-md-6 mb-5">
+					    <div class="key-points mb-4 text-center">
+						<br /><br />
+						    <ul class="key-points-list list-unstyled mb-4 mx-auto d-inline-block text-left">
+							    <li><i class="fas fa-check-circle mr-2"></i>地理區域和行業數據</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>銷售代表如何適應管理者和客戶的新期望</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>銷售職責的演變和重要性的提升</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>銷售管理者為業務復甦採取的新策略</li>
+
+						    </ul>
+							<br /><br />
+							<!--button class="btn btn-primary" onclick="window.location.href='#top1'">免費立即下載報告</button-->
+						    <div class="text-center"><a class="btn btn-primary" href="#top1" ><span style="font-size:24px">立即免費下載完整報告</span></a></div>
+					    </div><!--//key-points-->
+					    
+				    </div><!--//col-12-->   
+			    </div><!--//row-->
+		    </div><!--//single-col-max-->
+	    </div><!--//container-->
+    </section><!--//content-section-->
+    
+    <!--section id="audience-section" class="audience-section py-5">
+	    <div class="container">
+		    <h2 class="section-heading text-center mb-4">Who This Book Is For</h2>
+		    <div class="section-intro single-col-max mx-auto text-center mb-5">
+			    List your target readers in this section and back up with reviews. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie. Vivamus hendrerit nisi condimentum erat tempus, vitae accumsan odio euismod.
+		    </div><!--//section-intro>
+		    <div class="audience mx-auto">
+			    <div class="item media">
+				    <div class="item-icon mr-3"><i class="fas fa-user-check"></i></div>
+				    <div class="media-body">
+					    <h4 class="item-title">Software Developers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//media-body>
+			    </div><!--//item>
+			    <div class="item media">
+				    <div class="item-icon mr-3"><i class="fas fa-user-check"></i></div>
+				    <div class="media-body">
+					    <h4 class="item-title">App Developers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//media-body>
+			    </div><!--//item>
+			    <div class="item media">
+				    <div class="item-icon mr-3"><i class="fas fa-user-check"></i></div>
+				    <div class="media-body">
+					    <h4 class="item-title">Web Developers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//media-body>
+			    </div><!--//item>
+			    <div class="item media">
+				    <div class="item-icon mr-3"><i class="fas fa-user-check"></i></div>
+				    <div class="media-body">
+					    <h4 class="item-title">Product Designers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//media-body>
+			    </div><!--//item>
+		    </div><!--//audience>
+	    </div><!--//container>
+    </section><!--//audience-section-->
+    
+    <!--section id="form-section" class="form-section" style="background-color:#F3F3F3;"><span style="font-size:5px">&nbsp;</span-->
+	    <!--div class="container" -->
+		    <!--div class="lead-form-wrapper single-col-max mx-auto theme-bg-light rounded p-5" >
+			    <!--h2 class="form-heading text-center">Get A Free Preview</h2>
+			    <div class="form-intro text-center mb-3">Sign up to get a free preview of the book. <br>You can offer visitors free book previews to generate leads.</div>
+			    <div class="form-wrapper">
+				    <form class="form-inline justify-content-center flex-wrap">
+						<div class="form-group mr-md-2 mb-3 mb-md-0">
+							<label for="email" class="sr-only">Email</label>
+							<input type="email" class="form-control " id="email" placeholder="Your Email">
+						</div>
+						<div><table><tr><td></td></tr></table></div>
+						<button class="btn btn-primary" onclick="window.location.href='#top1'">免費立即下載報告</button>
+						<button type="submit" class="btn btn-primary btn-submit mb-3 mb-md-0">Send</button>
+					</form>
+			    </div--><!--//form-wrapper-->
+		    <!--/div--><!--//lead-form-wrapper-->
+	    <!--/div--><!--//container-->
+    <!--/section><!--//form-section-->
+    
+    <section id="reviews-section" class="reviews-section py-5" >
+	    <div class="container">
+		    <h2 class="section-heading text-center">銷售行業現況報告內容：</h2>
+		    <!--div class="section-intro text-center single-col-max mx-auto mb-5">See what our readers are saying. </div-->
+		    <div class="row justify-content-center">
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    
+					    <blockquote class="quote">
+					             
+				        </blockquote><!--//item-->
+				        <div class="source media flex-column flex-md-row align-items-center">
+					        <!--img class="source-profile mr-md-3" src="assets/images/profiles/profile-1.png" alt="image"-->
+					        <!--div class="source-info media-body text-center text-md-left"-->
+							<div class="source-info media-body text-center">
+						        <!--div class="source-name">James Doe</div>
+						        <div class="soure-title">Co-Founder, Startup Week</div-->
+								<img width=300px src="assets/images/r1.jpg" alt="image" > 
+						    </div>
+				        </div><!--//source-->
+				        
+						<!--div class="icon-holder"><i class="fas fa-quote-right"></i></div-->
+						<!--div><i class="fas fa-quote-right"></i></div-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+   
+				        </blockquote><!--//item-->
+				        <div class="source media flex-column flex-md-row align-items-center">
+					        <!--img class="source-profile mr-md-3" src="assets/images/profiles/profile-2.png" alt="image" -->
+					        <!--div class="source-info media-body text-center text-md-left"-->
+							<div class="source-info media-body text-center">
+						        <!--div class="source-name">Jean Doe</div>
+						        <div class="soure-title">Co-Founder, Company Tristique</div-->
+								<img width=300px src="assets/images/r2.jpg" alt="image" > 
+						    </div>
+				        </div><!--//source-->
+				         <!--div class="icon-holder"><i class="fas fa-quote-right"></i></div-->
+						<!--div><i class="fas fa-quote-right"></i></div-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+    
+				        </blockquote><!--//item-->
+				        <div class="source media flex-column flex-md-row align-items-center">
+					        <!--img class="source-profile mr-md-3" src="assets/images/profiles/profile-3.png" alt="image" -->
+					        <!--div class="source-info media-body text-center text-md-left"-->
+							<div class="source-info media-body text-center">
+						        <!--div class="source-name">Tom Doe</div>
+						        <div class="soure-title">Product Designer, Company Lorem</div-->
+								<img width=300px src="assets/images/r3.jpg" alt="image" > 
+						    </div>
+				        </div><!--//source-->
+				         <!--div class="icon-holder"><i class="fas fa-quote-right"></i></div-->
+						<!--div><i class="fas fa-quote-right"></i></div-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+					             
+				        </blockquote><!--//item-->
+				        <div class="source media flex-column flex-md-row align-items-center">
+					        <!--img class="source-profile mr-md-3" src="assets/images/profiles/profile-4.png" alt="image" -->
+					        <!--div class="source-info media-body text-center text-md-left"-->
+							<div class="source-info media-body text-center">
+						        <!--div class="source-name">Alice Doe</div>
+						        <div class="soure-title">App Developer, Company Ipsum</div-->
+								<img width=300px src="assets/images/r4.jpg" alt="image" >
+						    </div>
+				        </div><!--//source-->
+				         <!--div class="icon-holder"><i class="fas fa-quote-right"></i></div-->
+						<!--div><i class="fas fa-quote-right"></i></div-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+					           
+				        </blockquote><!--//item-->
+				        <div class="source media flex-column flex-md-row align-items-center">
+					        <!--img class="source-profile mr-md-3" src="assets/images/profiles/profile-5.png" alt="image" -->
+					        <!--div class="source-info media-body text-center text-md-left"-->
+							<div class="source-info media-body text-center">
+						        <!--div class="source-name">Sam Doe</div>
+						        <div class="soure-title">Co-Founder, Company Integer</div-->
+								<img width=300px src="assets/images/r5.jpg" alt="image" >
+								
+						    </div>
+				        </div><!--//source-->
+				         <!--div class="icon-holder"><i class="fas fa-quote-right"></i></div-->
+						<!--div><i class="fas fa-quote-right"></i></div-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+				<div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+					           
+				        </blockquote><!--//item-->
+				        <div class="source media flex-column flex-md-row align-items-center">
+					        <!--img class="source-profile mr-md-3" src="assets/images/profiles/profile-5.png" alt="image" -->
+					        <!--div class="source-info media-body text-center text-md-left"-->
+							<div class="source-info media-body text-center">
+						        <!--div class="source-name">Sam Doe</div>
+						        <div class="soure-title">Co-Founder, Company Integer</div-->
+								<img width=300px src="assets/images/r5.jpg" alt="image" >
+								
+						    </div>
+				        </div><!--//source-->
+				         <!--div class="icon-holder"><i class="fas fa-quote-right"></i></div-->
+						<!--div><i class="fas fa-quote-right"></i></div-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+		    </div><!--//row-->
+		    <!--div class="text-center">
+		        <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-4-book-ebook-landing-page-template-for-developers/">Get Your Copy Today</a>
+		    </div-->
+			<div class="text-center"><a class="btn btn-primary" href="#top1" style="font-size:30px">搶先免費下載 42 頁完整報告</a></div>
+	    </div><!--//container-->
+    </section><!--//reviews-section-->
+	<section>
+	<div class="text-center mb-5">
+	<div id="ff-compose"></div>
+<div class="container" id="ff-compose"></div>
+<script async defer src="https://formfacade.com/include/115743897657064383997/form/1FAIpQLScADXuxjx09_aBr5hVZwHJbHpEUFF4F72MP6E1t0DBbvmiybw/bootstrap.js?div=ff-compose"></script></div></section>
+        <footer class="footer">
+	    <div class="footer-bottom text-right">
+	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright" style="font-size:8px; color:grey">Designed by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a></small>
+ 
+	    </div>
+	    
+    </footer>
+    <section id="author-section" class="author-section section theme-bg-primary py-3"style="background-color:#F58211;">
+	    <div class="container" >
+		    <div class="author-profile text-center mb-5">
+			    <!--img class="author-pic" src="assets/images/profiles/author-profile.png" alt="image" -->
+		    </div><!--//author-profile-->
+		    <h2 class="section-heading text-center text-white mb-3">《T客邦》聲明</h2>
+		    <div class="author-bio single-col-max mx-auto">
+			    <p>聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明聲明</p>
+			    <!--div class="author-links text-center pt-4">
+			        <h5 class="text-white mb-4">Follow Author</h5>
+				    <ul class="social-list list-unstyled">
+					    <li class="list-inline-item"><a href="https://twitter.com/3rdwave_themes"><i class="fab fa-twitter"></i></a></li>
+					    <li class="list-inline-item"><a href="https://github.com/xriley"><i class="fab fa-github-alt"></i></a></li> 
+			            <li class="list-inline-item"><a href="https://medium.com/@3rdwave_themes"><i class="fab fa-medium-m"></i></a></li>
+			            
+			            <li class="list-inline-item"><a href="https://themes.3rdwavemedia.com/"><i class="fas fa-globe-europe"></i></a></li>
+			        </ul><!--//social-list>
+			    </div><!--//author-links-->
+			    
+		    </div><!--//author-bio-->
+		    
+	    </div><!--//container-->
+    </section><!--//author-section-->
+    
+    
+
+    <footer class="footer">
+		<br />
+		<div class="text-center py-3"><a href="https://www.salesforce.com/tw/company/privacy/">Salesforce 隱私說明</a></div>
+
+	    
+    </footer>
+       
+    <!-- Javascript-->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>  
+    <script src="assets/plugins/back-to-top.js"></script>  
+    
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html> 
+
