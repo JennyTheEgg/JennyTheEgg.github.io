@@ -225,18 +225,27 @@
 	  width: calc(100% - 12px);
       padding: 6px;  
 	  }
-	  #bannerbg {
-  background-image: url('assets/images/path149345.png'); 
+
+
+.pc-img {
+    background-image: url('assets/images/path149345.png'); 
     background-repeat: no-repeat;
     background-size: 100% 100%;
-   /* position: fixed; 
-  top: 0; 
-  left: 0; 
-	
-  Preserve aspet ratio 
-  width: 100%;
-  min-height: 100%;*/
 }
+
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .pc-img {
+    background-image: url('assets/images/path149345.png'); 
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .pc-img {
+    background: orange;
+  }
+}
+
     </style>
     <title>《T客邦》2021 銷售行業專題</title>
     
@@ -273,58 +282,12 @@
     </header><!--//header-->
     
     <section class="hero-section">
-	<div id="bannerbg">
+	
+	<div class="pc-img">
 	    <div class="container">
 		    <div class="row">
 			    <div class="col-12 col-md-7 pt-5 mb-5 align-self-center">
 				    <div class="promo pr-md-3 pr-lg-5">
-<!--form method='post' action='contact-form-proc-v2.php' name='contactform' id='contactform'>
-
-
-<label for='fname'>Your Name:</label><br/>
-<input type='text' name='fname' />
-
-<label for='company'>Your Name:</label><br/>
-<input type='text' name='company' />
-
-<label for='position'>Your Name:</label><br/>
-<input type='text' name='position' />
-
-<label for='phone'>Your Name:</label><br/>
-<input type='text' name='phone' />
-
-<label for='region'>Your Name:</label><br/>
-<input type='text' name='region' />
-
-<label for='noofemployees'>Your Name:</label><br/>
-<input type='text' name='noofemployees' />
-
-<label for='email'>Your Name:</label><br/>
-<input type='text' name='email' />
-
-<label for='agree'>Your Name:</label><br/>
-<input type='text' name='agree' />
-
-<!--input type='submit' name='submit' value='Submit Form' -->
-		  
-		  
-		  <!--div class="item">
-            <label for="lname">姓氏<span>*</span></label>
-            <input id="lname" type="text" name="lname" oninvalid="this.setCustomValidity('請填寫欄目')" oninput="this.setCustomValidity('')" required/>
-          </div><input class="btn btn-primary mr-lg-2" style="font-size:24px;" type='submit' name='submit' value='立即下載完整報告' />
-<!--p>
-<label for='fname'>Your Name:</label><br/>
-<input type='text' name='fname' />
-</p>
-<p>
-<label for='email' >Email Address:</label><br/>
-<input type='text' name='email' />
-</p>
-<input type='submit' name='submit' value='Submit Form' />
-</form-->
-
-<!--div class="container" id="ff-compose"></div>
-<script async defer src="https://formfacade.com/include/115743897657064383997/form/1FAIpQLScADXuxjx09_aBr5hVZwHJbHpEUFF4F72MP6E1t0DBbvmiybw/bootstrap.js?div=ff-compose"></script-->
 
 <div class="testbox2">
 <div>
@@ -400,16 +363,7 @@
 								        </div><!--//source-->
 								    </div><!--//carousel-item-->
 								</div><!--//carousel-inner-->
-							</div>
-				 
-				 
-				 
-				 
-				 
-				 
-				 
-				 
-				 
+							</div>			 
 					    </div>
 				    <div class="book-cover-holder">
 					    <img class="img-fluid book-cover" src="assets/images/path342.png" alt="book cover" >
@@ -421,8 +375,8 @@
 			    </div><!--col-->
 		    </div><!--//row-->
 	    </div><!--//container--></div><br />
-    </section><!--//hero-section-->
-    
+    </section><!--//hero-section1-->
+ 
     <!--section id="benefits-section" class="benefits-section theme-bg-light-gradient py-5" -->
 	<section id="benefits-section" class="benefits-section" >
 	<div class="container py-5" style="background-color:white;">
